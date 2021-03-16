@@ -8,7 +8,7 @@
     color: $header-text-grey;
     text-align: center;
     height: 100px;
-    
+    justify-content: space-around;
     .logo-container {
         text-transform: uppercase;
         font-size: 30px;
@@ -60,18 +60,47 @@
     }
 
     .right-main-header{
-        border: 2px solid blue;
+       
         display: flex;
+        font-size: 12px;
+        
         .install-button {
-            border: 2px solid green;
+            margin: 5px 5px 0 5px;
+            padding: 5px 10px 0px 10px;
+            height: 20px;
+            .fa-download{
+                margin-right: 10px;
+            }
         }
-
+        .grey {
+            background-color: $header-dark-grey;
+            color: white;
+        }
+       
+    
         .loggedIn-right-header{
             display: flex;
+             .envelope {
+            height: 20px;
+            width: 20px;
+            margin: 5px;
+                .fa-envelope{
+                color: white;
+                }
+            }
+            p {
+                margin: 5px;
+                .fa-caret-down{
+                    margin: 3px;
+                    font-size: 14px;
+                }
+            }
             .profile-pic{
                width: 36px;
                height: 36px;
                border: 2px solid $header-text-grey;
+               margin: 5px 10px 10px 10px;
+               
             }
         }
     }

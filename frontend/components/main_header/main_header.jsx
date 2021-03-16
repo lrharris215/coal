@@ -31,9 +31,11 @@ export default (props) => {
             <div className="right-main-header">
                 <div className={`install-button ${installButtonColor}`}>
                     <i className="fas fa-download"></i>
-                    Install Steam</div>
+                    Install Coal</div>
                 {props.loggedIn ? <div className="loggedIn-right-header">
-                <i className="far fa-envelope"></i>
+                    <div className="envelope">
+                <i className="fas fa-envelope"></i>
+                    </div>
                     <p>{props.username}<i className="fas fa-caret-down"></i></p>
                     <div className="profile-pic">
                         <img  src={window.cubeURL} alt="Profile pic" />
