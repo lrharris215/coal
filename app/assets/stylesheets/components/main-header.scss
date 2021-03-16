@@ -1,14 +1,40 @@
 .main-header {
     font-family: "Source Sans Pro", sans-serif; 
     border: 2px solid black;
-    font-weight: bold;
+    font-weight: 600;
     display: flex;
     background-color: $header-red;
+    color: $header-text-grey;
+    text-align: center;
     
     .logo-container {
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 25px;
         color: $header-text-grey;
+        margin: auto 50px auto 100px;
+        display: flex;
+        width: 150px;
+                .logo {
+                background-color: $header-text-grey;
+                text-align: center;
+                vertical-align: middle;
+                color: $header-red;
+                border-radius: 100%;
+                width: 40px;
+                height: 40px;
+                position: relative;
+
+                .fa-cogs{
+                    position: absolute;
+                    top: 8px;
+                    right: 5px;
+                }
+        }
+         h1{
+            font-size: 25px;
+            padding-left: 5px;
+        }
+       
         
     }
     .main-header-nav{

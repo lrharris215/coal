@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom'
 export default (props) => {
     return (
         <div className="main-header">
+            <Link to="/">
             <div className="logo-container">
-            <Link to= "/">
+            
             <div className="logo">
                 <i className="fas fa-cogs"></i>
-                <span>Coal</span>
+            </div>
+            <h1>Coal</h1>
+            
             </div>
             </Link>
-            </div>
 
             <nav className="main-header-nav">
                 <ul>
