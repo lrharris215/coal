@@ -1,45 +1,78 @@
 .main-header {
-    font-family: "Source Sans Pro", sans-serif; 
-    border: 2px solid black;
+    // font-family: "Source Sans Pro", sans-serif; 
+    font-family: "Duru Sans";
+    
     font-weight: 600;
     display: flex;
     background-color: $header-red;
     color: $header-text-grey;
     text-align: center;
+    height: 100px;
     
     .logo-container {
         text-transform: uppercase;
-        font-size: 25px;
+        font-size: 30px;
         color: $header-text-grey;
-        margin: auto 50px auto 100px;
+        margin: auto 50px auto 150px;
         display: flex;
         width: 150px;
+        align-items: center;
+        
                 .logo {
                 background-color: $header-text-grey;
                 text-align: center;
                 vertical-align: middle;
                 color: $header-red;
                 border-radius: 100%;
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
                 position: relative;
 
                 .fa-cogs{
                     position: absolute;
-                    top: 8px;
-                    right: 5px;
+                    top: 10px;
+                    right: 7px;
                 }
         }
          h1{
             font-size: 25px;
-            padding-left: 5px;
+            padding-left: 10px;
+            vertical-align: middle;
         }
        
         
     }
     .main-header-nav{
         text-transform: uppercase;
-        border: 2px solid blue;
+        
         color: $header-text-grey;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        ul{
+            display: flex;
+            align-items: center;
+            
+            li {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .right-main-header{
+        border: 2px solid blue;
+        display: flex;
+        .install-button {
+            border: 2px solid green;
+        }
+
+        .loggedIn-right-header{
+            display: flex;
+            .profile-pic{
+               width: 36px;
+               height: 36px;
+               border: 2px solid $header-text-grey;
+            }
+        }
     }
 }

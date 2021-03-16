@@ -1,37 +1,49 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 
 export default (props) => {
+    const installButtonColor = props.loggedIn ? "grey" : "orange"
     return (
+
         <div className="main-header">
-            <Link to="/">
-            <div className="logo-container">
+            <Link className="logo-container" to="/">
             
             <div className="logo">
                 <i className="fas fa-cogs"></i>
             </div>
             <h1>Coal</h1>
             
-            </div>
             </Link>
 
             <nav className="main-header-nav">
                 <ul>
-                    <li>Store</li>
-                    <li>Community</li>
-                    {props.loggedIn ? <li>{props.username}</li> : <li>About</li>}
+                    <li><a href="">Store</a></li>
+                    <li><a href="">Community</a></li>
+                    {props.loggedIn ? <li><a href="">{props.username}</a></li> : <li><a href="">About</a></li>}
 
-                    <li>Chat</li>
-                    <li>Support</li>
+                    <li><a href="">Chat</a></li>
+                    <li><a href="">Support</a></li>
                 </ul>
             </nav>
 
             <div className="right-main-header">
-                {props.loggedIn ? <button onClick={props.logoutUser}>Log Out</button>  : 
+                <div className={`install-button ${installButtonColor}`}>
+                    <i className="fas fa-download"></i>
+                    Install Steam</div>
+                {props.loggedIn ? <div className="loggedIn-right-header">
+                <i className="far fa-envelope"></i>
+                    <p>{props.username}<i className="fas fa-caret-down"></i></p>
+                    <div className="profile-pic">
+                        <img  src={window.cubeURL} alt="Profile pic" />
+                    </div>
+                <button onClick={props.logoutUser}>Log Out</button>  
+                </div>
+                : 
                 <div>
-                    <Link to="/login">Sign In</Link>
-                    <Link to="/signup">Sign Up</Link>
+                    <Link to="/login">login</Link> 
+                    <p>| language</p>
                 </div> }
             </div>
         </div>
