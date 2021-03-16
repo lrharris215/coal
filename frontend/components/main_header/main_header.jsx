@@ -43,10 +43,10 @@ class MainHeader extends React.Component {
                     <i className="fas fa-envelope"></i>
                         </div>
                        
-                            <HeaderDropDownContainer titleItem={<p>{this.props.username}<i className="fas fa-caret-down"></i></p>}listItems={
+                            <HeaderDropDownContainer titleItem={<p className="username-dropdown">{this.props.username}<i className="fas fa-caret-down"></i></p>}listItems={
                             [<a href="">View profile</a>, 
                             <a href="">Account details</a>, 
-                            <button onClick={this.props.logoutUser}>Log Out</button>, 
+                                    <button onClick={this.props.logoutUser}>Logout: <span className="yellow-text">{this.props.username}</span></button>,
                             <a href="">Preferences</a>, 
                             <a href="">Change language</a>]}/>
                         <div className="profile-pic">
