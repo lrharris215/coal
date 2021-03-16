@@ -55,9 +55,9 @@ class MainHeader extends React.Component {
                     
                     </div>
                     : 
-                    <div>
+                    <div className="loggedOut-right-header">
                         <Link to="/login">login</Link> 
-                        <p>| language</p>
+                                <p>| <span className="pretend-link">language</span><i className="fas fa-caret-down" /> </p>
                     </div> }
                 </div>
             </div>

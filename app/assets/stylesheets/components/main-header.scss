@@ -77,6 +77,10 @@
             background-color: $header-dark-grey;
             color: white;
         }
+        .orange {
+            background-color: rgb(255, 157, 0);
+            color: white;
+        }
        
     
         .loggedIn-right-header{
@@ -101,5 +105,19 @@
                
             }
         }
+        .loggedOut-right-header{
+            display: flex;
+            margin-top: 10px;
+            a {
+                margin: 0 5px;
+            }
+            .fa-caret-down{
+            padding-top: 2px;
+            margin: 0 3px;
+            }
+        }
     }
+}
+.pretend-link{
+    cursor: pointer;
 }
