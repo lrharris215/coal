@@ -1,0 +1,19 @@
+.header-drop-down{
+    border: 1px solid black;
+    width: 100px;
+    position: relative;
+    .active{
+        border: 1px solid green;
+        display: block;
+        width: 120px;
+        z-index: 1;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+
+    }
+    .hidden {
+        display: none;
+    }
+
+}
