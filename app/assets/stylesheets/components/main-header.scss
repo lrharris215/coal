@@ -1,0 +1,19 @@
+.main-header {
+    font-family: "Source Sans Pro", sans-serif; 
+    border: 2px solid black;
+    font-weight: bold;
+    display: flex;
+    background-color: $header-red;
+    
+    .logo-container {
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $header-text-grey;
+        
+    }
+    .main-header-nav{
+        text-transform: uppercase;
+        border: 2px solid blue;
+        color: $header-text-grey;
+    }
+}
