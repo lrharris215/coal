@@ -1,0 +1,129 @@
+.signup-form{
+    background-image: image-url('acct_creation_bg');
+    background-color: $background-dark-grey;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-auto-flow: column;
+    padding-bottom: 300px;
+    .left-login-section{
+        
+        .session-form{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            
+            width: 300px;
+            color: $header-text-grey;
+            padding: 50px 100px 0 200px;
+            .login-errors{
+                border: 1px solid red;
+                width: 250px;
+                margin: 20px auto;
+                color: whitesmoke;
+                text-align: center;
+                font-size: 12px;
+                padding: 20px;
+                background-color: $background-darker-grey;
+            }
+            h2{
+                color: white;
+                text-transform: uppercase;
+                font-size: 36px;
+                font-weight: 100;
+                text-align: center;
+                content: "Create your account"
+            }
+             label{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                font-size: 12px;
+            }
+            input{
+            
+                background-color: $input-grey;
+                margin: 5px 0;
+                height: 30px;
+               
+            }
+            .captcha-box {
+                border: 1px solid $header-text-grey;
+                background-color: $background-darker-grey;
+                color: whitesmoke;
+                font-weight: bold;
+                height: 70px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                label{
+                    padding: 0;
+                    flex-direction: row;
+                    align-items: center;
+                    input{
+                        margin: 0 10px;
+                        height: 30px;
+                        width: 30px;
+                        padding: 10px;
+                        outline: 1px solid $header-text-grey;
+                        &:hover{
+                            outline: 1px solid $button-orange;
+                        }
+                    }
+                    p {
+                        margin: 0 10px;
+                    }  
+                } 
+                  .fa-recycle {
+                        font-size: 30px;
+                        align-self: flex-end;
+                        margin: auto;
+                    }
+            }
+            .age-check {
+                width: 650px;
+                label {
+                    
+                    display: inline-block;
+                    font-size: 14px;
+                    input{
+                        display: inline-block;
+                        height: 15px;
+                        width: 15px;
+                        margin-right: 10px;
+                        margin: 0 10px 0 0;
+                    }
+                    a{
+                        color: whitesmoke;
+                        &:hover{
+                            color: $link-yellow;
+                        }
+                    }
+                    
+
+                }
+                
+            
+            }
+             button {
+                border-radius: 2px;
+                text-align: center;
+                color: white;
+                height: 35px;
+                width: 180px;
+                margin: 0 auto;
+                text-shadow: 1px 1px $header-dark-grey;
+                background-image: linear-gradient(to right, $link-yellow, $button-orange);
+                &:hover{
+                    background-image: linear-gradient(to right, rgb(255, 229, 135),rgb(255, 171, 36));
+
+                }
+            }
+        }
+        
+    }
+    .right-login-section {
+        background-color: $background-dark-grey;
+    }
+}

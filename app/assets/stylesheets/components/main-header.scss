@@ -1,0 +1,123 @@
+.main-header {
+    // font-family: "Source Sans Pro", sans-serif; 
+    font-family: "Duru Sans";
+    
+    font-weight: 600;
+    display: flex;
+    background-color: $header-red;
+    color: $header-text-grey;
+    text-align: center;
+    height: 100px;
+    .logo-container {
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $header-text-grey;
+        margin: auto 50px auto 150px;
+        display: flex;
+        width: 150px;
+        align-items: center;
+        
+                .logo {
+                background-color: $header-text-grey;
+                text-align: center;
+                vertical-align: middle;
+                color: $header-red;
+                border-radius: 100%;
+                width: 50px;
+                height: 50px;
+                position: relative;
+
+                .fa-cogs{
+                    position: absolute;
+                    top: 10px;
+                    right: 7px;
+                }
+        }
+         h1{
+            font-size: 25px;
+            padding-left: 10px;
+            vertical-align: middle;
+        }
+       
+        
+    }
+    .main-header-nav{
+        text-transform: uppercase;
+        
+        color: $header-text-grey;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        justify-content: space-evenly;
+        >ul{
+            display: flex;
+            align-items: center;
+            >li{
+                margin: 0 10px;
+                padding: 0;
+            }
+        }
+    }
+
+    .right-main-header{
+       
+        display: flex;
+        font-size: 12px;
+        
+        .install-button {
+            margin: 5px 5px 0 5px;
+            padding: 5px 10px 0px 10px;
+            height: 20px;
+            cursor: pointer;
+            .fa-download{
+                margin-right: 10px;
+            }
+        }
+        .grey {
+            background-color: $header-dark-grey;
+            color: white;
+        }
+        .orange {
+            background-color: $button-orange;
+            color: white;
+        }
+       
+    
+        .loggedIn-right-header{
+            display: flex;
+             .envelope {
+            height: 20px;
+            width: 20px;
+            margin-top: 10px;
+            margin-left: 5px;
+            cursor: pointer;
+                .fa-envelope{
+                color: white;
+                }
+            }
+            
+            .profile-pic{
+               width: 36px;
+               height: 36px;
+               border: 2px solid $header-text-grey;
+               margin: 5px 10px 10px 10px;
+               cursor: pointer;
+               
+            }
+        }
+        .loggedOut-right-header{
+            display: flex;
+            margin-top: 10px;
+            a {
+                margin: 0 5px;
+            }
+            .fa-caret-down{
+            padding-top: 2px;
+            margin: 0 3px;
+            }
+        }
+    }
+}
+.pretend-link{
+    cursor: pointer;
+}

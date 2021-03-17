@@ -7,9 +7,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+      <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap" rel="stylesheet">
+
+    
+        <script type="text/javascript">
+          window.cubeURL = "<%= image_url('cube.jpg') %>";
+          window.giftCards = "<%= image_url('giftCards2.png') %>";
+          window.joinPic = "<%= image_url('join_pc.png') %>";
+          window.accountBG =  "<%= image_url('acct_creation_bg.jpg') %>";
+          </script>
   </head>
 
   <body>
+  
     <%= yield %>
   </body>
 </html>

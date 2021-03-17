@@ -1,0 +1,130 @@
+.login-form{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-auto-flow: column;
+    // border: 2px solid lime;
+    background-image: image-url('acct_creation_bg');
+    background-color: $background-dark-grey;
+    .left-login-section {
+            padding-bottom: 300px;
+        
+    
+        // border: 2px solid yellow;
+        .login-errors{
+            border: 1px solid red;
+            width: 250px;
+            margin: 20px auto;
+            color: whitesmoke;
+            text-align: center;
+            font-size: 12px;
+            padding: 20px;
+            background-color: $background-darker-grey;
+        }
+        .session-form{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            
+            width: 300px;
+            color: $header-text-grey;
+            padding: 50px 100px 0 200px;
+            h2{
+                color: white;
+                text-transform: uppercase;
+                font-size: 36px;
+                font-weight: 100;
+                text-align: center;
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                font-size: 12px;
+            }
+            input{
+            
+                background-color: $input-grey;
+                margin: 5px 0;
+                height: 30px;
+            }
+            button {
+                border-radius: 2px;
+                text-align: center;
+                color: white;
+                height: 35px;
+                width: 180px;
+                margin: 0 auto;
+                text-shadow: 1px 1px $header-dark-grey;
+                background-image: linear-gradient(to right, $link-yellow, $button-orange);
+                &:hover{
+                    background-image: linear-gradient(to right, rgb(255, 229, 135),rgb(255, 171, 36));
+
+                }
+            }
+            .login-bottom{
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+            }
+            .guest-button{
+                width: 140px;
+                margin: 0 auto;
+            }
+            .forgot-pw{
+                font-size: 12px;
+                color: whitesmoke;
+                text-align: center;
+                margin: 20px 0;
+                &:hover{
+                    color: $link-yellow;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .right-login-section {
+        background-color: $background-darker-grey;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 300px;
+        
+        p{
+          
+           width: 200px;
+           margin: 0 auto;
+           color: $header-text-grey;
+        }
+        p:first-child{
+            margin-top: 100px;
+        }
+        .computerImage{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .learn-more{
+            padding: 20px;
+            &:hover{
+                color: $link-yellow;
+            }
+            
+        }
+        .join-button{
+            padding: 8px 10px;
+            border: 1px solid $header-text-grey;
+            border-radius: 2px;
+            width: 80px;
+            height: 25px;
+            margin: 30px auto;
+            &:hover {
+                border: 1px solid whitesmoke;
+            }
+        }
+       
+    }
+}
