@@ -9,6 +9,10 @@ class SessionForm extends React.Component {
             password: "",
             email: "",
         }
+        this.guest = {
+            username: "Guest",
+            password: "password"
+        }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -67,7 +71,10 @@ class SessionForm extends React.Component {
                         
                         <button>{this.props.formType}</button>
                         {this.props.formType === "Sign in" ? 
-                        <p className="forgot-pw" onClick={() => alert("Too bad")}>Forgot your password?</p> :
+                        <div className="login-bottom">
+                            <p className="forgot-pw" onClick={() => alert("Too bad")}>Forgot your password?</p>
+                            <button className="guest-button" onClick={() => this.props.action(this.guest)}>Sign in as Guest!</button>
+                        </div> :
                         null }
                     </form>
                 </div>
