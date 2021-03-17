@@ -5,10 +5,10 @@
     // border: 2px solid lime;
     background-image: image-url('acct_creation_bg');
     background-color: $background-dark-grey;
-
     .left-login-section {
+            padding-bottom: 300px;
         
-        height: 100vh;
+    
         // border: 2px solid yellow;
         .login-errors{
             border: 1px solid red;
@@ -80,6 +80,8 @@
         text-align: center;
         display: flex;
         flex-direction: column;
+        padding-bottom: 300px;
+        
         p{
           
            width: 200px;

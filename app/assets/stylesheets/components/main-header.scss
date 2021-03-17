@@ -8,7 +8,6 @@
     color: $header-text-grey;
     text-align: center;
     height: 100px;
-    justify-content: space-around;
     .logo-container {
         text-transform: uppercase;
         font-size: 30px;
@@ -49,12 +48,13 @@
         display: flex;
         align-items: center;
         font-weight: 500;
+        justify-content: space-evenly;
         >ul{
             display: flex;
             align-items: center;
-            
-            >li {
-                padding: 0 10px;
+            >li{
+                margin: 0 10px;
+                padding: 0;
             }
         }
     }

@@ -4,9 +4,9 @@
     display: grid;
     grid-template-columns: 60% 40%;
     grid-auto-flow: column;
-
+    padding-bottom: 300px;
     .left-login-section{
-        height: 100vh;
+        
         .session-form{
             display: flex;
             flex-direction: column;
@@ -15,6 +15,16 @@
             width: 300px;
             color: $header-text-grey;
             padding: 50px 100px 0 200px;
+            .login-errors{
+                border: 1px solid red;
+                width: 250px;
+                margin: 20px auto;
+                color: whitesmoke;
+                text-align: center;
+                font-size: 12px;
+                padding: 20px;
+                background-color: $background-darker-grey;
+            }
             h2{
                 color: white;
                 text-transform: uppercase;
