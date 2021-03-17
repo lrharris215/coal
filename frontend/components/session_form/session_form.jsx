@@ -54,14 +54,15 @@ class SessionForm extends React.Component {
                 {this.props.formType === "Sign in" ? 
                     <div className="right-login-section">
                         <p>Join Coal and discover dozens of games to play.</p>
-                        <Link to="/">Learn More</Link>
+                        <Link className="learn-more" to="/">Learn More</Link>
 
                         <div className="computerImage">
-
+                            <img src={window.joinPic} alt="Computer image" />
+                            <p>It's free and easy to use.</p>
+                            <Link className="join-button" to="/signup">Join Coal</Link>
                         </div>
 
-                        <p>It's free and easy to use.</p>
-                        <Link to="/signup">Join Coal</Link>
+                      
                     </div>
                     :
                     null}
