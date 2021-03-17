@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
-import HeaderDropDownContainer from "../dropdowns/header_drop_down"
+import HeaderDropDownContainer from "../dropdowns/header_dropdown"
+
 
 
 class MainHeader extends React.Component {
@@ -25,9 +26,11 @@ class MainHeader extends React.Component {
 
                 <nav className="main-header-nav">
                     <ul>
-                        <li><a href="">Store</a></li>
-                        <li><a href="">Community</a></li>
-                        {this.props.loggedIn ? <li><a href="">{this.props.username}</a></li> : <li><a href="">About</a></li>}
+                        <li><HeaderDropDownContainer buttonName={"store-button"}hasHover={true} titleItem={<p className="store-dropdown">Store</p>} listItems={[<a href="">Home</a>, <a href="">Discovery Queue</a>, <a href="">Wishlist</a>, <a href="">News</a>, <a href="">Stats</a>, <a href="">About</a>]}/></li>
+                            <li><HeaderDropDownContainer buttonName={"community-button"}hasHover={true} titleItem={<p className="community-dropdown">Community</p>} listItems={[<Link to="/">Home</Link>, <Link to="/">Discussions</Link>, <Link to="/">Workshop</Link>, <Link to="/">Market</Link>, <Link to="/">Broadcasts</Link>]}/> </li>
+                        {this.props.loggedIn ? <li>
+                                <HeaderDropDownContainer buttonName={"main-username-button"} hasHover={true} titleItem={<p>{this.props.username}</p>} listItems={[<Link to="/">Activity</Link>, <Link to="/">Profile</Link>, <Link to="/">Friends</Link>, <Link to="/">Groups</Link>, <Link to="/">Content</Link>, <Link to="/">Badges</Link>, <Link to="/">Inventory</Link>]}/>
+                                </li> : <li><a href="">About</a></li>}
 
                         <li><a href="">Chat</a></li>
                         <li><a href="">Support</a></li>
@@ -43,7 +46,7 @@ class MainHeader extends React.Component {
                     <i className="fas fa-envelope"></i>
                         </div>
                        
-                            <HeaderDropDownContainer titleItem={<p className="username-dropdown">{this.props.username}<i className="fas fa-caret-down"></i></p>}listItems={
+                            <HeaderDropDownContainer buttonName={"username-button"}titleItem={<p className="username-dropdown">{this.props.username}<i className="fas fa-caret-down"></i></p>}listItems={
                             [<a href="">View profile</a>, 
                             <a href="">Account details</a>, 
                                     <button onClick={this.props.logoutUser}>Logout: <span className="yellow-text">{this.props.username}</span></button>,

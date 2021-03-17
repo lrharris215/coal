@@ -36,9 +36,42 @@
             margin: 3px;
             font-size: 14px;
         }
+        
     }
     .hidden {
         display: none;
+    }  
+    
+    .store-button{
+        position: relative;
+    }
+    .store-button+div{
+        position: absolute;
+        left: 23px;
+        font-size: 12px;
+    }
+    .community-button{
+        position: relative;
+    }
+    .community-button+div{
+        position: absolute;
+        left: 18px;
+        font-size: 12px;
+    }
+    .main-username-button{
+        position: relative;
+    }
+    .main-username-button+div{
+        position: absolute;
+        left: 23px;
+        
+        font-size: 12px;
+        width: 100px;
     }
 
+
 }
+
+
+
+ 
