@@ -46,6 +46,9 @@ class SessionForm extends React.Component {
                         </label>
                         
                         <button>{this.props.formType}</button>
+                        {this.props.formType === "Sign in" ? 
+                        <p className="forgot-pw" onClick={() => alert("Too bad")}>Forgot your password?</p> :
+                        null }
                     </form>
                 </div>
                 {this.props.formType === "Sign in" ? 
