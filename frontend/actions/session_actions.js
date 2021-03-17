@@ -32,6 +32,7 @@ export const createNewUser = user => dispatch => {
 }
 
 export const loginUser = user => dispatch => {
+    debugger
     return (
         SessionUtils.postSession(user).then((user)=> dispatch(receiveCurrentUser(user)), 
         error => dispatch(receiveErrors(error.responseJSON)))

@@ -26,7 +26,9 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div>
+                {this.props.errors ? <div className="login-errors">{this.props.errors}</div> : null }
                 <form onSubmit={this.handleSubmit}>
+                    
                     <label>Username
                     <input type="text" value={this.state.username} onChange={this.update('username')} />
                     </label>
