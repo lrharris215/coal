@@ -10,6 +10,16 @@
         
         height: 100vh;
         // border: 2px solid yellow;
+        .login-errors{
+            border: 1px solid red;
+            width: 250px;
+            margin: 20px auto;
+            color: whitesmoke;
+            text-align: center;
+            font-size: 12px;
+            padding: 20px;
+            background-color: $background-darker-grey;
+        }
         .session-form{
             display: flex;
             flex-direction: column;
