@@ -8,7 +8,8 @@ const MSTP = ({ errors }) => {
     return {
         formType: "Sign up",
         errors: errors.session,
-        navLink: <Link to="/login">Sign In</Link>
+        navLink: <Link to="/login">Sign In</Link>,
+        klassName: "signup-form"
 
     }
 }

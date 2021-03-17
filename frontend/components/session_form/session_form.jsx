@@ -45,6 +45,25 @@ class SessionForm extends React.Component {
                         <label>Password 
                         <input type="password" value={this.state.password} onChange={this.update('password')} />
                         </label>
+
+                        {this.props.formType === "Sign up" ? 
+                        <div>
+                        <div className="captcha-box">
+                            <label>
+                                    <input type="checkbox" /> <p>I am not a robot</p> 
+                            </label>
+                            <i className="fas fa-recycle"></i>
+                        </div>
+                        <div className="age-check">
+                            <label>
+                                <input type="checkbox"/>
+                                        I am 13 years or older and agree to the terms of the <Link to="">Coal Subscriber Agreement</Link> and the <Link to="">Gears Privacy Policy.</Link>
+                            </label>
+                        </div>
+                        </div>
+                        :
+                        null
+                        }
                         
                         <button>{this.props.formType}</button>
                         {this.props.formType === "Sign in" ? 
@@ -65,8 +84,8 @@ class SessionForm extends React.Component {
 
                       
                     </div>
-                    :
-                    null}
+                    : <div className="right-login-section"></div>
+                    }
                 
             </div>
         )
