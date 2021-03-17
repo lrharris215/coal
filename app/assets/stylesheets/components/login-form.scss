@@ -1,0 +1,48 @@
+.login-form{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-auto-flow: column;
+    border: 2px solid lime;
+    background-color: $background-dark-grey;
+    .left-login-section {
+        
+        height: 100vh;
+        border: 2px solid yellow;
+        .session-form{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            border: 4px solid pink;
+            width: 300px;
+            color: $header-text-grey;
+            padding: 50px 100px 0 200px;
+            h2{
+                color: white;
+                text-transform: uppercase;
+                font-size: 36px;
+                font-weight: 100;
+                text-align: center;
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+            input{
+                border: 1px solid white;
+                background-color: $input-grey;
+                margin: 5px 0;
+                height: 30px;
+            }
+            button {
+                border: 1px solid blue;
+                text-align: center;
+                color: white;
+            }
+        }
+    }
+    .right-login-section {
+        background-color: $background-darker-grey;
+        color: white;
+    }
+}
