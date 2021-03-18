@@ -17,6 +17,7 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.toggleChecked = this.toggleChecked.bind(this);
+        this.handleGuest = this.handleGuest.bind(this);
     }
 
     componentDidMount() {
@@ -26,6 +27,13 @@ class SessionForm extends React.Component {
     toggleChecked() {
         this.checked = !this.checked;
     }
+    
+   handleGuest(e) {
+       this.setState({
+           username: "Guest",
+           password: "password"
+       }) 
+   }
     handleSubmit(e){
         e.preventDefault();
         
@@ -112,7 +120,7 @@ class SessionForm extends React.Component {
                         {this.props.formType === "Sign in" ? 
                         <div className="login-bottom">
                             <p className="forgot-pw" onClick={() => alert("Too bad")}>Forgot your password?</p>
-                            <button className="guest-button" onClick={() => this.props.action(this.guest)}>Sign in as Guest!</button>
+                            <button className="guest-button" onClick={() => this.handleGuest()}>Sign in as Guest!</button>
                         </div> :
                         null }
                     </form>
