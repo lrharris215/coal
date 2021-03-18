@@ -13,17 +13,27 @@ class SessionForm extends React.Component {
             username: "Guest",
             password: "password"
         }
+        this.checked = false;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.toggleChecked = this.toggleChecked.bind(this);
     }
 
     componentDidMount() {
         this.props.clearErrors();
     }
+
+    toggleChecked() {
+        this.checked = !this.checked;
+    }
     handleSubmit(e){
         e.preventDefault();
-        if(this.formType === "Sign up" && document.getElementById("age-check").checked === false){
-            return false;
+        debugger
+        if(this.props.formType === "Sign up" && !this.checked){
+            debugger
+            this.props.receiveErrors(["You must be 13 or older to register."])
+
+            return;
         }
         const user = Object.assign({}, this.state);
         this.props.action(user)      
@@ -80,7 +90,7 @@ class SessionForm extends React.Component {
                         </div>
                         <div className="age-check">
                             <label>
-                                <input id="age-check" type="checkbox"/>
+                                <input id="age-check" onChange={() => this.toggleChecked()}type="checkbox"/>
                                         I am 13 years or older and agree to the terms of the <Link to="">Coal Subscriber Agreement</Link> and the <Link to="">Gears Privacy Policy.</Link>
                             </label>
                         </div>
@@ -100,13 +110,15 @@ class SessionForm extends React.Component {
                 </div>
                 {this.props.formType === "Sign in" ? 
                     <div className="right-login-section">
-                        <p>Join Coal and discover dozens of games to play.</p>
-                        <Link className="learn-more" to="/">Learn More</Link>
+                        <div className="right-side">
+                            <p>Join Coal and discover dozens of games to play.</p>
+                            <Link className="learn-more" to="/">Learn More</Link>
 
-                        <div className="computerImage">
-                            <img src={window.joinPic} alt="Computer image" />
-                            <p>It's free and easy to use.</p>
-                            <Link className="join-button" to="/signup">Join Coal</Link>
+                            <div className="computerImage">
+                                <img src={window.joinPic} alt="Computer image" />
+                                <p>It's free and easy to use.</p>
+                                <Link className="join-button" to="/signup">Join Coal</Link>
+                            </div>
                         </div>
 
                       

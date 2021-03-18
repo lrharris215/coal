@@ -19,7 +19,7 @@
             .login-errors{
                 border: 1px solid red;
                 width: 80%;
-                margin: 20px auto;
+                margin: 20px 0;
                 color: whitesmoke;
                 text-align: left;
                 font-size: 14px;
@@ -127,7 +127,6 @@
                 color: white;
                 height: 35px;
                 width: 180px;
-                margin: 0 auto;
                 margin-bottom: 200px;
                 text-shadow: 1px 1px $header-dark-grey;
                 background-image: linear-gradient(to right, $link-yellow, $button-orange);

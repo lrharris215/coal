@@ -1,6 +1,6 @@
 .login-form{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 62% 38%;
     grid-auto-flow: column;
     // border: 2px solid lime;
     background-image: image-url('acct_creation_bg');
@@ -33,7 +33,7 @@
             display: flex;
             flex-direction: column;
             margin: 0 auto;
-            
+            margin-right: 0;
             width: 300px;
             color: $header-text-grey;
             padding: 50px 100px 0 200px;
@@ -106,45 +106,48 @@
         flex-direction: column;
         align-items: center;
         padding-bottom: 300px;
-        
-        p{
-          
-           width: 200px;
-           margin: 0 auto;
-           color: $header-text-grey;
-        }
-        p:first-child{
-            margin-top: 100px;
-        }
-        .computerImage{
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            img{
-                margin-bottom: 30px;
-            }
-        }
-        .learn-more{
-            margin: 20px 0;
-            width: fit-content;
-            &:hover{
-                color: $link-yellow;
-            }
+        .right-side {
             
-        }
-        .join-button{
-            padding: 8px 10px;
-            border: 1px solid $header-text-grey;
-            border-radius: 2px;
-            width: 80px;
-            height: 25px;
-            margin: 30px auto;
-            &:hover {
-                border: 1px solid whitesmoke;
+            margin-right: 30%;
+            p{
+            
+            width: 200px;
+            margin: 0 auto;
+            color: $header-text-grey;
             }
-        }
+            p:first-child{
+                margin-top: 100px;
+            }
+            .computerImage{
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                img{
+                    margin-bottom: 30px;
+                }
+            }
+            .learn-more{
+                margin: 20px 0;
+                width: fit-content;
+                &:hover{
+                    color: $link-yellow;
+                }
+                
+            }
+            .join-button{
+                padding: 8px 10px;
+                border: 1px solid $header-text-grey;
+                border-radius: 2px;
+                width: 80px;
+                height: 25px;
+                margin: 30px auto;
+                &:hover {
+                    border: 1px solid whitesmoke;
+                }
+            }
+    }
        
     }
 }
