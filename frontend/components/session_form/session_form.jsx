@@ -28,9 +28,9 @@ class SessionForm extends React.Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        debugger
+        
         if(this.props.formType === "Sign up" && !this.checked){
-            debugger
+            
             this.props.receiveErrors(["You must be 13 or older to register."])
 
             return;
@@ -56,6 +56,14 @@ class SessionForm extends React.Component {
             </ul>
         )
     }
+    hasError(field){
+        for(let i = 0; i < this.props.errors.length; i++) {
+            if (this.props.errors[i].includes(field)){
+                return true
+            }
+        }
+        return false;
+    }
 
     render() {
         const hasErrors = (this.props.errors.length > 0) ? "login-errors" : "empty"
@@ -67,17 +75,18 @@ class SessionForm extends React.Component {
                         <div className={hasErrors} >{this.renderErrors()}</div>
 
                         <label>Coal account name
-                        <input type="text" value={this.state.username} onChange={this.update('username')} />
+                        <input type="text" value={this.state.username} onChange={this.update('username')}
+                        className={this.hasError("Username") ? "red-border" : ""} />
                         </label>
 
                         {this.props.formType === "Sign up" ? 
                             <label>Email
-                                <input type="text" value={this.state.email} onChange={this.update('email')} />
+                                <input type="text" value={this.state.email} onChange={this.update('email')} className={this.hasError("Email") ? "red-border" : ""}/>
                             </label>
                         : null}
 
                         <label>Password 
-                        <input type="password" value={this.state.password} onChange={this.update('password')} />
+                        <input type="password" value={this.state.password} onChange={this.update('password')} className={this.hasError("Password") ? "red-border" : ""} />
                         </label>
 
                         {this.props.formType === "Sign up" ? 
@@ -90,7 +99,7 @@ class SessionForm extends React.Component {
                         </div>
                         <div className="age-check">
                             <label>
-                                <input id="age-check" onChange={() => this.toggleChecked()}type="checkbox"/>
+                                        <input id="age-check" onChange={() => this.toggleChecked()} type="checkbox" className={this.hasError("13") ? "red-border" : ""}/>
                                         I am 13 years or older and agree to the terms of the <Link to="">Coal Subscriber Agreement</Link> and the <Link to="">Gears Privacy Policy.</Link>
                             </label>
                         </div>
