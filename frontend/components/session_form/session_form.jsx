@@ -22,6 +22,9 @@ class SessionForm extends React.Component {
     }
     handleSubmit(e){
         e.preventDefault();
+        if(this.formType === "Sign up" && document.getElementById("age-check").checked === false){
+            return false;
+        }
         const user = Object.assign({}, this.state);
         this.props.action(user)      
     }
@@ -50,7 +53,7 @@ class SessionForm extends React.Component {
             <div className={this.props.klassName}>
                 <div className="left-login-section">
                     <form className="session-form" onSubmit={this.handleSubmit}>
-                        <h2>{this.props.formType}</h2>
+                        {this.props.formType === "Sign in" ? <h2>{this.props.formType}</h2> : <h2>Create your account</h2>}
                         <div className={hasErrors} >{this.renderErrors()}</div>
 
                         <label>Coal account name
@@ -77,7 +80,7 @@ class SessionForm extends React.Component {
                         </div>
                         <div className="age-check">
                             <label>
-                                <input type="checkbox"/>
+                                <input id="age-check" type="checkbox"/>
                                         I am 13 years or older and agree to the terms of the <Link to="">Coal Subscriber Agreement</Link> and the <Link to="">Gears Privacy Policy.</Link>
                             </label>
                         </div>
