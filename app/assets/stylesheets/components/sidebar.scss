@@ -51,8 +51,11 @@
         color: $link-yellow;
         padding: 5px;
         &:first-child {
-            color: white;
+            color: whitesmoke;
             text-transform: uppercase;
+        }
+        &:hover{
+            color: whitesmoke;
         }
        }
     }

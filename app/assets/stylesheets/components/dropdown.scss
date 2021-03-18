@@ -1,5 +1,5 @@
 .header-drop-down{
-    width: 100px;
+    
     position: relative;
    
     .active{
@@ -17,6 +17,9 @@
             }
             li{
                 padding: 5px 10px;
+                &:hover {
+                    color: whitesmoke;
+                }
             }
             li:last-child{
                 padding-bottom: 10px;
@@ -45,6 +48,10 @@
     .store-button{
         position: relative;
         cursor: pointer;
+        &:hover{
+           color: whitesmoke;
+       }
+       
     }
     .store-button+div{
         position: absolute;
@@ -54,6 +61,9 @@
     .community-button{
         position: relative;
         cursor: pointer;
+       &:hover{
+           color: whitesmoke;
+       }
     }
     .community-button+div{
         position: absolute;
@@ -63,6 +73,9 @@
     .main-username-button{
         position: relative;
         cursor: pointer;
+         &:hover{
+           color: whitesmoke;
+       }
     }
     .main-username-button+div{
         position: absolute;
