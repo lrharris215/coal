@@ -122,14 +122,22 @@
             margin-top: 10px;
             a {
                 margin: 0 5px;
+                &:hover{
+                    color: whitesmoke;
+                }
             }
+
             .fa-caret-down{
             padding-top: 2px;
             margin: 0 3px;
             }
+            
         }
     }
 }
 .pretend-link, .fa-caret-down{
     cursor: pointer;
+    &:hover{
+         color: whitesmoke;
+    }
 }
