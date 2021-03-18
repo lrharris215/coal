@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
             password: "password"
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     handleSubmit(e){
@@ -28,13 +29,26 @@ class SessionForm extends React.Component {
         })
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, idx) => {
+                    return (
+                        <li key={`error-${idx}`}>{error}</li>
+                    )
+                })}
+            </ul>
+        )
+    }
+
     render() {
+        const hasErrors = (this.props.errors.length > 0) ? "login-errors" : "empty"
         return (
             <div className={this.props.klassName}>
                 <div className="left-login-section">
                     <form className="session-form" onSubmit={this.handleSubmit}>
                         <h2>{this.props.formType}</h2>
-                        {(this.props.errors.length) ? <div className="login-errors">{this.props.errors}</div> : null}
+                        <div className={hasErrors} >{this.renderErrors()}</div>
 
                         <label>Coal account name
                         <input type="text" value={this.state.username} onChange={this.update('username')} />
