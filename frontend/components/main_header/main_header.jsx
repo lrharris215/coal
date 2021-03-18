@@ -31,8 +31,9 @@ class MainHeader extends React.Component {
                         {this.props.loggedIn ? <li>
                                 <HeaderDropDownContainer buttonName={"main-username-button"} hasHover={true} titleItem={<p>{this.props.username}</p>} listItems={[<Link to="/">Activity</Link>, <Link to="/">Profile</Link>, <Link to="/">Friends</Link>, <Link to="/">Groups</Link>, <Link to="/">Content</Link>, <Link to="/">Badges</Link>, <Link to="/">Inventory</Link>]}/>
                                 </li> : <li><a href="">About</a></li>}
-
-                        <li><a href="">Chat</a></li>
+                                
+                        {this.props.loggedIn ? <li><a href="">Chat</a></li> : null}
+                        
                         <li><a href="">Support</a></li>
                     </ul>
                 </nav>
