@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loginUser } from '../../actions/session_actions';
+import { loginUser, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const MSTP = ({errors}) => {
@@ -10,13 +10,15 @@ const MSTP = ({errors}) => {
         errors: errors.session,
         navLink: <Link to="/signup">Sign Up</Link>,
         klassName: "login-form",
+       
         
     }
 }
 
 const MDTP = dispatch => {
     return {
-        action: (user) => dispatch(loginUser(user))
+        action: (user) => dispatch(loginUser(user)),
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 
