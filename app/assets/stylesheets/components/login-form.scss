@@ -86,6 +86,9 @@
                     background-image: linear-gradient(to right, rgb(255, 229, 135),rgb(255, 171, 36));
 
                 }
+                &:active{
+                    border: 2px solid whitesmoke;
+                }
             }
             .login-bottom{
                 display: flex; 
