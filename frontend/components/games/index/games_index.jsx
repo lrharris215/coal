@@ -12,11 +12,14 @@ class GamesIndex extends React.Component {
     }
 
     render() {
-        debugger
-        const mappedGames = this.props.games.map((game) => {
         
+        const mappedGames = this.props.games.map((game) => {
+            const titleCard = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === "title-card")
             return (
-                <Link to={`/api/games/${game.id}`} component={<GameIndexItem game={game} titleCard={game.gameImages[0]}/>} />
+                
+                <li key={`game-${game.id}`}>
+                     <GameIndexItem  game={game}/>
+                </li>
             )
         })
         return (

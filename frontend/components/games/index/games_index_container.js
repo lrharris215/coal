@@ -3,7 +3,7 @@ import { requestAllGames } from '../../../actions/games_actions';
 import GamesIndex from './games_index';
 
 const MSTP = state => {
-    debugger
+    
     return {
         games: Object.values(state.entities.games)
     }
