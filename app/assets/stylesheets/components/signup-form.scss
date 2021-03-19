@@ -25,9 +25,10 @@
                 font-size: 14px;
                 padding: 20px;
                 background-color: $background-darker-grey;
-                transition: max-height .5s ease-in;
+                transition: max-height 1s ease-in-out;
                 max-height: 500px;
                 overflow: hidden;
+                
             }
             .empty {
             max-height: 0;
