@@ -1,6 +1,6 @@
 .main-header {
     // font-family: "Source Sans Pro", sans-serif; 
-    font-family: "Duru Sans";
+    font-family: "Open Sans";
     
     font-weight: 600;
     display: grid;
@@ -45,12 +45,12 @@
     }
     .main-header-nav{
         text-transform: uppercase;
-        
+        margin-left: 50px;
         color: $header-text-grey;
         display: flex;
         align-items: center;
         font-weight: 500;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         font-size: 14px;
         >ul{
             display: flex;
@@ -72,24 +72,35 @@
     .right-main-header{
        
         display: flex;
-        font-size: 10px;
-        
+        font-size: 11px;
+        font-weight: 400;
         .install-button {
-            margin: 5px 10px 0 5px;
-            padding: 5px 15px 0px 15px;
-            height: 16px;
+            margin: 7px 10px 0 10px;
+            padding-bottom: 2px;
+            width: 110px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: $lighter-grey;
             cursor: pointer;
+            &:hover{
+                color: white;
+            }
             .fa-download{
                 margin-right: 10px;
+               
+                font-size: 13px;
             }
         }
         .grey {
             background-color: $header-dark-grey;
-            color: white;
+            
         }
         .orange {
             background-color: $button-orange;
-            color: white;
+            
         }
        
     
@@ -120,23 +131,32 @@
         .loggedOut-right-header{
             display: flex;
             margin-top: 10px;
+            
             a {
                 margin: 0 5px;
+                height: fit-content;
+               
                 &:hover{
                     color: whitesmoke;
                 }
             }
 
             .fa-caret-down{
-            padding-top: 2px;
+            padding-bottom: 2px;
+            
             margin: 0 3px;
             }
             
         }
     }
 }
+.line{
+    margin: 0 7px;
+   
+}
 .pretend-link, .fa-caret-down{
     cursor: pointer;
+   
     &:hover{
          color: whitesmoke;
     }
