@@ -17,7 +17,7 @@
             color: $header-text-grey;
             padding: 50px 150px 0 0;
             .login-errors{
-                border: 1px solid red;
+                border: 2px solid $error-red;
                 width: 80%;
                 margin: 20px 0;
                 color: whitesmoke;
@@ -151,6 +151,6 @@
         background-color: rgb(33,34,38);
     }
     .red-border{
-        outline: 1px solid red;
+        outline: 1px solid $error-red;
     }
 }
