@@ -25,8 +25,9 @@
                 font-size: 14px;
                 padding: 20px;
                 background-color: $background-darker-grey;
-                transition: max-height 1s ease-in-out;
-                max-height: 500px;
+                transition-delay: .5s;
+                transition: max-height 2s ease-out;
+                max-height: 200px;
                 overflow: hidden;
                 
             }
