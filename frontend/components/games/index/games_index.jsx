@@ -16,25 +16,36 @@ class GamesIndex extends React.Component {
         
         const mappedGames = this.props.games.map((game) => {
             const titleCard = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === "title-card")
-            const screenshots = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === "screenshot")
-            debugger
             return (
                 
                 <li key={`game-${game.id}`}>
                      <GameIndexItem titleCard={titleCard} game={game}/>
-                    <GameIndexDetail screenshots={screenshots} game={game}/>
+                </li>
+            )
+        })
+        const mappedGamesDetails = this.props.games.map((game) => {
+            const screenshots = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === "screenshot")
+            return (
+                <li key={`game-detail-${game.id}`}>
+                <GameIndexDetail screenshots={screenshots} game={game} />
                 </li>
             )
         })
         return (
             <div className="index-container">
                 <div className="index-left-side">
+                    <div className="index-header-row">
+                        <p>See more:</p>
+                        <div><Link to="">New Releases</Link></div>
+                    </div>
                     <ul>
                         {mappedGames}
                     </ul>
                 </div>
                 <div className="index-right-side">
-                    {/*<GameIndexDetail /> */}
+                    <ul>
+                    {mappedGamesDetails}
+                    </ul>
                 </div>
             </div>
         )

@@ -13,12 +13,16 @@ const App = () => {
         <header>
             <MainHeader />
         </header>
-        <Switch>
-        <AuthRoute path="/login" component={LogInFormContainer} />
-        <AuthRoute path="/signup" component={SignUpFormContainer} />
-        <Route path="/" component={Sidebar} />
-        </Switch>
-       <Route exact path="/" component={GamesIndexContainer} />
+        <div className="main-body-section">
+            <Switch>
+                <AuthRoute path="/login" component={LogInFormContainer} />
+                <AuthRoute path="/signup" component={SignUpFormContainer} />
+                <Route path="/" component={Sidebar} />
+            </Switch>
+
+            <Route exact path="/" component={GamesIndexContainer} />
+        </div>
+
     </div>
     )
 }

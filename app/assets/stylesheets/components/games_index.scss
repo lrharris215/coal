@@ -1,7 +1,93 @@
-.titleCard-box {
-    width: 180px;
-    height: auto;
+.index-container {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 30px;
+    border: 1px solid pink;
+    .index-left-side {
+        width: 700px;
+        background-color: $index-bg-red;
+        height: fit-content;
+        .index-header-row {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: $gradient-start-red;
+            p{
+                font-size: 12px;
+                color: $header-text-grey;
+            }
+            div{
+                font-size: 12px;
+                border: 1px solid $header-text-grey;
+                padding: 5px 10px;
+                margin: 5px;
+                border-radius: 2px;
+                color: whitesmoke;
+                &:hover{
+                    border-color: whitesmoke;
+                }
+            }
+        }
+        
+        .games-index-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: $gradient-start-red;
+            margin-bottom: 5px;
+            height: 70px;
+            .games-index-item-left {
+                display: flex;
+                height: 70px;
+                .titleCard-box {
+                width: 185px;
+                height: 70px;
+                img {
+                    height: 70px;
+                    width: 185px;
+                }
+                }
+                .games-index-item-words{
+                    margin-left: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    color: $header-dark-grey;
+                    h4{
+                        margin: 0;
+                        color: $lighter-grey;
+                    }
+                    p {
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                }
+            }
+          
+            .games-index-item-price{
+                display: block;
+                margin: 0;
+            }
+
+            &:hover{
+                background-color: $gradient-mid-red;
+              .games-index-item-left>div>h4 {
+                  color: black;
+              }
+            }
+
+        }
+
+    }
+    .index-right-side {
+        border: 1px solid purple;
+        background-color: $gradient-mid-red;
+        .game-detail-tab{
+            margin: 15px;
+        }
+    }
 }
+
+
 .game-index-screenshots{
     width: 258px;
     height: 134px;
