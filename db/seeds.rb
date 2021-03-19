@@ -225,3 +225,175 @@ GameImage.create({
     img_url: "https://cdn.akamai.steamstatic.com/steam/apps/1145360/ss_abb2427810a4e91cc600f37c3630b912d4e0191b.600x338.jpg?t=1615848317",
     img_type: "screenshot"
 })
+
+#Bastion
+
+GameImage.create({
+    game_id: 4,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/107100/header.jpg?t=1601950406",
+    img_type: "title-card"
+})
+
+GameImage.create({
+    game_id: 4,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/107100/ss_d158b1b4ece3a362c7d8acc6168ad14de00e64ba.600x338.jpg?t=1601950406",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 4,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/107100/ss_5e3781ab7684f7943b25346f9ae7c3a32dc0e7a5.600x338.jpg?t=1601950406",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 4,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/107100/ss_7d3cd935098d3cd0603f713017624ef508c86c98.600x338.jpg?t=1601950406",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 4,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/107100/ss_9cc86f936b3b0761cb6f685594ba56f4d5088369.600x338.jpg?t=1601950406",
+    img_type: "screenshot"
+})
+
+#civ6
+GameImage.create({
+    game_id: 5,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/289070/header.jpg?t=1611862077",
+    img_type: "title-card"
+})
+
+GameImage.create({
+    game_id: 5,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/289070/ss_f501156a69223131ee8b12452f3003698334e964.600x338.jpg?t=1611862077",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 5,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/289070/ss_36c63ebeb006b246cb740fdafeb41bb20e3b330d.600x338.jpg?t=1611862077",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 5,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/289070/ss_a4b07a0fbdd09e35b5ec3a4726239b884f1f1f7d.600x338.jpg?t=1611862077",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 5,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/289070/ss_fd6bbe6791ee8ab68f8a91455fa3c25b4dd9bca7.116x65.jpg?t=1611862077",
+    img_type: "screenshot"
+})
+
+#TWD
+GameImage.create({
+    game_id: 6,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/207610/header.jpg?t=1612901774",
+    img_type: "title-card"
+})
+
+GameImage.create({
+    game_id: 6,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/207610/ss_7a2c18f45ed5c6464ae803ae49c32bf3717ae375.600x338.jpg?t=1612901774",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 6,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/207610/ss_b8880868558943bf6b8e1aa94fe9ab51ea04472a.600x338.jpg?t=1612901774",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 6,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/207610/ss_8652e0679f3de9d0382a0164888c60a5edb0b076.600x338.jpg?t=1612901774",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 6,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/207610/ss_044086628ad6b406be3f75d9bbb9656512d5ff18.600x338.jpg?t=1612901774",
+    img_type: "screenshot"
+})
+
+#Subnautica 
+GameImage.create({
+    game_id: 7,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1609982984",
+    img_type: "title-card"
+})
+GameImage.create({
+    game_id: 7,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/264710/ss_e182b6b20bb797500f9f63c561586d920d44e37c.600x338.jpg?t=1609982984",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 7,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/264710/ss_cebc378d2f7bc78978c21db4e3c5e12ccd067349.600x338.jpg?t=1609982984",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 7,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/264710/ss_f0eeabe108c2bc2b3e370b9828fb280035b50db2.600x338.jpg?t=1609982984",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 7,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/264710/ss_883a98ad56021ce409219e1b749818866b6115cd.600x338.jpg?t=1609982984",
+    img_type: "screenshot"
+})
+
+#witness
+
+
+GameImage.create({
+    game_id: 8,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/210970/header.jpg?t=1598383120",
+    img_type: "title-card"
+})
+GameImage.create({
+    game_id: 8,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/210970/ss_9c73ac83c8acfb69db6166f239fdba2ffa099b32.600x338.jpg?t=1598383120",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 8,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/210970/ss_6a7964a4dede8ad7d8b4e413e8b291defbbaa55b.600x338.jpg?t=1598383120",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 8,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/210970/ss_583fdbf6aa66a179d60a2261bab7b10c102e36e8.600x338.jpg?t=1598383120",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 8,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/210970/ss_fabb0939200a1f2bbb40b775c8e07645f21dc44a.600x338.jpg?t=1598383120",
+    img_type: "screenshot"
+})
+
+#Talos
+
+GameImage.create({
+    game_id: 9,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/257510/header.jpg?t=1601561095",
+    img_type: "title-card"
+})
+GameImage.create({
+    game_id: 9,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/257510/ss_8061dc63743404a7829eabdd47590421652c318d.600x338.jpg?t=1601561095",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 9,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/257510/ss_3f16d21674b27dad893ccb27b581670b5bb8043a.600x338.jpg?t=1601561095",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 9,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/257510/ss_bf869965e8e972acb4dfe3f8d4bf7baa2c2cdf29.600x338.jpg?t=1601561095",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 9,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/257510/ss_b42acabe63d45a11580a2949e34f305e1bd10fc7.600x338.jpg?t=1601561095",
+    img_type: "screenshot"
+})
