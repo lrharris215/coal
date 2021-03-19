@@ -14,6 +14,7 @@ class GamesIndex extends React.Component {
     render() {
         debugger
         const mappedGames = this.props.games.map((game) => {
+        
             return (
                 <Link to={`/api/games/${game.id}`} component={<GameIndexItem game={game} titleCard={game.gameImages[0]}/>} />
             )

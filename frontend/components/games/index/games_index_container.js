@@ -3,8 +3,9 @@ import { requestAllGames } from '../../../actions/games_actions';
 import GamesIndex from './games_index';
 
 const MSTP = state => {
+    debugger
     return {
-        games: state.entities.games,
+        games: Object.values(state.entities.games)
     }
 }
 
