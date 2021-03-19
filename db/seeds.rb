@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+GameImage.delete_all
 Game.delete_all
 User.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('games')
+ActiveRecord::Base.connection.reset_pk_sequence!('game_images')
 
 User.create({
     username: "Guest",
@@ -29,7 +30,9 @@ User.create({
     password: "password"
 })
 
-#date is (YYYY, MM, DD)
+#Games 
+#date is Date.parse("YYYY-MM-DD")
+#1
 Game.create({
     title: "Stardew Valley",
     publisher: "ConcernedApe",
@@ -41,6 +44,7 @@ Game.create({
 
 })
 
+#2
 Game.create({
     title: "The Elder Scrolls V: Skyrim Special Edition",
     publisher: "Bethesda Softworks",
@@ -51,6 +55,7 @@ Game.create({
     featured: true
 })
 
+#3
 Game.create({
     title: "Hades",
     publisher: "Supergiant Games",
@@ -60,6 +65,7 @@ Game.create({
     description: "Hades is a god-like rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles, including the fast-paced action of Bastion, the rich atmosphere and depth of Transistor, and the character-driven storytelling of Pyre."
 })
 
+#4
 Game.create({
     title: "Bastion",
     publisher: "Supergiant Games",
@@ -69,6 +75,7 @@ Game.create({
     description: "Bastion is an action role-playing experience that redefines storytelling in games, with a reactive narrator who marks your every move. Explore more than 40 lush hand-painted environments as you discover the secrets of the Calamity, a surreal catastrophe that shattered the world to pieces. Wield a huge arsenal of upgradeable weapons and battle savage beasts adapted to their new habitat. Finish the main story to unlock the New Game Plus mode and continue your journey!"
 })
 
+#5
 Game.create({
     title: "Sid Meier’s Civilization® VI",
     publisher: "2K, Aspyr (Mac), Aspyr (Linux)",
@@ -78,6 +85,7 @@ Game.create({
     description: "Civilization VI offers new ways to interact with your world, expand your empire across the map, advance your culture, and compete against history’s greatest leaders to build a civilization that will stand the test of time. Play as one of 20 historical leaders including Roosevelt (America) and Victoria (England)."
 })
 
+#6
 Game.create({
     title: "The Walking Dead",
     developer: "Telltale Games",
@@ -87,6 +95,7 @@ Game.create({
     description: "The Walking Dead is a five-part game series set in the same universe as Robert Kirkman’s award-winning comic book series. Play as Lee Everett, a convicted criminal, who has been given a second chance at life in a world devastated by the undead. With corpses returning to life and survivors stopping at nothing to maintain their own safety, protecting an orphaned girl named Clementine may offer him redemption in a world gone to hell."
 })
 
+#7
 Game.create({
     title: "Subnautica",
     developer: "Unknown Worlds Entertainment",
@@ -97,6 +106,7 @@ Game.create({
     featured: true
 })
 
+#8
 Game.create({
     title: "The Witness",
     developer: "Thekla, Inc.",
@@ -107,6 +117,7 @@ Game.create({
     featured: true
 })
 
+#9
 Game.create({
     title: "The Talos Principle",
     developer: "Croteam",
@@ -117,3 +128,100 @@ Game.create({
 
 })
 
+#Game Images
+
+
+#SDValley
+GameImage.create({
+    game_id: 1,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg?t=1608624324",
+    img_type: "title-card"
+})
+
+GameImage.create({
+    game_id: 1,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_b887651a93b0525739049eb4194f633de2df75be.600x338.jpg?t=1608624324",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 1,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_30aeedc47e731232ade368831a598d6545346f70.600x338.jpg?t=1608624324",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 1,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_f79d2066dfaf32bbe87868d36db4845f771eddbd.600x338.jpg?t=1608624324",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 1,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/413150/ss_980472fb4f4860639155880938b6ec292a0648c4.600x338.jpg?t=1608624324",
+    img_type: "screenshot"
+})
+
+#Skyrim
+GameImage.create({
+    game_id: 2,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/489830/header.jpg?t=1590515887",
+    img_type: "title-card"
+})
+
+GameImage.create({
+    game_id: 2,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/489830/ss_5d19c69d33abca6f6271d75f371d4241c0d6b2d1.600x338.jpg?t=1590515887",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 2,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/489830/ss_d64b646612ab1402bdda8e400672aa0dbcb352ea.600x338.jpg?t=1590515887",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 2,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/489830/ss_8c7ecd394afb581b9b2137a3de04433f78fdf4ea.600x338.jpg?t=1590515887",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 2,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/489830/ss_73c1a0bb7e1720c8a1847186c3ddd837d3ca7a8d.600x338.jpg?t=1590515887",
+    img_type: "screenshot"
+})
+
+#Hades
+
+GameImage.create({
+    game_id: 3,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/1145360/header.jpg?t=1615848317",
+    img_type: "title-card"
+    
+})
+
+GameImage.create({
+    game_id: 3,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/1145360/ss_c0fed447426b69981cf1721756acf75369801b31.600x338.jpg?t=1615848317",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 3,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/1145360/ss_8a9f0953e8a014bd3df2789c2835cb787cd3764d.600x338.jpg?t=1615848317",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 3,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/1145360/ss_217b70678a2eea71a974fba1a4cd8baa660581bb.600x338.jpg?t=1615848317",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 3,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/1145360/ss_abb2427810a4e91cc600f37c3630b912d4e0191b.600x338.jpg?t=1615848317",
+    img_type: "screenshot"
+})
