@@ -26,6 +26,7 @@ class GamesIndexItem extends React.Component {
                         
                         <p>${game.price / 100}</p>
                     </div>
+                    <div className="index-bridge"></div>
                 </div>
             </Link>
 

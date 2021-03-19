@@ -6,6 +6,9 @@ export default (props) => {
             <div className="game-detail-tab">
                 <div className="top-part">
                     <h3>{props.game.title}</h3>
+                    <div className="review-box"></div>
+                 </div>
+                <div className="image-list">
                     <ul>
                         {props.screenshots.map((pic) => {
                             return (
