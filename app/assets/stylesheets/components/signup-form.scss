@@ -25,9 +25,11 @@
                 font-size: 14px;
                 padding: 20px;
                 background-color: $background-darker-grey;
-                transition: max-height .5s ease-in;
-                max-height: 500px;
+                transition-delay: .5s;
+                transition: max-height 2s ease-out;
+                max-height: 200px;
                 overflow: hidden;
+                
             }
             .empty {
             max-height: 0;
@@ -138,6 +140,8 @@
                 }
                 &:active{
                     border: 2px solid whitesmoke;
+                    height: 31px;
+                    width: 176px;
                 }
             }
         }
@@ -147,7 +151,6 @@
         background-color: rgb(33,34,38);
     }
     .red-border{
-        border: 1px solid red;
         outline: 1px solid red;
     }
 }
