@@ -2,7 +2,11 @@ class Api::GamesController < ApplicationController
 
     def show
         @game = Game.find_by_id(params[:id])
-        render :show
+        if @game
+            render :show
+        else
+            render json: ["Sorry, the game you are looking for cannot be found"], status: 404
+        end
     end
 
     def index
@@ -11,7 +15,6 @@ class Api::GamesController < ApplicationController
     end
 
     def featured
-        puts "featturreee"
         @games= Game.where(featured: true)
         render :index
     end
