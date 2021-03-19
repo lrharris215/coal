@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root'
-import { createNewUser, loginUser, logoutUser } from './actions/session_actions'
+import { requestAllGames, requestFeaturedGames, requestOneGame } from './actions/games_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let preloadedState = {};
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const store = configureStore(preloadedState);
 
     window.store = store;
-    window.createNewUser = createNewUser;
-    window.loginUser = loginUser;
-    window.logoutUser = logoutUser;
+    window.requestAllGames = requestAllGames;
+    window.requestOneGame = requestOneGame;
+    window.requestFeaturedGames = requestFeaturedGames;
 
     ReactDOM.render(<Root store={store} />, root)
 })
