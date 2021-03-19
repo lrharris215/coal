@@ -4,6 +4,5 @@ class Game < ApplicationRecord
     # will belong to user after i make the shopping cart/library
     #belongs_to :user
 
-    #has many game images
-    
+    has_many :game_images,
 end
