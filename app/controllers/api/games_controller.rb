@@ -7,12 +7,13 @@ class Api::GamesController < ApplicationController
 
     def index
         @games = Game.all
-        render :index;
+        render :index
     end
 
     def featured
-        @games= Game.where(featured: false)
-        render :index;
+        puts "featturreee"
+        @games= Game.where(featured: true)
+        render :index
     end
 
 
