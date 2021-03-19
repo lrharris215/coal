@@ -1,4 +1,4 @@
-class Api::GamesController < ApplicationController {
+class Api::GamesController < ApplicationController 
 
     def show
         @game = Game.find_by_id(params[:id])
@@ -10,5 +10,10 @@ class Api::GamesController < ApplicationController {
         render :index;
     end
 
+    def featured
+        @games= Game.where(featured: false)
+        render :index;
+    end
 
-}
+
+end

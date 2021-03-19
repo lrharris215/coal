@@ -36,7 +36,8 @@ Game.create({
     developer: "ConcernedApe",
     release_date: Date.parse("2016-02-26"),
     price: 1499,
-    description: "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?"
+    description: "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+    featured: true
 
 })
 
@@ -46,7 +47,8 @@ Game.create({
     developer: "Bethesda Game Studeo",
     release_date: Date.parse("2016-10-27"),
     price: 3999,
-    description: "Winner of more than 200 Game of the Year Awards, Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features like remastered art and effects, volumetric god rays, dynamic depth of field, screen-space reflections, and more. Skyrim Special Edition also brings the full power of mods to the PC and consoles. New quests, environments, characters, dialogue, armor, weapons and more – with Mods, there are no limits to what you can experience."
+    description: "Winner of more than 200 Game of the Year Awards, Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features like remastered art and effects, volumetric god rays, dynamic depth of field, screen-space reflections, and more. Skyrim Special Edition also brings the full power of mods to the PC and consoles. New quests, environments, characters, dialogue, armor, weapons and more – with Mods, there are no limits to what you can experience.",
+    featured: true
 })
 
 Game.create({
@@ -91,7 +93,8 @@ Game.create({
     publisher: "Unknown Worlds Entertainment",
     release_date: Date.parse("2018-01-03"),
     price: 2999,
-    description: "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive."
+    description: "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive.",
+    featured: true
 })
 
 Game.create({
@@ -100,7 +103,8 @@ Game.create({
     publisher: "Thekla, Inc.",
     release_date: Date.parse("2016-01-26"),
     price: 3999,
-    description: "You wake up, alone, on a strange island full of puzzles that will challenge and surprise you. You don't remember who you are, and you don't remember how you got here, but there's one thing you can do: explore the island in hope of discovering clues, regaining your memory, and somehow finding your way home."
+    description: "You wake up, alone, on a strange island full of puzzles that will challenge and surprise you. You don't remember who you are, and you don't remember how you got here, but there's one thing you can do: explore the island in hope of discovering clues, regaining your memory, and somehow finding your way home.",
+    featured: true
 })
 
 Game.create({

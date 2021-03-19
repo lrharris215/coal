@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_19_014141) do
     t.datetime "updated_at", null: false
     t.date "release_date", null: false
     t.boolean "featured", default: false
+    t.index ["featured"], name: "index_games_on_featured"
   end
 
   create_table "users", force: :cascade do |t|
