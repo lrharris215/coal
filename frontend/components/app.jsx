@@ -22,7 +22,7 @@ const App = () => {
                         <Route path="/" component={Sidebar} />
                     </Switch>
 
-                    {/* <Route exact path="/" component={FeaturedCarouselContainer} /> */}
+                    <Route exact path="/" component={FeaturedCarouselContainer} />
                 </div>
                 <Route exact path="/" component={GamesIndexContainer} />
             </div>

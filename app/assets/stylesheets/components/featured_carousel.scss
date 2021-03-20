@@ -1,0 +1,50 @@
+.featured-carousel-outer-div {
+    h2 {
+    }
+    > div {
+        display: flex;
+        border: 1px solid hotpink;
+    }
+    .left-arrow {
+    }
+    .right-arrow {
+    }
+    .active {
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    .featured-carousel-inner-div {
+        display: flex;
+        background-color: $header-red;
+        color: whitesmoke;
+        .big-image {
+            width: 656px;
+            height: 353px;
+        }
+        .featured-right-side {
+            .title {
+            }
+            .four-pic-box {
+                border: 1px solid white;
+                width: 325px;
+                height: fit-content;
+                display: flex;
+                flex-wrap: wrap;
+                .screenshot-div {
+                    img {
+                        width: 162px;
+                        height: 69px;
+                    }
+                }
+            }
+            .recommended {
+            }
+            .featured-bottom-row {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
