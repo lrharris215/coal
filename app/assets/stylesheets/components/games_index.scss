@@ -7,32 +7,41 @@
         width: 700px;
         height: fit-content;
         margin: 10px;
+        .active {
+            background-color: $gradient-mid-red;
+            .games-index-item-left > div > h4 {
+                color: black;
+            }
+        }
+        .inactive {
+            background-color: $gradient-start-red;
+        }
         .index-header-row {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             background-color: $gradient-start-red;
-            p{
+            p {
                 font-size: 12px;
                 color: $header-text-grey;
             }
-            div{
+            div {
                 font-size: 12px;
                 border: 1px solid $header-text-grey;
                 padding: 5px 10px;
                 margin: 5px;
                 border-radius: 2px;
                 color: whitesmoke;
-                &:hover{
+                &:hover {
                     border-color: whitesmoke;
                 }
             }
         }
-        
+
         .games-index-item {
             display: flex;
             justify-content: space-between;
-            background-color: $gradient-start-red;
+
             margin-bottom: 5px;
             height: 70px;
             position: relative;
@@ -40,20 +49,20 @@
                 display: flex;
                 height: 70px;
                 .titleCard-box {
-                width: 185px;
-                height: 70px;
-                img {
-                    height: 70px;
                     width: 185px;
+                    height: 70px;
+                    img {
+                        height: 70px;
+                        width: 185px;
+                    }
                 }
-                }
-                .games-index-item-words{
+                .games-index-item-words {
                     margin-left: 15px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
                     color: $header-dark-grey;
-                    h4{
+                    h4 {
                         margin: 0;
                         color: $lighter-grey;
                     }
@@ -63,25 +72,12 @@
                     }
                 }
             }
-          
-            .games-index-item-price{
+            .games-index-item-price {
                 display: block;
                 margin: 0;
             }
 
-            &:hover{
-                background-color: $gradient-mid-red;
-              .games-index-item-left>div>h4 {
-                  color: black;
-              }
-            }
-            .index-bridge {
-                .active {
-                    display: block;
-                }
-                .hidden {
-                    display: none;
-                }
+            .index-bridge-active {
                 position: absolute;
                 border: 1px solid transparent;
                 height: 68px;
@@ -89,24 +85,24 @@
                 right: -21px;
                 z-index: 2;
             }
+            .index-bridge-hidden {
+                display: none;
+            }
         }
-
     }
     .index-right-side {
         border: 1px solid purple;
         background-color: $gradient-mid-red;
         width: fit-content;
-        .game-detail-tab{
+        .game-detail-tab {
             margin: 15px;
         }
         .image-list {
             width: fit-content;
-            .game-index-screenshots{
+            .game-index-screenshots {
                 width: 275px;
                 height: 150px;
             }
         }
     }
 }
-
-

@@ -1,56 +1,69 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import GameIndexItem from './games_index_item'
-import GameIndexDetail from './games_index_detail'
+import { Link } from 'react-router-dom';
+import GameIndexItem from './games_index_item';
+import GameIndexDetail from './games_index_detail';
 
 class GamesIndex extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            activeGame: null,
+        };
     }
 
     componentDidMount() {
         this.props.requestAllGames();
     }
+    componentDidUpdate(oldProps, oldState) {
+        if (oldState.activeGame === null && this.props.games.length > 0) {
+            this.setState({
+                activeGame: this.props.games[0].id,
+            });
+        }
+    }
 
     render() {
-        
         const mappedGames = this.props.games.map((game) => {
-            const titleCard = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === "title-card")
+            const titleCard = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === 'title-card');
+
             return (
-                
-                <li key={`game-${game.id}`}>
-                     <GameIndexItem titleCard={titleCard} game={game}/>
+                <li
+                    key={`game-${game.id}`}
+                    onMouseEnter={() => {
+                        this.setState({ activeGame: game.id });
+                    }}>
+                    <GameIndexItem isActive={this.state.activeGame === game.id} titleCard={titleCard} game={game} />
                 </li>
-            )
-        })
+            );
+        });
         const mappedGamesDetails = this.props.games.map((game) => {
-            const screenshots = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === "screenshot")
+            const screenshots = Object.values(game.gameImages).filter(
+                (gameImage) => gameImage.img_type === 'screenshot'
+            );
             return (
                 <li key={`game-detail-${game.id}`}>
-                <GameIndexDetail screenshots={screenshots} game={game} />
+                    <GameIndexDetail screenshots={screenshots} game={game} />
                 </li>
-            )
-        })
+            );
+        });
+
         return (
             <div className="index-container">
                 <div className="index-left-side">
                     <div className="index-header-row">
                         <p>See more:</p>
-                        <div><Link to="">New Releases</Link></div>
+                        <div>
+                            <Link to="">New Releases</Link>
+                        </div>
                     </div>
-                    <ul>
-                        {mappedGames}
-                    </ul>
+                    <ul>{mappedGames}</ul>
                 </div>
                 <div className="index-right-side">
-                    <ul>
-                    {mappedGamesDetails}
-                    </ul>
+                    <ul>{mappedGamesDetails}</ul>
                 </div>
             </div>
-        )
+        );
     }
-
 }
 
 export default GamesIndex;
