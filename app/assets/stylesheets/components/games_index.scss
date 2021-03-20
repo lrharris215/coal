@@ -1,8 +1,9 @@
 .index-container {
+    background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
+
     display: flex;
     margin-top: 10px;
     margin-left: 30px;
-    border: 1px solid pink;
     .index-left-side {
         width: 650px;
         height: fit-content;
@@ -10,6 +11,9 @@
         .active {
             background-color: $index-detail-red;
             #index-title {
+                color: black;
+            }
+            #price {
                 color: black;
             }
         }
@@ -73,8 +77,14 @@
                 }
             }
             .games-index-item-price {
-                display: block;
+                display: flex;
                 margin: 0;
+                color: $lighter-grey;
+                align-items: center;
+                p {
+                    padding: 0 15px;
+                    font-size: 12px;
+                }
             }
 
             .index-bridge-active {
@@ -92,14 +102,14 @@
     }
     .index-right-side {
         background-color: $index-detail-red;
-        width: fit-content;
         margin-top: 15px;
         padding-left: 15px;
         width: 287px;
+        height: fit-content;
         .game-detail-tab {
             width: 275px;
+            padding-top: 15px;
             .top-part {
-                border: 1px solid green;
                 h3 {
                     margin: 0;
                     text-overflow: ellipsis;
@@ -108,14 +118,27 @@
                 }
                 .review-box {
                     background-color: $review-box-red;
-                    font-size: 12px;
+                    font-size: 11px;
+                    border-radius: 2px;
+                    margin: 10px 0;
+                    padding: 5px;
                     p {
+                        background-color: transparent;
                         color: whitesmoke;
                         span {
                             background-color: transparent;
                             color: $link-yellow;
                         }
                     }
+                }
+                .categories {
+                    background-color: $review-box-red;
+                    font-size: 11px;
+                    color: whitesmoke;
+                    margin: 3px 3px 5px 0;
+                    width: fit-content;
+                    padding: 3px;
+                    border-radius: 2px;
                 }
             }
         }
@@ -124,6 +147,10 @@
             .game-index-screenshots {
                 width: 275px;
                 height: 150px;
+                margin-bottom: 7px;
+            }
+            &:last-child {
+                margin-bottom: 12px;
             }
         }
         .hidden {

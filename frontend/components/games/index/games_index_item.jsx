@@ -22,7 +22,7 @@ class GamesIndexItem extends React.Component {
                             </div>
                         </div>
                         <div className="games-index-item-price">
-                            <p>${game.price / 100}</p>
+                            <p id="price">${game.price / 100}</p>
                         </div>
                         <div className={`${isActive ? 'index-bridge-active' : 'index-bridge-hidden'}`}></div>
                     </div>

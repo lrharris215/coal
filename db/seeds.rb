@@ -128,6 +128,16 @@ Game.create({
 
 })
 
+#10 
+Game.create({
+    title: "Broken Age",
+    developer: "Double Fine Productions",
+    publisher: "Double Fine Productions",
+    release_date: Date.parse("2014-01-14"),
+    price: 1499,
+    description: "A family friendly, hand-animated, puzzle-filled adventure game with an all-star cast, including Elijah Wood, Jack Black and Masasa Moyo. Funded by a record breaking crowdfunding campaign and designed by industry legend Tim Schafer, Broken Age is a timeless coming-of-age story."
+})
+
 #Game Images
 
 
@@ -397,3 +407,34 @@ GameImage.create({
     img_url: "https://cdn.akamai.steamstatic.com/steam/apps/257510/ss_b42acabe63d45a11580a2949e34f305e1bd10fc7.600x338.jpg?t=1601561095",
     img_type: "screenshot"
 })
+
+#brokenAge
+GameImage.create({
+    game_id: 10,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/232790/header.jpg?t=1598206793",
+    img_type: "title-card"
+})
+
+GameImage.create({
+    game_id: 10,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/232790/ss_50d2f768497d2e3d9a172c5c98e74066ee8ab1ab.600x338.jpg?t=1598206793",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 10,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/232790/ss_d957c6d99ac66b74abb61ff471bfb8ff3457fafa.600x338.jpg?t=1598206793",
+    img_type: "screenshot"
+})
+
+GameImage.create({
+    game_id: 10,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/232790/ss_b68cceb1a45a50eea07345ebab8fdd348837c5a3.600x338.jpg?t=1598206793",
+    img_type: "screenshot"
+})
+GameImage.create({
+    game_id: 10,
+    img_url: "https://cdn.akamai.steamstatic.com/steam/apps/232790/ss_b349304cd01c58ed72b7e6847c3ba7c81b436318.600x338.jpg?t=1598206793",
+    img_type: "screenshot"
+})
+
