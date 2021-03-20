@@ -5,14 +5,14 @@ import { Link, Route } from "react-router-dom"
 
 const MSTP = (state) => {
     return {
-        
+        games: Object.values(state.entities.games).filter((game) => game.featured)
     }
 }
 
 const MDTP = dispatch => {
     return {
         requestFeaturedGames: () => dispatch(requestFeaturedGames()),
-        // requestOneGame: () => dispatch(requestOneGame())
+        
     }
 }
 

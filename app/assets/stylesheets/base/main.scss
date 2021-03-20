@@ -1,7 +1,12 @@
-body{
+body {
     background-image: linear-gradient(to bottom, $gradient-start-red, $gradient-mid-red, $gradient-end-red);
-    font-family: "Duru Sans", sans-serif;
+    font-family: 'Duru Sans', sans-serif;
 }
 .main-body-section {
     display: flex;
+    flex-direction: column;
+    .main-body-top {
+        display: flex;
+        flex-direction: row;
+    }
 }
