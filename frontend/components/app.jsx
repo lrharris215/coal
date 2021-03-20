@@ -15,16 +15,16 @@ const App = () => {
                 <MainHeader />
             </header>
             <div className="main-body-section">
-                <div className="main-body-top">
-                    <Switch>
-                        <AuthRoute path="/login" component={LogInFormContainer} />
-                        <AuthRoute path="/signup" component={SignUpFormContainer} />
-                        <Route path="/" component={Sidebar} />
-                    </Switch>
+                <AuthRoute path="/login" component={LogInFormContainer} />
+                <AuthRoute path="/signup" component={SignUpFormContainer} />
 
-                    <Route exact path="/" component={FeaturedCarouselContainer} />
+                <div className="homepage">
+                    <Route exact path="/" component={Sidebar} />
+                    <div className="main-content">
+                        <Route exact path="/" component={FeaturedCarouselContainer} />
+                        <Route exact path="/" component={GamesIndexContainer} />
+                    </div>
                 </div>
-                <Route exact path="/" component={GamesIndexContainer} />
             </div>
         </div>
     );

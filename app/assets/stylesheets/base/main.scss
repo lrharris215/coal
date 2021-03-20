@@ -5,8 +5,12 @@ body {
 .main-body-section {
     display: flex;
     flex-direction: column;
-    .main-body-top {
+    .homepage {
         display: flex;
         flex-direction: row;
+        .main-content {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

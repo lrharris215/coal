@@ -20,11 +20,6 @@ class FeaturedCarousel extends React.Component {
     }
     render() {
         const { games } = this.props;
-        let buttons = [];
-
-        if (games.length > 0) {
-            buttons = [0, 1, 2, 3];
-        }
         return (
             <div className="featured-carousel-outer-div">
                 <h2>Featured and Recommended</h2>
@@ -78,13 +73,13 @@ class FeaturedCarousel extends React.Component {
                     </div>
                 </div>
                 <div className="bottom-buttons">
-                    {buttons.map((button) => {
+                    {games.map((game, idx) => {
                         return (
                             <div
                                 className="bottom-button"
                                 onClick={() =>
                                     this.setState({
-                                        activeGameIdx: button,
+                                        activeGameIdx: idx,
                                     })
                                 }></div>
                         );
