@@ -16,7 +16,7 @@ class GamesIndexItem extends React.Component {
                                 <img src={titleCard[0].img_url} />
                             </div>
                             <div className="games-index-item-words">
-                                <h4>{game.title}</h4>
+                                <h4 id="index-title">{game.title}</h4>
                                 <i className="fab fa-windows"></i>
                                 <p>Categories</p>
                             </div>

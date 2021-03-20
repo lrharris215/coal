@@ -42,7 +42,11 @@ class GamesIndex extends React.Component {
             );
             return (
                 <li key={`game-detail-${game.id}`}>
-                    <GameIndexDetail screenshots={screenshots} game={game} />
+                    <GameIndexDetail
+                        isActive={this.state.activeGame === game.id}
+                        screenshots={screenshots}
+                        game={game}
+                    />
                 </li>
             );
         });

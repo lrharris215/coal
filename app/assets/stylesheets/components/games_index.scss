@@ -4,12 +4,12 @@
     margin-left: 30px;
     border: 1px solid pink;
     .index-left-side {
-        width: 700px;
+        width: 650px;
         height: fit-content;
-        margin: 10px;
+        margin: 15px;
         .active {
-            background-color: $gradient-mid-red;
-            .games-index-item-left > div > h4 {
+            background-color: $index-detail-red;
+            #index-title {
                 color: black;
             }
         }
@@ -91,11 +91,33 @@
         }
     }
     .index-right-side {
-        border: 1px solid purple;
-        background-color: $gradient-mid-red;
+        background-color: $index-detail-red;
         width: fit-content;
+        margin-top: 15px;
+        padding-left: 15px;
+        width: 287px;
         .game-detail-tab {
-            margin: 15px;
+            width: 275px;
+            .top-part {
+                border: 1px solid green;
+                h3 {
+                    margin: 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+                .review-box {
+                    background-color: $review-box-red;
+                    font-size: 12px;
+                    p {
+                        color: whitesmoke;
+                        span {
+                            background-color: transparent;
+                            color: $link-yellow;
+                        }
+                    }
+                }
+            }
         }
         .image-list {
             width: fit-content;
@@ -103,6 +125,9 @@
                 width: 275px;
                 height: 150px;
             }
+        }
+        .hidden {
+            display: none;
         }
     }
 }
