@@ -1,11 +1,29 @@
 .featured-carousel-outer-div {
+    margin-top: 120px;
+    margin-left: 20px;
+    position: relative;
+
     h2 {
+        font-size: 14px;
+        color: whitesmoke;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 300;
     }
     > div {
         display: flex;
-        border: 1px solid hotpink;
     }
     .left-arrow {
+        position: absolute;
+        font-size: 46px;
+        z-index: -1;
+        top: 150px;
+        left: -45px;
+        color: whitesmoke;
+        background-image: linear-gradient(to right, $gradient-start-red, rgb(126, 48, 48));
+        .fa-chevron-left {
+            padding: 25px 10px;
+        }
     }
     .right-arrow {
     }
@@ -19,31 +37,43 @@
         display: flex;
         justify-content: center;
         .bottom-button {
-            width: 20px;
-            height: 10px;
-            border: 1px solid black;
+            width: 15px;
+            height: 7px;
+            background-color: $index-detail-red;
+            border: 1px solid yellow;
+            margin: 3px;
+            border-radius: 3px;
         }
     }
     .featured-carousel-inner-div {
         display: flex;
         background-color: $header-red;
+        width: fit-content;
         color: whitesmoke;
+        border: 1px solid black;
+        box-shadow: 0 0 5px black;
         .big-image {
-            width: 656px;
+            width: 645px;
             height: 353px;
+            img {
+                width: 645px;
+                height: 353px;
+            }
         }
         .featured-right-side {
             .title {
+                text-transform: none;
             }
             .four-pic-box {
                 border: 1px solid white;
-                width: 325px;
+                width: fit-content;
                 height: fit-content;
                 display: flex;
                 flex-wrap: wrap;
                 .screenshot-div {
+                    margin: 5px;
                     img {
-                        width: 162px;
+                        width: 160px;
                         height: 69px;
                     }
                 }
