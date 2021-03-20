@@ -4,16 +4,27 @@ class FeaturedCarousel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeGame: null,
+            activeGameIdx: null,
         };
     }
 
     componentDidMount() {
         this.props.requestFeaturedGames();
     }
+    componentDidUpdate(oldProps, oldState) {
+        if (oldState.activeGameIdx === null && this.props.games.length > 0) {
+            this.setState({
+                activeGameIdx: 0,
+            });
+        }
+    }
     render() {
         const { games } = this.props;
+        let buttons = [];
 
+        if (games.length > 0) {
+            buttons = [0, 1, 2, 3];
+        }
         return (
             <div className="featured-carousel-outer-div">
                 <h2>Featured and Recommended</h2>
@@ -22,7 +33,7 @@ class FeaturedCarousel extends React.Component {
                         <i className="fas fa-chevron-left"></i>
                     </div>
                     <ul>
-                        {games.map((game) => {
+                        {games.map((game, idx) => {
                             const titleCard = Object.values(game.gameImages).filter(
                                 (gameImage) => gameImage.img_type === 'title-card'
                             );
@@ -30,7 +41,7 @@ class FeaturedCarousel extends React.Component {
                                 (gameImage) => gameImage.img_type === 'screenshot'
                             );
                             return (
-                                <div className={this.state.activeGame === game.id ? 'active' : 'hidden'}>
+                                <div className={this.state.activeGameIdx === idx ? 'active' : 'hidden'}>
                                     <div className="featured-carousel-inner-div">
                                         <div className="big-image">
                                             <img src={titleCard[0].img_url} alt={`${game.title}-title-card`} />
@@ -65,6 +76,19 @@ class FeaturedCarousel extends React.Component {
                     <div className="right-arrow">
                         <i className="fas fa-chevron-right"></i>
                     </div>
+                </div>
+                <div className="bottom-buttons">
+                    {buttons.map((button) => {
+                        return (
+                            <div
+                                className="bottom-button"
+                                onClick={() =>
+                                    this.setState({
+                                        activeGameIdx: button,
+                                    })
+                                }></div>
+                        );
+                    })}
                 </div>
             </div>
         );

@@ -15,6 +15,15 @@
     .hidden {
         display: none;
     }
+    .bottom-buttons {
+        display: flex;
+        justify-content: center;
+        .bottom-button {
+            width: 20px;
+            height: 10px;
+            border: 1px solid black;
+        }
+    }
     .featured-carousel-inner-div {
         display: flex;
         background-color: $header-red;
