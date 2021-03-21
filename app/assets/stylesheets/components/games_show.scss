@@ -67,37 +67,16 @@
                         line-height: 150%;
                     }
                 }
-                .reviews {
-                    display: flex;
-                    margin-top: 15px;
-                    color: $header-text-grey;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                    .reviews-left {
-                        text-transform: uppercase;
-                        font-size: 10px;
-                    }
-                    .reviews-right {
-                        font-size: 11px;
-                        margin-left: 10px;
-                        span {
-                            color: $link-yellow;
-                        }
-                    }
-                }
-                .release-date {
-                    margin-top: 15px;
-                    font-size: 10px;
-                    color: $header-text-grey;
-                    display: flex;
-                    &:first-child {
-                        text-transform: uppercase;
-                    }
+                .bottom-half {
+                    display: grid;
+                    grid-template-columns: 30% 70%;
+                    grid-template-rows: 25% 25% 10% 10%;
+                    font-size: 12px;
                 }
             }
         }
     }
+
     .buy-now-bar {
         align-self: center;
     }

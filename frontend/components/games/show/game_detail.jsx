@@ -1,4 +1,5 @@
 import React from 'react';
+
 import BuyNowBar from './buy_now_bar';
 
 class GameDetail extends React.Component {
@@ -68,7 +69,7 @@ class GameDetail extends React.Component {
                             <div className="description">
                                 <p>{game.description}</p>
                             </div>
-                            <div className="reviews">
+                            <div className="bottom-half">
                                 <div className="reviews-left">
                                     <p>Recent Reviews:</p>
                                     <p>All Reviews:</p>
@@ -81,22 +82,22 @@ class GameDetail extends React.Component {
                                         <span>Overwhelmingly Positive</span> {`(${reviewNum})`}
                                     </p>
                                 </div>
-                            </div>
-                            <div className="release-date">
+
                                 <p>Release Date:</p>
-                                <p>{game.release_date}</p>
-                            </div>
-                            <div className="developer-box">
-                                <div>
-                                    <p>Developer:</p>
-                                    <p>Publisher:</p>
-                                </div>
-                                <div>
-                                    <p>{game.developer}</p>
-                                    <p>{game.publisher}</p>
-                                </div>
-                            </div>
-                            <div className="popular-tags">
+                                <p className="date">
+                                    {new Date(game.release_date).toLocaleDateString('en-us', {
+                                        timeZone: 'utc',
+                                        month: 'long',
+                                        day: 'numeric',
+                                        year: 'numeric',
+                                    })}
+                                </p>
+
+                                <p>Developer:</p>
+                                <p>{game.developer}</p>
+                                <p>Publisher:</p>
+                                <p>{game.publisher}</p>
+
                                 <p>Popular user-defined tags for this product:</p>
                                 <div className="tags">
                                     <div className="tag">Tag-1</div>
