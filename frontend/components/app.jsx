@@ -7,6 +7,7 @@ import MainHeader from './main_header/main_header_container';
 import Sidebar from './sidebar/sidebar';
 import GamesIndexContainer from './games/index/games_index_container';
 import FeaturedCarouselContainer from './games/featured/featured_carousel_container';
+import GameDetailContainer from './games/show/game_detail_container';
 
 const App = () => {
     return (
@@ -25,6 +26,7 @@ const App = () => {
                         <Route exact path="/" component={GamesIndexContainer} />
                     </div>
                 </div>
+                <Route path={`/api/games/:id`} component={GameDetailContainer} />
             </div>
         </div>
     );

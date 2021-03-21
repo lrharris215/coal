@@ -1,0 +1,25 @@
+.game-detail-container {
+    width: 1000px;
+    height: 700px;
+    border: 1px solid blue;
+    align-self: center;
+    margin-top: 50px;
+    .game-detail-header {
+        display: flex;
+        justify-content: space-between;
+        .gd-header-left {
+        }
+        .gd-header-right {
+        }
+    }
+    .game-detail-main {
+        .game-detail-left {
+        }
+        .game-detail-right {
+            .title-card {
+                width: 300px;
+                height: auto;
+            }
+        }
+    }
+}
