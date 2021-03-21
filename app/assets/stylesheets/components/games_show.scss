@@ -4,6 +4,7 @@
     border: 1px solid blue;
     align-self: center;
     margin-top: 50px;
+
     .game-detail-header {
         display: flex;
         justify-content: space-between;
@@ -13,7 +14,19 @@
         }
     }
     .game-detail-main {
+        display: flex;
         .game-detail-left {
+            .big-picture {
+                width: 600px;
+                height: 340px;
+            }
+            .screenshots {
+                display: flex;
+                .screenshot {
+                    width: 125px;
+                    height: auto;
+                }
+            }
         }
         .game-detail-right {
             .title-card {
