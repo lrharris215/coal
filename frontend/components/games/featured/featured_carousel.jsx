@@ -7,17 +7,25 @@ class FeaturedCarousel extends React.Component {
             activeGameIdx: null,
             activePicIdx: 0,
         };
+        this.intervalId = null;
+        this.debounceInterval = this.debounceInterval.bind(this);
     }
 
     componentDidMount() {
         this.props.requestFeaturedGames();
-        // setInterval(() => {
-        //     console.log('wooof!');
-        //     this.setState({
-        //         activeGameIdx:
-        //             this.state.activeGameIdx === this.props.games.length - 1 ? 0 : this.state.activeGameIdx + 1,
-        //     });
-        // }, 5 * 1000);
+        this.debounceInterval();
+    }
+
+    debounceInterval() {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+        }
+        this.intervalId = setInterval(() => {
+            this.setState({
+                activeGameIdx:
+                    this.state.activeGameIdx === this.props.games.length - 1 ? 0 : this.state.activeGameIdx + 1,
+            });
+        }, 5 * 1000);
     }
     componentDidUpdate(oldProps, oldState) {
         if (oldState.activeGameIdx === null && this.props.games.length > 0) {
@@ -36,6 +44,7 @@ class FeaturedCarousel extends React.Component {
                     <div
                         className="left-arrow"
                         onClick={() => {
+                            this.debounceInterval();
                             this.setState((state) => ({
                                 activeGameIdx: state.activeGameIdx === 0 ? games.length - 1 : state.activeGameIdx - 1,
                             }));
@@ -54,7 +63,10 @@ class FeaturedCarousel extends React.Component {
                             return (
                                 <div className={this.state.activeGameIdx === idx ? 'active' : 'hidden'}>
                                     <Link to={`api/games/${game.id}`}>
-                                        <div className="featured-carousel-inner-div">
+                                        <div
+                                            className="featured-carousel-inner-div"
+                                            onMouseEnter={() => clearInterval(this.intervalId)}
+                                            onMouseLeave={() => this.debounceInterval()}>
                                             <div className="big-image">
                                                 <img
                                                     src={allImages[this.state.activePicIdx].img_url}
@@ -103,6 +115,7 @@ class FeaturedCarousel extends React.Component {
                     <div
                         className="right-arrow"
                         onClick={() => {
+                            this.debounceInterval();
                             this.setState((state) => ({
                                 activeGameIdx: state.activeGameIdx === games.length - 1 ? 0 : state.activeGameIdx + 1,
                             }));
@@ -114,12 +127,13 @@ class FeaturedCarousel extends React.Component {
                     {games.map((game, idx) => {
                         return (
                             <div
-                                className="bottom-button"
-                                onClick={() =>
+                                className={idx === this.state.activeGameIdx ? 'button-active' : 'button-inactive'}
+                                onClick={() => {
+                                    this.debounceInterval();
                                     this.setState({
                                         activeGameIdx: idx,
-                                    })
-                                }></div>
+                                    });
+                                }}></div>
                         );
                     })}
                 </div>

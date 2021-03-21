@@ -24,6 +24,10 @@
         .fa-chevron-left {
             padding: 25px 10px;
         }
+        &:hover {
+            background-image: linear-gradient(to right, $index-detail-red, rgb(126, 48, 48));
+            cursor: pointer;
+        }
     }
     .right-arrow {
         position: absolute;
@@ -36,6 +40,10 @@
         .fa-chevron-right {
             padding: 25px 5px;
         }
+        &:hover {
+            cursor: pointer;
+            background-image: linear-gradient(to left, $index-detail-red, rgb(126, 48, 48));
+        }
     }
     .active {
         display: block;
@@ -46,13 +54,26 @@
     .bottom-buttons {
         display: flex;
         justify-content: center;
-        .bottom-button {
+        margin-top: 7px;
+        .button-active {
             width: 15px;
-            height: 7px;
+            height: 9px;
             background-color: $index-detail-red;
-            border: 1px solid yellow;
             margin: 3px;
             border-radius: 3px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .button-inactive {
+            width: 15px;
+            height: 9px;
+            background-color: rgb(171, 77, 77);
+            margin: 3px;
+            border-radius: 3px;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     .featured-carousel-inner-div {
@@ -79,8 +100,8 @@
             box-shadow: 3px -1px 10px black;
             .title {
                 text-transform: none;
-                font-size: 20px;
-                margin-top: 10px;
+                font-size: 24px;
+                margin-top: 20px;
                 margin-left: 15px;
             }
             .four-pic-box {
@@ -111,7 +132,7 @@
             .recommended {
                 margin-left: 15px;
                 font-size: 20px;
-                height: 80px;
+                height: 50px;
                 div {
                     font-size: 10px;
                     width: fit-content;
