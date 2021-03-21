@@ -1,14 +1,14 @@
 .featured-carousel-outer-div {
-    margin-top: 120px;
+    margin-top: 115px;
     margin-left: 20px;
     position: relative;
-
     h2 {
         font-size: 14px;
         color: whitesmoke;
         text-transform: uppercase;
         margin-bottom: 10px;
-        font-weight: 300;
+        font-weight: 500;
+        font-family: 'Open Sans';
     }
     > div {
         display: flex;
@@ -16,7 +16,7 @@
     .left-arrow {
         position: absolute;
         font-size: 46px;
-        z-index: -1;
+        z-index: 0;
         top: 150px;
         left: -45px;
         color: whitesmoke;
@@ -26,6 +26,16 @@
         }
     }
     .right-arrow {
+        position: absolute;
+        font-size: 46px;
+        z-index: 0;
+        top: 150px;
+        right: -5px;
+        color: whitesmoke;
+        background-image: linear-gradient(to left, $gradient-start-red, rgb(126, 48, 48));
+        .fa-chevron-right {
+            padding: 25px 5px;
+        }
     }
     .active {
         display: block;
@@ -48,41 +58,82 @@
     .featured-carousel-inner-div {
         display: flex;
         background-color: $header-red;
-        width: fit-content;
         color: whitesmoke;
-        border: 1px solid black;
-        box-shadow: 0 0 5px black;
+        border: 1px solid $header-red;
+        z-index: 2;
         .big-image {
-            width: 645px;
-            height: 353px;
+            z-index: 2;
+            box-shadow: 5px -1px 8px black;
             img {
-                width: 645px;
-                height: 353px;
+                width: 630px;
+                height: 345px;
+                z-index: 2;
             }
         }
         .featured-right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 325px;
+            z-index: 1;
+            box-shadow: 3px -1px 10px black;
             .title {
                 text-transform: none;
+                font-size: 20px;
+                margin-top: 10px;
+                margin-left: 15px;
             }
             .four-pic-box {
-                border: 1px solid white;
+                // border: 1px solid white;
+                z-index: 1;
+                position: relative;
+                left: -20px;
+                top: 0;
+
                 width: fit-content;
                 height: fit-content;
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
+
                 .screenshot-div {
                     margin: 5px;
                     img {
                         width: 160px;
                         height: 69px;
+                        filter: brightness(80%);
+                        &:hover {
+                            filter: brightness(100%);
+                        }
                     }
                 }
             }
             .recommended {
+                margin-left: 15px;
+                font-size: 20px;
+                height: 80px;
+                div {
+                    font-size: 10px;
+                    width: fit-content;
+                    background-color: $review-box-red;
+                    padding: 3px;
+                    margin-top: 3px;
+                    border-radius: 3px;
+                }
             }
             .featured-bottom-row {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+                p {
+                    margin-left: 15px;
+                    font-size: 12px;
+                    height: fit-content;
+                    color: $lighter-grey;
+                }
+                .fa-windows {
+                    margin: 10px;
+                }
             }
         }
     }

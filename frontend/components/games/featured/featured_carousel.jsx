@@ -11,13 +11,13 @@ class FeaturedCarousel extends React.Component {
 
     componentDidMount() {
         this.props.requestFeaturedGames();
-        setInterval(() => {
-            console.log('wooof!');
-            this.setState({
-                activeGameIdx:
-                    this.state.activeGameIdx === this.props.games.length - 1 ? 0 : this.state.activeGameIdx + 1,
-            });
-        }, 5 * 1000);
+        // setInterval(() => {
+        //     console.log('wooof!');
+        //     this.setState({
+        //         activeGameIdx:
+        //             this.state.activeGameIdx === this.props.games.length - 1 ? 0 : this.state.activeGameIdx + 1,
+        //     });
+        // }, 5 * 1000);
     }
     componentDidUpdate(oldProps, oldState) {
         if (oldState.activeGameIdx === null && this.props.games.length > 0) {
@@ -87,7 +87,7 @@ class FeaturedCarousel extends React.Component {
                                                     })}
                                                 </div>
                                                 <div className="recommended">
-                                                    Recommended because you played games tagged with <div>category</div>
+                                                    Now Available <div>Category</div>
                                                 </div>
                                                 <div className="featured-bottom-row">
                                                     <p>${game.price / 100}</p>
