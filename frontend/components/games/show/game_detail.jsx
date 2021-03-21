@@ -21,7 +21,6 @@ class GameDetail extends React.Component {
     render() {
         const { gameId, games } = this.props;
         const game = games && games[gameId];
-
         const titleCard = game && Object.values(game.gameImages).filter((image) => image.img_type === 'title-card');
         const screenshots = game && Object.values(game.gameImages).filter((image) => image.img_type === 'screenshot');
         const reviewNum = game && game.id * 1047 + 453;
@@ -75,8 +74,12 @@ class GameDetail extends React.Component {
                                     <p>All Reviews:</p>
                                 </div>
                                 <div className="reviews-right">
-                                    <p> {`Overwhelmingly Positive (${Math.floor(reviewNum * (1 / 20))})`}</p>
-                                    <p> {`Overwhelmingly Positive (${reviewNum})`}</p>
+                                    <p>
+                                        <span>Overwhelmingly Positive</span> {`(${Math.floor(reviewNum * (1 / 20))})`}
+                                    </p>
+                                    <p>
+                                        <span>Overwhelmingly Positive</span> {`(${reviewNum})`}
+                                    </p>
                                 </div>
                             </div>
                             <div className="release-date">
