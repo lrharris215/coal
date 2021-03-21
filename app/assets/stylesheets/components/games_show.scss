@@ -1,38 +1,76 @@
-.game-detail-container {
-    width: 1000px;
-    height: 700px;
-    border: 1px solid blue;
-    align-self: center;
-    margin-top: 50px;
+.game-show-page {
+    display: flex;
+    flex-direction: column;
+    .game-detail-container {
+        width: 950px;
+        height: 500px;
+        border: 1px solid blue;
+        align-self: center;
+        margin: 50px 15px 0 15px;
 
-    .game-detail-header {
-        display: flex;
-        justify-content: space-between;
-        .gd-header-left {
-        }
-        .gd-header-right {
-        }
-    }
-    .game-detail-main {
-        display: flex;
-        .game-detail-left {
-            .big-picture {
-                width: 600px;
-                height: 340px;
+        .game-detail-header {
+            display: flex;
+            justify-content: space-between;
+            .gd-header-left {
+                p {
+                    font-size: 11px;
+                    color: $header-text-grey;
+                }
+                h2 {
+                    color: white;
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                }
             }
-            .screenshots {
+            .gd-header-right {
                 display: flex;
-                .screenshot {
-                    width: 125px;
-                    height: auto;
+                flex-direction: column-reverse;
+                .community-hub {
+                    background-color: rgba(214, 98, 98, 0.5);
+                    padding: 8px 16px;
+                    font-size: 13px;
+                    margin-bottom: 14px;
+                    margin-right: 2px;
+                    color: $link-yellow;
+                    border-radius: 2px;
                 }
             }
         }
-        .game-detail-right {
-            .title-card {
-                width: 300px;
-                height: auto;
+        .game-detail-main {
+            display: flex;
+            .game-detail-left {
+                .big-picture {
+                    width: 600px;
+                    height: 340px;
+                }
+                .screenshots {
+                    display: flex;
+                    .screenshot {
+                        width: 125px;
+                        height: auto;
+                    }
+                }
+            }
+            .game-detail-right {
+                // border: 1px solid hotpink;
+                margin-left: 15px;
+                .title-card {
+                    width: 328px;
+                    height: 148px;
+                }
+                .description {
+                    font-size: 12px;
+                    color: whitesmoke;
+                    margin-top: 15px;
+                    margin-right: 15px;
+                    p {
+                        line-height: 150%;
+                    }
+                }
             }
         }
+    }
+    .buy-now-bar {
+        align-self: center;
     }
 }
