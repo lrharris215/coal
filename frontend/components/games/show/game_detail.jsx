@@ -12,7 +12,6 @@ class GameDetail extends React.Component {
         this.props.requestOneGame(this.props.gameId);
     }
     componentDidUpdate(oldProps, oldState) {
-        debugger;
         if (oldState.activePicIdx === null && this.props.games.length > 0) {
             this.setState({
                 activeGameIdx: 0,
@@ -25,7 +24,7 @@ class GameDetail extends React.Component {
 
         const titleCard = game && Object.values(game.gameImages).filter((image) => image.img_type === 'title-card');
         const screenshots = game && Object.values(game.gameImages).filter((image) => image.img_type === 'screenshot');
-        debugger;
+        const reviewNum = game && game.id * 1047 + 453;
         if (!game) {
             return <div></div>;
         }
@@ -76,8 +75,8 @@ class GameDetail extends React.Component {
                                     <p>All Reviews:</p>
                                 </div>
                                 <div className="reviews-right">
-                                    <p> Overwhelmingly Positive</p>
-                                    <p> Overwhelmingly Positive</p>
+                                    <p> {`Overwhelmingly Positive (${Math.floor(reviewNum * (1 / 20))})`}</p>
+                                    <p> {`Overwhelmingly Positive (${reviewNum})`}</p>
                                 </div>
                             </div>
                             <div className="release-date">
