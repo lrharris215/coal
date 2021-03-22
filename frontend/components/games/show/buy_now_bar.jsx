@@ -3,21 +3,18 @@ import React from 'react';
 export default (props) => {
     return (
         <div className="buy-now-bar">
-            <div>
+            <div className="main-box">
                 <h2 className="title">{props.game.title}</h2>
                 <div className="icons">
                     <i className="fab fa-windows"></i>
                     <i className="fab fa-apple"></i>
-                    <div className="logo">
-                        <i className="fas fa-cogs"></i>
-                    </div>
                 </div>
             </div>
             <div className="black-box">
-                <div>
+                <div className="price-box">
                     <p>{props.game.price / 100}</p>
                 </div>
-                <div>
+                <div className="cart-box">
                     <p>Add to Cart</p>
                 </div>
             </div>

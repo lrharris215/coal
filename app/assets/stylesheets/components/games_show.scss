@@ -1,13 +1,14 @@
 .game-show-page {
     display: flex;
     flex-direction: column;
+    // opacity: 50%;
+    // background-color: $review-box-red;
     .game-detail-container {
-        width: 950px;
+        width: 944px;
         height: 500px;
 
         align-self: center;
         margin: 50px 15px 0 15px;
-        background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
         .game-detail-header {
             display: flex;
             justify-content: space-between;
@@ -49,6 +50,8 @@
         }
         .game-detail-main {
             display: flex;
+            background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
+
             .game-detail-left {
                 .big-picture {
                     width: 600px;
@@ -114,6 +117,7 @@
                     color: whitesmoke;
                     margin-top: 15px;
                     margin-right: 15px;
+                    max-height: 100px;
                     p {
                         line-height: 150%;
                     }

@@ -1,0 +1,58 @@
+.buy-now-bar {
+    margin-top: 50px;
+
+    width: 650px;
+    position: relative;
+    .main-box {
+        display: flex;
+        justify-content: space-between;
+        color: whitesmoke;
+        background-color: $review-box-red;
+
+        border-radius: 5px;
+        padding-bottom: 20px;
+        .title {
+            font-size: 20px;
+            background-color: transparent;
+            padding: 15px;
+        }
+        .icons {
+            display: flex;
+            padding: 15px 10px;
+            background-color: transparent;
+            font-size: 17px;
+
+            .fa-windows {
+                margin: 0 5px;
+            }
+            .fa-apple {
+                margin: 0 5px;
+            }
+        }
+    }
+    .black-box {
+        position: absolute;
+        border: 3px solid black;
+        display: flex;
+        font-size: 15px;
+        right: 15px;
+        bottom: -15px;
+        border-radius: 3px;
+        .price-box {
+            background-color: black;
+            color: $lighter-grey;
+            padding: 5px 10px;
+        }
+        .cart-box {
+            background-image: linear-gradient(to right, rgb(255, 187, 77), $button-orange);
+            color: whitesmoke;
+            text-shadow: 1px 1px $background-dark-grey;
+            padding: 5px 10px;
+            filter: brightness(80%);
+            &:hover {
+                cursor: pointer;
+                filter: brightness(100%);
+            }
+        }
+    }
+}

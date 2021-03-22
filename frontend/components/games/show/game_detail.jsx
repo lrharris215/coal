@@ -45,6 +45,9 @@ class GameDetail extends React.Component {
         const screenshots = game && Object.values(game.gameImages).filter((image) => image.img_type === 'screenshot');
 
         const reviewNum = game && game.id * 1047 + 453;
+        // const bgStyle = game && {
+        //     backgroundImage: `url(${screenshots[1].img_url})`,
+        // };
         if (!game) {
             return <div></div>;
         }
