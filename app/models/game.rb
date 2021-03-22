@@ -1,8 +1,14 @@
 class Game < ApplicationRecord
 
     validates :title, :price, :publisher, :developer, :release_date, presence: true;
-    # will belong to user after i make the shopping cart/library
-    #belongs_to :user
 
     has_many :game_images
+
+    has_many :purchases,
+    foreign_key: :gameId,
+    class_name: :Purchase
+
+    has_many :buyers,
+    through: :purchases,
+    source: :buyer
 end

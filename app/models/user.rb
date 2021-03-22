@@ -8,7 +8,13 @@ class User < ApplicationRecord
     
     before_validation :ensure_session_token
 
-   #has_many games after i make shopping cart.
+   has_many :purchases,
+   foreign_key: :buyerId,
+   class_name: :Purchase
+
+   has_many :games,
+   through: :purchases,
+   source: :game
 
     def self.find_by_credentials(username, password)
         @user = User.find_by_username(username)

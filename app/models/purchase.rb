@@ -1,6 +1,6 @@
 class Purchase < ApplicationRecord
     validates :buyerId, :gameId, presence: true
-    validates [:buyerId, :gameId], uniqueness: true
+    validates :buyerId, uniqueness: {scope: :gameId}
 
     belongs_to :buyer,
     foreign_key: :buyerId,
