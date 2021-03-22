@@ -9,6 +9,7 @@ class GamesIndex extends React.Component {
         this.state = {
             activeGame: null,
         };
+        this.sortGamesByReleaseDate = this.sortGamesByReleaseDate.bind(this);
     }
 
     componentDidMount() {
@@ -21,9 +22,19 @@ class GamesIndex extends React.Component {
             });
         }
     }
+    sortGamesByReleaseDate(a, b) {
+        if (a.release_date > b.release_date) {
+            return -1;
+        } else if (a.release_date === b.release_date) {
+            return 0;
+        } else return 1;
+    }
 
     render() {
-        const mappedGames = this.props.games.map((game) => {
+        let sortedGames = this.props.games && [...this.props.games].sort(this.sortGamesByReleaseDate);
+
+        console.log(sortedGames);
+        const mappedGames = sortedGames.map((game) => {
             const titleCard = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === 'title-card');
 
             return (
