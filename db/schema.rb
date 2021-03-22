@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_131319) do
+ActiveRecord::Schema.define(version: 2021_03_22_154408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 2021_03_19_131319) do
     t.date "release_date", null: false
     t.boolean "featured", default: false
     t.index ["featured"], name: "index_games_on_featured"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer "gameId", null: false
+    t.integer "buyerId", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyerId", "gameId"], name: "index_purchases_on_buyerId_and_gameId", unique: true
+    t.index ["buyerId"], name: "index_purchases_on_buyerId"
+    t.index ["gameId"], name: "index_purchases_on_gameId"
   end
 
   create_table "users", force: :cascade do |t|
