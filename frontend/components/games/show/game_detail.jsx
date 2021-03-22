@@ -83,7 +83,7 @@ class GameDetail extends React.Component {
                                     </p>
                                 </div>
 
-                                <p>Release Date:</p>
+                                <p className="releaseDate">Release Date:</p>
                                 <p className="date">
                                     {new Date(game.release_date).toLocaleDateString('en-us', {
                                         timeZone: 'utc',
@@ -92,12 +92,17 @@ class GameDetail extends React.Component {
                                         year: 'numeric',
                                     })}
                                 </p>
+                                <div className="devpub-box">
+                                    <p>Developer:</p>
+                                    <p>Publisher:</p>
+                                </div>
+                                <div className="devpub-right">
+                                    <p>{game.developer}</p>
 
-                                <p>Developer:</p>
-                                <p>{game.developer}</p>
-                                <p>Publisher:</p>
-                                <p>{game.publisher}</p>
-
+                                    <p>{game.publisher}</p>
+                                </div>
+                            </div>
+                            <div className="popular-tags">
                                 <p>Popular user-defined tags for this product:</p>
                                 <div className="tags">
                                     <div className="tag">Tag-1</div>
