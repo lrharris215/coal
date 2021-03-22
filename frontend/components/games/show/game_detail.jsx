@@ -54,7 +54,8 @@ class GameDetail extends React.Component {
                     <div className="game-detail-header">
                         <div className="gd-header-left">
                             <p>
-                                All Games {'>'} Indie Games {'>'} {game.title}
+                                <span>All Games</span> {'>'} <span>Indie Games </span>
+                                {'>'} <span>{game.title}</span>
                             </p>
                             <h2>{game.title}</h2>
                         </div>
