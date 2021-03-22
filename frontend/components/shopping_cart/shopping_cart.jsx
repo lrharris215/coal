@@ -19,8 +19,8 @@ class ShoppingCart extends React.Component {
     }
 
     render() {
-        const mappedGames = this.state.games.map((game) => {
-            return <li>{<ShoppingCartItem game={game} />}</li>;
+        const mappedGames = this.state.games.map((game, idx) => {
+            return <li key={`shop-cart-${idx}`}>{<ShoppingCartItem game={game} />}</li>;
         });
         const totalPrice = this.calculateTotalPrice();
 

@@ -28,6 +28,8 @@ class ShoppingCartItem extends React.Component {
         const { game } = this.props;
         const titleCard = Object.values(game.gameImages).filter((image) => image.img_type === 'title-card');
         const screenshots = Object.values(game.gameImages).filter((image) => image.img_type === 'screenshot');
+        const reviewNum = game && game.id * 1047 + 453;
+
         return (
             <div className="shopping-cart-item">
                 <div className="left-side">
@@ -41,7 +43,7 @@ class ShoppingCartItem extends React.Component {
                         <i className="fab fa-windows"></i>
                         <i className="fab fa-apple"></i>
                     </div>
-                    <div>
+                    <div className="price-remove">
                         <p className="price">{`$${game.price / 100}`}</p>
                         <p className="remove">Remove</p>
                     </div>
@@ -57,7 +59,12 @@ class ShoppingCartItem extends React.Component {
                         })}
                     </p>
                     <img className="screenshot" src={screenshots[this.state.activePicIdx].img_url} />
-                    <div className="reveiw-box"></div>
+                    <div className="review-box">
+                        <p>Overall user reviews:</p>
+                        <p>
+                            <span>Overwhelmingly Positive</span>({reviewNum})
+                        </p>
+                    </div>
                     <div className="tag-box">
                         <p>User tags</p>
                         <div className="tags">
