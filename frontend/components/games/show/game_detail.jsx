@@ -22,6 +22,9 @@ class GameDetail extends React.Component {
             });
         }
     }
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
     debounceInterval() {
         if (this.intervalId) {
             clearInterval(this.intervalId);

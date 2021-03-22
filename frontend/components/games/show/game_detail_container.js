@@ -8,6 +8,7 @@ const MSTP = (state, ownProps) => {
     return {
         gameId: id,
         games: state.entities.games,
+        
     }
 }
 

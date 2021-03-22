@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default (props) => {
     return (
@@ -14,9 +15,13 @@ export default (props) => {
                 <div className="price-box">
                     <p>{props.game.price / 100}</p>
                 </div>
-                <div className="cart-box">
-                    <p>Add to Cart</p>
-                </div>
+                <Link to="/cart">
+                    <div
+                        className="cart-box"
+                        onClick={() => localStorage.setItem(currentUser.id, JSON.stringify(props.game))}>
+                        <p>Add to Cart</p>
+                    </div>
+                </Link>
             </div>
         </div>
     );
