@@ -2,6 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default (props) => {
+    const onClickHandle = () => {
+        const savedCart = localStorage.getItem(currentUser.id);
+        let cart = [];
+        if (savedCart) {
+            cart = JSON.parse(savedCart);
+        }
+        cart.push(props.game);
+        localStorage.setItem(currentUser.id, JSON.stringify(cart));
+    };
     return (
         <div className="buy-now-bar">
             <div className="main-box">
@@ -16,9 +25,7 @@ export default (props) => {
                     <p>{props.game.price / 100}</p>
                 </div>
                 <Link to="/cart">
-                    <div
-                        className="cart-box"
-                        onClick={() => localStorage.setItem(currentUser.id, JSON.stringify(props.game))}>
+                    <div className="cart-box" onClick={onClickHandle}>
                         <p>Add to Cart</p>
                     </div>
                 </Link>
