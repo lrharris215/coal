@@ -31,7 +31,6 @@ class GameDetail extends React.Component {
         }
 
         this.intervalId = setInterval(() => {
-            console.log(this.props.games[this.props.gameId].gameImages.length);
             this.setState({
                 activePicIdx:
                     this.state.activePicIdx === Object.values(this.props.games[this.props.gameId].gameImages).length - 2

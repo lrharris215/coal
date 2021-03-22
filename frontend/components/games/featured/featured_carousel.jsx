@@ -34,6 +34,9 @@ class FeaturedCarousel extends React.Component {
             });
         }
     }
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
     render() {
         const { games } = this.props;
 
