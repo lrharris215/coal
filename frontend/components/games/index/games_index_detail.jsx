@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (props) => {
-    let reviewNum = props.game.id * 17 + 453;
+    const reviewNum = props.game && props.game.id * 1047 + 453;
     return (
         <div className={props.isActive ? 'active' : 'hidden'}>
             <div className="game-detail-tab">

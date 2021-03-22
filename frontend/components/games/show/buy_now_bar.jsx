@@ -4,7 +4,7 @@ export default (props) => {
     return (
         <div className="buy-now-bar">
             <div className="main-box">
-                <h2 className="title">{props.game.title}</h2>
+                <h2 className="title"> Buy {props.game.title}</h2>
                 <div className="icons">
                     <i className="fab fa-windows"></i>
                     <i className="fab fa-apple"></i>

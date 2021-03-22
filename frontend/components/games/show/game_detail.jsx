@@ -45,14 +45,16 @@ class GameDetail extends React.Component {
         const screenshots = game && Object.values(game.gameImages).filter((image) => image.img_type === 'screenshot');
 
         const reviewNum = game && game.id * 1047 + 453;
-        // const bgStyle = game && {
-        //     backgroundImage: `url(${screenshots[1].img_url})`,
-        // };
+        const bgStyle = game && {
+            backgroundImage: `url(${screenshots[0].img_url})`,
+            backgroundSize: 'cover',
+        };
         if (!game) {
             return <div></div>;
         }
         return (
             <div className="game-show-page">
+                <img className="background" src={screenshots[0].img_url} />
                 <div className="game-detail-container">
                     <div className="game-detail-header">
                         <div className="gd-header-left">
