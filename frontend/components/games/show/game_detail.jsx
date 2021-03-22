@@ -27,15 +27,15 @@ class GameDetail extends React.Component {
             clearInterval(this.intervalId);
         }
 
-        // this.intervalId = setInterval(() => {
-        //     console.log(this.props.games[this.props.gameId].gameImages.length);
-        //     this.setState({
-        //         activePicIdx:
-        //             this.state.activePicIdx === Object.values(this.props.games[this.props.gameId].gameImages).length - 2
-        //                 ? 0
-        //                 : this.state.activePicIdx + 1,
-        //     });
-        // }, 5 * 1000);
+        this.intervalId = setInterval(() => {
+            console.log(this.props.games[this.props.gameId].gameImages.length);
+            this.setState({
+                activePicIdx:
+                    this.state.activePicIdx === Object.values(this.props.games[this.props.gameId].gameImages).length - 2
+                        ? 0
+                        : this.state.activePicIdx + 1,
+            });
+        }, 5 * 1000);
     }
     render() {
         const { gameId, games } = this.props;
