@@ -4,10 +4,10 @@
     .game-detail-container {
         width: 950px;
         height: 500px;
-        border: 1px solid blue;
+
         align-self: center;
         margin: 50px 15px 0 15px;
-
+        background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
         .game-detail-header {
             display: flex;
             justify-content: space-between;
@@ -46,11 +46,45 @@
                 .screenshots {
                     display: flex;
                     margin-top: 5px;
+                    // overflow-x: scroll;
+                    // &::-webkit-scrollbar {
+                    //     width: 1em;
+                    // }
 
+                    // &::-webkit-scrollbar-track {
+                    //     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    // }
+
+                    // &::-webkit-scrollbar-thumb {
+                    //     background-color: $gradient-end-red;
+                    //     outline: 1px solid slategrey;
+                    // }
+                    // &::-webkit-scrollbar-button {
+                    //     display: block;
+                    //     color: blue;
+                    //     background-color: green;
+                    // }
                     .screenshot {
                         width: 125px;
                         height: auto;
                         margin-right: 4px;
+                        position: relative;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    .active {
+                        border: 2px solid $lighter-grey;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: -27px;
+                            left: 50px;
+                            width: 0;
+                            height: 0;
+                            border: 13px solid transparent;
+                            border-bottom-color: $lighter-grey;
+                        }
                     }
                 }
             }
@@ -74,16 +108,16 @@
                     margin-top: 15px;
                     display: grid;
                     grid-template-columns: 35% 65%;
-                    grid-template-rows: 40% 25% 35%;
+                    grid-template-rows: 35% 25%;
                     font-size: 10px;
-                    height: 120px;
+                    height: 115px;
                     color: $header-text-grey;
                     .reviews-left {
                         text-transform: uppercase;
                         line-height: 16px;
                     }
                     .reviews-right {
-                        font-size: 12px;
+                        font-size: 11px;
                         span {
                             color: $link-yellow;
                             &:hover {
@@ -96,7 +130,7 @@
                         line-height: 16px;
                     }
                     .date {
-                        font-size: 12px;
+                        font-size: 11px;
                         color: $lighter-grey;
                     }
                     .devpub-left {
@@ -104,7 +138,7 @@
                         line-height: 16px;
                     }
                     .devpub-right {
-                        font-size: 12px;
+                        font-size: 11px;
                         color: $link-yellow;
                         &:hover {
                             cursor: pointer;

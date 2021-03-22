@@ -8,22 +8,42 @@ class GameDetail extends React.Component {
         this.state = {
             activePicIdx: 0,
         };
+        this.intervalId = null;
+        this.debounceInterval = this.debounceInterval.bind(this);
     }
     componentDidMount() {
         this.props.requestOneGame(this.props.gameId);
+        this.debounceInterval();
     }
     componentDidUpdate(oldProps, oldState) {
         if (oldState.activePicIdx === null && this.props.games.length > 0) {
             this.setState({
-                activeGameIdx: 0,
+                activePicIdx: 0,
             });
         }
+    }
+    debounceInterval() {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+        }
+
+        // this.intervalId = setInterval(() => {
+        //     console.log(this.props.games[this.props.gameId].gameImages.length);
+        //     this.setState({
+        //         activePicIdx:
+        //             this.state.activePicIdx === Object.values(this.props.games[this.props.gameId].gameImages).length - 2
+        //                 ? 0
+        //                 : this.state.activePicIdx + 1,
+        //     });
+        // }, 5 * 1000);
     }
     render() {
         const { gameId, games } = this.props;
         const game = games && games[gameId];
         const titleCard = game && Object.values(game.gameImages).filter((image) => image.img_type === 'title-card');
+
         const screenshots = game && Object.values(game.gameImages).filter((image) => image.img_type === 'screenshot');
+
         const reviewNum = game && game.id * 1047 + 453;
         if (!game) {
             return <div></div>;
@@ -53,11 +73,21 @@ class GameDetail extends React.Component {
                             <div className="screenshots">
                                 {screenshots.map((screenshot, idx) => {
                                     return (
-                                        <img
-                                            className="screenshot"
-                                            src={screenshot.img_url}
-                                            alt={`screenshot #${idx + 1} from ${game.title}`}
-                                        />
+                                        <div
+                                            className={
+                                                idx === this.state.activePicIdx ? 'screenshot active' : 'screenshot'
+                                            }>
+                                            <img
+                                                onClick={() => {
+                                                    this.debounceInterval();
+                                                    this.setState({
+                                                        activePicIdx: idx,
+                                                    });
+                                                }}
+                                                src={screenshot.img_url}
+                                                alt={`screenshot #${idx + 1} from ${game.title}`}
+                                            />
+                                        </div>
                                     );
                                 })}
                             </div>
@@ -92,7 +122,7 @@ class GameDetail extends React.Component {
                                         year: 'numeric',
                                     })}
                                 </p>
-                                <div className="devpub-box">
+                                <div className="devpub-left">
                                     <p>Developer:</p>
                                     <p>Publisher:</p>
                                 </div>

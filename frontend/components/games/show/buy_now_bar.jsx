@@ -7,7 +7,7 @@ export default (props) => {
                 <h2 className="title">{props.game.title}</h2>
                 <div className="icons">
                     <i className="fab fa-windows"></i>
-                    <i class="fab fa-apple"></i>
+                    <i className="fab fa-apple"></i>
                     <div className="logo">
                         <i className="fas fa-cogs"></i>
                     </div>
