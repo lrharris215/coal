@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     get "/games/featured", to: 'games#featured'
     resources :games, only: [:show, :index]
-    
+    resources :purchases, only:[:create]
   end
 end
