@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 export default (props) => {
     const onClickHandle = () => {
         const savedCart = localStorage.getItem(currentUser.id);
-        let cart = [];
+        let cart = {};
         if (savedCart) {
             cart = JSON.parse(savedCart);
         }
-        cart.push(props.game);
+        cart[props.game.id] = props.game;
         localStorage.setItem(currentUser.id, JSON.stringify(cart));
     };
     return (

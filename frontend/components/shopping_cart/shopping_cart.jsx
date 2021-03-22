@@ -3,9 +3,26 @@ import React from 'react';
 class ShoppingCart extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            games: JSON.parse(localStorage.getItem(this.props.currentUserId)),
+        };
+        this.calculateTotalPrice = this.calculateTotalPrice.bind(this);
+    }
+    calculateTotalPrice() {
+        let total = 0;
+        this.state.games.map((game) => {
+            total += game.price;
+        });
+        return total;
     }
 
     render() {
+        const mappedGames = this.state.games.map((game) => {
+            return <li>{<ShoppingCartItem game={game} />}</li>;
+        });
+        const totalPrice = this.calculateTotalPrice();
+        debugger;
         return (
             <div className="shopping-cart-container">
                 <div className="shopping-cart-header">
