@@ -1,13 +1,15 @@
 .index-container {
-    background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
+    // background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
 
     display: flex;
     margin-top: 10px;
-    margin-left: 30px;
+    // margin-left: 30px;
+
     .index-left-side {
-        width: 650px;
+        width: 616px;
         height: fit-content;
-        margin: 15px;
+        margin: 15px 15px 15px 21px;
+
         .active {
             background-color: $index-detail-red;
             #index-title {

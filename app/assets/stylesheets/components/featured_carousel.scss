@@ -34,7 +34,7 @@
         font-size: 46px;
         z-index: 0;
         top: 150px;
-        right: -5px;
+        right: -45px;
         color: whitesmoke;
         background-image: linear-gradient(to left, $gradient-start-red, rgb(126, 48, 48));
         .fa-chevron-right {
@@ -82,11 +82,12 @@
         color: whitesmoke;
         border: 1px solid $header-red;
         z-index: 2;
+
         .big-image {
             z-index: 2;
             box-shadow: 5px -1px 8px black;
             img {
-                width: 630px;
+                width: 616px;
                 height: 345px;
                 z-index: 2;
             }
@@ -95,7 +96,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 325px;
+            width: 315px;
             z-index: 1;
             box-shadow: 3px -1px 10px black;
             .title {
