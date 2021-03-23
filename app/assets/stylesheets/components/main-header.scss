@@ -1,7 +1,7 @@
 .main-header {
-    // font-family: "Source Sans Pro", sans-serif; 
-    font-family: "Open Sans";
-    
+    // font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Open Sans';
+
     font-weight: 600;
     display: grid;
     grid-template-columns: 30% 45% 25%;
@@ -13,37 +13,35 @@
         text-transform: uppercase;
         font-size: 30px;
         color: $header-text-grey;
-       
+
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        
-                .logo {
-                background-color: $header-text-grey;
-                // text-align: center;
-                vertical-align: middle;
-                color: $header-red;
-                border-radius: 100%;
-                width: 50px;
-                height: 50px;
-                position: relative;
 
-                .fa-cogs{
-                    position: absolute;
-                    top: 10px;
-                    right: 7px;
-                }
+        .logo {
+            background-color: $header-text-grey;
+            // text-align: center;
+            vertical-align: middle;
+            color: $header-red;
+            border-radius: 100%;
+            width: 50px;
+            height: 50px;
+            position: relative;
+
+            .fa-cogs {
+                position: absolute;
+                top: 10px;
+                right: 7px;
+            }
         }
-         h1{
+        h1 {
             font-size: 25px;
             padding-left: 10px;
             vertical-align: middle;
         }
-       
-        
     }
-    .main-header-nav{
+    .main-header-nav {
         text-transform: uppercase;
         margin-left: 50px;
         color: $header-text-grey;
@@ -52,15 +50,15 @@
         font-weight: 500;
         justify-content: flex-start;
         font-size: 14px;
-        >ul{
+        > ul {
             display: flex;
             align-items: center;
-           
-            >li{
+
+            > li {
                 margin: 0 10px;
                 padding: 0;
                 text-align: center;
-                >a{
+                > a {
                     &:hover {
                         color: whitesmoke;
                     }
@@ -69,8 +67,7 @@
         }
     }
 
-    .right-main-header{
-       
+    .right-main-header {
         display: flex;
         font-size: 11px;
         font-weight: 400;
@@ -85,79 +82,74 @@
             text-align: center;
             color: $lighter-grey;
             cursor: pointer;
-            &:hover{
+            &:hover {
                 color: white;
             }
-            .fa-download{
+            .fa-download {
                 margin-right: 10px;
-               
+
                 font-size: 13px;
             }
         }
         .grey {
             background-color: $header-dark-grey;
-            
         }
         .orange {
             background-color: $button-orange;
-            
         }
-       
-    
-        .loggedIn-right-header{
+
+        .loggedIn-right-header {
             display: flex;
-             .envelope {
-            height: 20px;
-            width: 20px;
-            margin-top: 10px;
-            margin-left: 5px;
-            margin-right: 10px;
-            cursor: pointer;
-                .fa-envelope{
-                color: white;
-                background-color: $gradient-end-red;
+            .envelope {
+                height: 20px;
+                width: 20px;
+                margin-top: 10px;
+                margin-left: 5px;
+                margin-right: 10px;
+                cursor: pointer;
+                .fa-envelope {
+                    color: white;
+                    background-color: $gradient-end-red;
                 }
             }
-            
-            .profile-pic{
-               width: 32px;
-               height: 32px;
-               border: 2px solid $header-dark-grey;
-               margin: 5px 10px 10px 10px;
-               cursor: pointer;
-               
+
+            .profile-pic {
+                width: 32px;
+                height: 32px;
+                border: 2px solid $header-dark-grey;
+                margin: 5px 10px 10px 10px;
+                cursor: pointer;
             }
         }
-        .loggedOut-right-header{
+        .loggedOut-right-header {
             display: flex;
             margin-top: 10px;
-            
+
             a {
                 margin: 0 5px;
                 height: fit-content;
-               
-                &:hover{
+
+                &:hover {
                     color: whitesmoke;
                 }
             }
 
-            .fa-caret-down{
-            padding-bottom: 2px;
-            
-            margin: 0 3px;
+            .fa-caret-down {
+                padding-bottom: 2px;
+
+                margin: 0 3px;
             }
-            
         }
     }
 }
-.line{
+.line {
     margin: 0 7px;
-   
 }
-.pretend-link, .fa-caret-down{
+.pretend-link,
+.fa-caret-down {
     cursor: pointer;
-   
-    &:hover{
-         color: whitesmoke;
+
+    &:hover {
+        color: whitesmoke;
     }
 }
