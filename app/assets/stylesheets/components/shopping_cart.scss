@@ -187,4 +187,35 @@
             }
         }
     }
+    .under-cart {
+        width: 65%;
+        margin-top: 20px;
+        .remove-all-box {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 10px;
+            color: $header-dark-grey;
+            text-decoration: underline;
+            p {
+                &:hover {
+                    cursor: pointer;
+                    color: $link-yellow;
+                }
+            }
+        }
+        .continue-shopping-box {
+            background-color: $review-box-red;
+            width: fit-content;
+            padding: 8px 10px;
+            font-size: 14px;
+            border-radius: 2px;
+            color: $link-yellow;
+            filter: brightness(100%);
+            &:hover {
+                filter: brightness(130%);
+                cursor: pointer;
+                color: whitesmoke;
+            }
+        }
+    }
 }

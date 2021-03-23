@@ -42,8 +42,14 @@ class ShoppingCart extends React.Component {
                         <p>{`$${this.calculateTotalPrice() / 100}`}</p>
                     </div>
                     <div className="purchase-row">
-                        <div className="purchase-button">Purchase for Myself</div>
+                        <div className="purchase-button">Purchase for myself</div>
                     </div>
+                </div>
+                <div className="under-cart">
+                    <div className="remove-all-box">
+                        <p>Remove all items</p>
+                    </div>
+                    <div className="continue-shopping-box">Continue Shopping</div>
                 </div>
             </div>
         );
