@@ -2,7 +2,7 @@ class Api::PurchasesController < ApplicationController
     def create
         @purchase = Purchase.new(purchase_params)
         if @purchase.save
-            render json: {}
+            render json: ["Purchase Successful!"]
         else
             render json: @purchase.errors.full_messages, status: 400
         end

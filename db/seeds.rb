@@ -5,12 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Purchase.delete_all
 GameImage.delete_all
 Game.delete_all
 User.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('games')
 ActiveRecord::Base.connection.reset_pk_sequence!('game_images')
+ActiveRecord::Base.connection.reset_pk_sequence!('purchases')
 
 User.create({
     username: "Guest",

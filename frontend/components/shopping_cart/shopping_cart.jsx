@@ -45,7 +45,7 @@ class ShoppingCart extends React.Component {
             this.props.createNewPurchase({ buyerId: this.props.currentUserId, gameId: game.id });
         });
         localStorage.clear();
-        <Redirect to="/" />;
+        return <Redirect to="/" />;
     }
 
     render() {
