@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-
+        // this.props.clearErrors();
         if (this.props.formType === 'Sign up' && !this.checked) {
             this.props.receiveErrors(['You must be 13 or older to register.']);
 

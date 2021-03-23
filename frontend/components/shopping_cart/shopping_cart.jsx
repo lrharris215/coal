@@ -11,6 +11,7 @@ class ShoppingCart extends React.Component {
         };
         this.handleRemoveAllItems = this.handleRemoveAllItems.bind(this);
         this.handleRemoveOneItem = this.handleRemoveOneItem.bind(this);
+        this.handlePurchaseButton = this.handlePurchaseButton.bind(this);
         this.calculateTotalPrice = this.calculateTotalPrice.bind(this);
     }
     componentDidMount() {
@@ -36,6 +37,15 @@ class ShoppingCart extends React.Component {
         this.setState({
             games: this.state.games,
         });
+    }
+    handlePurchaseButton() {
+        let games = Object.values(this.state.games);
+        debugger;
+        games.map((game) => {
+            this.props.createNewPurchase({ buyerId: this.props.currentUserId, gameId: game.id });
+        });
+        localStorage.clear();
+        <Redirect to="/" />;
     }
 
     render() {
@@ -70,7 +80,9 @@ class ShoppingCart extends React.Component {
                         <p>{`$${this.calculateTotalPrice() / 100}`}</p>
                     </div>
                     <div className="purchase-row">
-                        <div className="purchase-button">Purchase for myself</div>
+                        <div className="purchase-button" onClick={() => this.handlePurchaseButton()}>
+                            Purchase for myself
+                        </div>
                     </div>
                 </div>
                 <div className="under-cart">
