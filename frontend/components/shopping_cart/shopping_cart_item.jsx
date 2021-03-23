@@ -49,7 +49,7 @@ class ShoppingCartItem extends React.Component {
                     </div>
                     <div className="price-remove">
                         <p className="price">{`$${game.price / 100}`}</p>
-                        <p className="remove" onClick={this.props.handleRemoveOneItem(game.id)}>
+                        <p className="remove" onClick={() => this.props.handleRemoveOneItem(game.id)}>
                             Remove
                         </p>
                     </div>

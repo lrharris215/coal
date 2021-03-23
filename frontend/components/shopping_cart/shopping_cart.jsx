@@ -48,7 +48,7 @@ class ShoppingCart extends React.Component {
                     </li>
                 );
             });
-        if (!this.state.games) {
+        if (Object.values(this.state.games).length < 1) {
             return <Redirect to="/" />;
         }
 
@@ -79,7 +79,9 @@ class ShoppingCart extends React.Component {
                             <p>Remove all items</p>
                         </Link>
                     </div>
-                    <div className="continue-shopping-box">Continue Shopping</div>
+                    <Link to="/">
+                        <div className="continue-shopping-box">Continue Shopping</div>
+                    </Link>
                 </div>
             </div>
         );

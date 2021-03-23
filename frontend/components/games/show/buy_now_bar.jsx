@@ -8,7 +8,9 @@ export default (props) => {
         if (savedCart) {
             cart = JSON.parse(savedCart);
         }
+
         cart[props.game.id] = props.game;
+
         localStorage.setItem(currentUser.id, JSON.stringify(cart));
     };
     return (
