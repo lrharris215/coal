@@ -33,7 +33,6 @@ class GamesIndex extends React.Component {
     render() {
         let sortedGames = this.props.games && [...this.props.games].sort(this.sortGamesByReleaseDate);
 
-        console.log(sortedGames);
         const mappedGames = sortedGames.map((game) => {
             const titleCard = Object.values(game.gameImages).filter((gameImage) => gameImage.img_type === 'title-card');
 
