@@ -1,5 +1,5 @@
 .shopping-cart-container {
-    border: 1px solid pink;
+    // border: 1px solid pink;
     width: 935px;
     height: 700px;
     align-self: center;
@@ -71,6 +71,9 @@
                     .remove {
                         font-size: 10px;
                         color: $header-dark-grey;
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                 }
             }

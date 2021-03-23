@@ -33,10 +33,14 @@ class ShoppingCartItem extends React.Component {
         return (
             <div className="shopping-cart-item">
                 <div className="left-side">
-                    <div className="title-card">
-                        <img className="title-card" src={titleCard[0].img_url} alt={`${game.title}-title-card`} />
-                    </div>
-                    <div className="title">{game.title}</div>
+                    <Link to={`/api/games/${game.id}`}>
+                        <div className="title-card">
+                            <img className="title-card" src={titleCard[0].img_url} alt={`${game.title}-title-card`} />
+                        </div>
+                    </Link>
+                    <Link to={`/api/games/${game.id}`}>
+                        <div className="title">{game.title}</div>
+                    </Link>
                 </div>
                 <div className="right-side">
                     <div className="icons">
@@ -45,9 +49,12 @@ class ShoppingCartItem extends React.Component {
                     </div>
                     <div className="price-remove">
                         <p className="price">{`$${game.price / 100}`}</p>
-                        <p className="remove">Remove</p>
+                        <p className="remove" onClick={this.props.handleRemoveOneItem(game.id)}>
+                            Remove
+                        </p>
                     </div>
                 </div>
+
                 <div className="sc-item-detail">
                     <h4>{game.title}</h4>
                     <p>
