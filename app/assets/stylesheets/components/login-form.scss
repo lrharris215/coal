@@ -1,4 +1,6 @@
-.login-form{
+.session-form-container {
+}
+.login-form {
     display: grid;
     grid-template-columns: 62% 38%;
     grid-auto-flow: column;
@@ -6,12 +8,13 @@
     background-image: image-url('acct_creation_bg');
     background-position: -45vw -20vh;
     background-color: $background-dark-grey;
+    width: 100%;
+    height: 100%;
     .left-login-section {
-            padding-bottom: 300px;
-        
-    
+        padding-bottom: 300px;
+
         // border: 2px solid yellow;
-        .login-errors{
+        .login-errors {
             border: 1px solid $error-red;
             width: 250px;
             margin: 20px auto;
@@ -20,19 +23,18 @@
             font-size: 14px;
             padding: 20px;
             background-color: $background-darker-grey;
-            transition-delay: .5s;
+            transition-delay: 0.5s;
             transition: max-height 1.5s linear;
             max-height: 100px;
             overflow: hidden;
-            
         }
         .empty {
             max-height: 0;
-            transition-delay: .75s;
+            transition-delay: 0.75s;
             transition: max-height 5s ease-in-out;
         }
-      
-        .session-form{
+
+        .session-form {
             display: flex;
             flex-direction: column;
             margin: 0 auto;
@@ -40,23 +42,22 @@
             width: 300px;
             color: $header-text-grey;
             padding: 50px 100px 0 200px;
-            h2{
+            h2 {
                 color: white;
                 text-transform: uppercase;
-                font-family: "Open Sans";
+                font-family: 'Open Sans';
                 font-size: 36px;
                 font-weight: 300;
                 text-align: center;
                 margin-bottom: 20px;
             }
-            label{
+            label {
                 display: flex;
                 flex-direction: column;
                 margin: 10px;
                 font-size: 13px;
             }
-            input{
-            
+            input {
                 background-color: $input-grey;
                 margin: 5px 0;
                 padding-left: 5px;
@@ -73,30 +74,29 @@
                 margin: 0 auto;
                 text-shadow: 1px 1px $header-dark-grey;
                 background-image: linear-gradient(to right, $link-yellow, $button-orange);
-                &:hover{
-                    background-image: linear-gradient(to right, rgb(255, 229, 135),rgb(255, 171, 36));
-
+                &:hover {
+                    background-image: linear-gradient(to right, rgb(255, 229, 135), rgb(255, 171, 36));
                 }
-                &:active{
+                &:active {
                     border: 2px solid whitesmoke;
                     height: 33px;
                 }
             }
-            .login-bottom{
-                display: flex; 
+            .login-bottom {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-            .guest-button{
+            .guest-button {
                 width: 140px;
                 margin: 0 auto;
             }
-            .forgot-pw{
+            .forgot-pw {
                 font-size: 12px;
                 color: whitesmoke;
                 text-align: center;
                 margin: 20px 0;
-                &:hover{
+                &:hover {
                     color: $link-yellow;
                     cursor: pointer;
                 }
@@ -113,36 +113,33 @@
         align-items: center;
         padding-bottom: 300px;
         .right-side {
-            
             margin-right: 30%;
-            p{
-            
-            width: 200px;
-            margin: 0 auto;
-            color: $header-text-grey;
+            p {
+                width: 200px;
+                margin: 0 auto;
+                color: $header-text-grey;
             }
-            p:first-child{
+            p:first-child {
                 margin-top: 100px;
             }
-            .computerImage{
+            .computerImage {
                 width: 300px;
                 height: 300px;
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
-                img{
+                img {
                     margin-bottom: 30px;
                 }
             }
-            .learn-more{
+            .learn-more {
                 margin: 20px 0;
                 width: fit-content;
-                &:hover{
+                &:hover {
                     color: $link-yellow;
                 }
-                
             }
-            .join-button{
+            .join-button {
                 padding: 8px 10px;
                 border: 1px solid $header-text-grey;
                 border-radius: 2px;
@@ -153,8 +150,6 @@
                     border: 1px solid whitesmoke;
                 }
             }
+        }
     }
-       
-    }
-    
 }

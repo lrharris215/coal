@@ -1,5 +1,8 @@
 .sidebar {
-    width: 220px;
+    width: 230px;
+    // margin-right: 15px;
+    position: absolute;
+    left: -230px;
     .giftcards-pic {
         width: 150px;
         height: 120px;
@@ -26,8 +29,8 @@
                 .fa-cogs {
                     font-size: 24px;
                     position: absolute;
-                    top: 10px;
-                    left: 6px;
+                    top: 11px;
+                    left: 7px;
                 }
             }
             h4 {
@@ -45,6 +48,7 @@
 
         font-size: 12px;
         padding: 5px;
+        padding-left: 0px;
 
         li {
             color: $link-yellow;

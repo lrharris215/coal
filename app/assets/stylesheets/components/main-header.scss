@@ -1,25 +1,31 @@
-.main-header {
-    // font-family: "Source Sans Pro", sans-serif; 
-    font-family: "Open Sans";
-    
-    font-weight: 600;
-    display: grid;
-    grid-template-columns: 30% 45% 25%;
+.header-container {
+    display: flex;
+    justify-content: center;
     background-color: $header-red;
-    color: $header-text-grey;
-    text-align: center;
-    height: 104px;
-    .logo-container {
-        text-transform: uppercase;
-        font-size: 30px;
+    .main-header {
+        // font-family: "Source Sans Pro", sans-serif;
+        font-family: 'Open Sans';
+        width: 935px;
+
+        font-weight: 600;
+
+        display: grid;
+        grid-template-columns: 25% 43% 32%;
+        background-color: $header-red;
         color: $header-text-grey;
-       
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        
-                .logo {
+        text-align: center;
+        height: 104px;
+        .logo-container {
+            text-transform: uppercase;
+            font-size: 30px;
+            color: $header-text-grey;
+
+            display: flex;
+            flex-direction: row;
+            // justify-content: flex-end;
+            align-items: center;
+
+            .logo {
                 background-color: $header-text-grey;
                 // text-align: center;
                 vertical-align: middle;
@@ -29,135 +35,129 @@
                 height: 50px;
                 position: relative;
 
-                .fa-cogs{
+                .fa-cogs {
                     position: absolute;
                     top: 10px;
                     right: 7px;
                 }
+            }
+            h1 {
+                font-size: 25px;
+                padding-left: 10px;
+                vertical-align: middle;
+            }
         }
-         h1{
-            font-size: 25px;
-            padding-left: 10px;
-            vertical-align: middle;
-        }
-       
-        
-    }
-    .main-header-nav{
-        text-transform: uppercase;
-        margin-left: 50px;
-        color: $header-text-grey;
-        display: flex;
-        align-items: center;
-        font-weight: 500;
-        justify-content: flex-start;
-        font-size: 14px;
-        >ul{
+        .main-header-nav {
+            text-transform: uppercase;
+            // margin-left: 50px;
+            color: $header-text-grey;
             display: flex;
             align-items: center;
-           
-            >li{
-                margin: 0 10px;
-                padding: 0;
-                text-align: center;
-                >a{
-                    &:hover {
-                        color: whitesmoke;
+            font-weight: 500;
+            justify-content: flex-start;
+            font-size: 14px;
+            > ul {
+                display: flex;
+                align-items: center;
+
+                > li {
+                    margin: 0 10px;
+                    padding: 0;
+                    text-align: center;
+                    > a {
+                        &:hover {
+                            color: whitesmoke;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .right-main-header{
-       
-        display: flex;
-        font-size: 11px;
-        font-weight: 400;
-        .install-button {
-            margin: 7px 10px 0 10px;
-            padding-bottom: 2px;
-            width: 110px;
-            height: 20px;
+        .right-main-header {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: $lighter-grey;
-            cursor: pointer;
-            &:hover{
-                color: white;
-            }
-            .fa-download{
-                margin-right: 10px;
-               
-                font-size: 13px;
-            }
-        }
-        .grey {
-            background-color: $header-dark-grey;
-            
-        }
-        .orange {
-            background-color: $button-orange;
-            
-        }
-       
-    
-        .loggedIn-right-header{
-            display: flex;
-             .envelope {
-            height: 20px;
-            width: 20px;
-            margin-top: 10px;
-            margin-left: 5px;
-            margin-right: 10px;
-            cursor: pointer;
-                .fa-envelope{
-                color: white;
-                background-color: $gradient-end-red;
+            font-size: 11px;
+            font-weight: 400;
+            .install-button {
+                margin: 7px 10px 0 10px;
+                padding-bottom: 2px;
+                width: 110px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: $lighter-grey;
+                cursor: pointer;
+                &:hover {
+                    color: white;
+                }
+                .fa-download {
+                    margin-right: 10px;
+
+                    font-size: 13px;
                 }
             }
-            
-            .profile-pic{
-               width: 32px;
-               height: 32px;
-               border: 2px solid $header-dark-grey;
-               margin: 5px 10px 10px 10px;
-               cursor: pointer;
-               
+            .grey {
+                background-color: $header-dark-grey;
             }
-        }
-        .loggedOut-right-header{
-            display: flex;
-            margin-top: 10px;
-            
-            a {
-                margin: 0 5px;
-                height: fit-content;
-               
-                &:hover{
-                    color: whitesmoke;
-                }
+            .orange {
+                background-color: $button-orange;
             }
 
-            .fa-caret-down{
-            padding-bottom: 2px;
-            
-            margin: 0 3px;
+            .loggedIn-right-header {
+                display: flex;
+                .envelope {
+                    height: 20px;
+                    width: 20px;
+                    margin-top: 10px;
+                    margin-left: 5px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    .fa-envelope {
+                        color: white;
+                        background-color: $gradient-end-red;
+                    }
+                }
+
+                .profile-pic {
+                    width: 32px;
+                    height: 32px;
+                    border: 2px solid $header-dark-grey;
+                    margin: 5px 10px 10px 10px;
+                    cursor: pointer;
+                }
             }
-            
+            .loggedOut-right-header {
+                display: flex;
+                margin-top: 10px;
+
+                a {
+                    margin: 0 5px;
+                    height: fit-content;
+
+                    &:hover {
+                        color: whitesmoke;
+                    }
+                }
+
+                .fa-caret-down {
+                    padding-bottom: 2px;
+
+                    margin: 0 3px;
+                }
+            }
         }
     }
 }
-.line{
+
+.line {
     margin: 0 7px;
-   
 }
-.pretend-link, .fa-caret-down{
+.pretend-link,
+.fa-caret-down {
     cursor: pointer;
-   
-    &:hover{
-         color: whitesmoke;
+
+    &:hover {
+        color: whitesmoke;
     }
 }

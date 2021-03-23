@@ -1,22 +1,24 @@
-.signup-form{
+.signup-form {
     background-image: image-url('acct_creation_bg');
     background-color: $background-dark-grey;
     background-position: -45vw -20vh;
     display: grid;
     grid-template-columns: 70% 30%;
     grid-auto-flow: column;
-    .left-login-section{
+    width: 100%;
+    height: 100%;
+    .left-login-section {
         display: flex;
         flex-direction: row-reverse;
-        .session-form{
+        .session-form {
             display: flex;
             flex-direction: column;
             margin: 0;
-            background-image: linear-gradient(to right,rgba(33,34,38, .2), rgba(33,34,38, 1));
+            background-image: linear-gradient(to right, rgba(33, 34, 38, 0.2), rgba(33, 34, 38, 1));
             width: 500px;
             color: $header-text-grey;
             padding: 50px 150px 0 0;
-            .login-errors{
+            .login-errors {
                 border: 2px solid $error-red;
                 width: 80%;
                 margin: 20px 0;
@@ -25,39 +27,36 @@
                 font-size: 14px;
                 padding: 20px;
                 background-color: $background-darker-grey;
-                transition-delay: .5s;
+                transition-delay: 0.5s;
                 transition: max-height 1.5s linear;
                 max-height: 200px;
                 overflow: hidden;
-                
             }
             .empty {
-            max-height: 0;
+                max-height: 0;
             }
-            h2{
+            h2 {
                 color: white;
                 text-transform: uppercase;
                 font-size: 36px;
                 font-weight: 300;
                 text-align: left;
                 margin: 30px 0;
-                font-family: "Open Sans";
+                font-family: 'Open Sans';
             }
-             label{
+            label {
                 display: flex;
                 flex-direction: column;
                 padding: 10px 0;
                 font-size: 13px;
             }
-            input{
-            
+            input {
                 background-color: $input-grey;
                 margin: 5px 0;
                 height: 35px;
                 width: 65%;
                 padding-left: 5px;
                 border-radius: 3px;
-               
             }
             .captcha-box {
                 border: 1px solid $header-text-grey;
@@ -72,60 +71,54 @@
                 justify-content: space-between;
                 width: 70%;
                 margin: 20px 0;
-                
 
-                label{
+                label {
                     padding: 0;
                     flex-direction: row;
                     align-items: center;
-                    
-                    input{
+
+                    input {
                         margin: 0 10px;
                         height: 30px;
                         width: 30px;
                         padding: 10px;
                         outline: 1px solid $header-text-grey;
-                        &:hover{
+                        &:hover {
                             outline: 1px solid $button-orange;
                         }
                     }
                     p {
                         margin: 0 10px;
-                    }  
-                } 
-                  .fa-recycle {
-                        font-size: 30px;
-                        align-self: flex-end;
-                        margin: auto;
                     }
+                }
+                .fa-recycle {
+                    font-size: 30px;
+                    align-self: flex-end;
+                    margin: auto;
+                }
             }
             .age-check {
                 width: 650px;
                 margin: 30px 0;
                 label {
-                    
                     display: inline-block;
                     font-size: 14px;
-                    input{
+                    input {
                         display: inline-block;
                         height: 18px;
                         width: 18px;
                         margin-right: 10px;
                         margin: 0 10px 0 0;
                     }
-                    a{
+                    a {
                         color: whitesmoke;
-                        &:hover{
+                        &:hover {
                             color: $link-yellow;
                         }
                     }
-                    
-
                 }
-                
-            
             }
-             button {
+            button {
                 border-radius: 2px;
                 text-align: center;
                 color: white;
@@ -134,23 +127,21 @@
                 margin-bottom: 200px;
                 text-shadow: 1px 1px $header-dark-grey;
                 background-image: linear-gradient(to right, $link-yellow, $button-orange);
-                &:hover{
-                    background-image: linear-gradient(to right, rgb(255, 229, 135),rgb(255, 171, 36));
-
+                &:hover {
+                    background-image: linear-gradient(to right, rgb(255, 229, 135), rgb(255, 171, 36));
                 }
-                &:active{
+                &:active {
                     border: 2px solid whitesmoke;
                     height: 31px;
                     width: 176px;
                 }
             }
         }
-        
     }
     .right-login-section {
-        background-color: rgb(33,34,38);
+        background-color: rgb(33, 34, 38);
     }
-    .red-border{
+    .red-border {
         outline: 1px solid $error-red;
     }
 }
