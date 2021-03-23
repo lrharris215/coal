@@ -1,198 +1,205 @@
 .game-show-page {
     display: flex;
     flex-direction: column;
-    height: auto;
-    padding-bottom: 20px;
+    height: 100%;
+    padding-bottom: 40px;
     //
     .background {
         z-index: -5;
-        // width: 100%;
-        // height: 100%;
+        width: 100%;
+        height: fit-content;
         object-fit: cover;
         position: absolute;
         opacity: 10%;
     }
-    .game-detail-container {
-        width: 944px;
-        height: 500px;
-        opacity: 100%;
-        z-index: 3;
+    .center-page-helper {
         align-self: center;
-        margin: 50px 15px 0 15px;
-        .game-detail-header {
-            display: flex;
-            justify-content: space-between;
-            .gd-header-left {
-                p {
-                    font-size: 11px;
-                    color: $header-text-grey;
-                    span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .game-detail-container {
+            width: 944px;
+            height: 500px;
+            opacity: 100%;
+            z-index: 3;
+            // align-self: left;
+            margin: 50px 15px 0 15px;
+            .game-detail-header {
+                display: flex;
+                justify-content: space-between;
+                .gd-header-left {
+                    p {
+                        font-size: 11px;
+                        color: $header-text-grey;
+                        span {
+                            &:hover {
+                                cursor: pointer;
+                                color: whitesmoke;
+                            }
+                        }
+                    }
+                    h2 {
+                        color: white;
+                        margin-bottom: 10px;
+                        margin-top: 5px;
+                    }
+                }
+                .gd-header-right {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    .community-hub {
+                        background-color: rgba(214, 98, 98, 0.5);
+                        padding: 8px 16px;
+                        font-size: 13px;
+                        margin-bottom: 14px;
+                        margin-right: 2px;
+                        color: $link-yellow;
+                        border-radius: 2px;
                         &:hover {
                             cursor: pointer;
                             color: whitesmoke;
+                            background-image: linear-gradient(to right, $index-detail-red, rgb(190, 87, 87));
                         }
                     }
                 }
-                h2 {
-                    color: white;
-                    margin-bottom: 10px;
-                    margin-top: 5px;
-                }
             }
-            .gd-header-right {
+            .game-detail-main {
                 display: flex;
-                flex-direction: column-reverse;
-                .community-hub {
-                    background-color: rgba(214, 98, 98, 0.5);
-                    padding: 8px 16px;
-                    font-size: 13px;
-                    margin-bottom: 14px;
-                    margin-right: 2px;
-                    color: $link-yellow;
-                    border-radius: 2px;
-                    &:hover {
-                        cursor: pointer;
-                        color: whitesmoke;
-                        background-image: linear-gradient(to right, $index-detail-red, rgb(190, 87, 87));
-                    }
-                }
-            }
-        }
-        .game-detail-main {
-            display: flex;
-            background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
+                background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-end-red);
 
-            .game-detail-left {
-                .big-picture {
-                    width: 600px;
-                    // height: 340px;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-                .screenshots {
-                    display: flex;
-                    margin-top: 5px;
-                    // overflow-x: scroll;
-                    // &::-webkit-scrollbar {
-                    //     width: 1em;
-                    // }
-
-                    // &::-webkit-scrollbar-track {
-                    //     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                    // }
-
-                    // &::-webkit-scrollbar-thumb {
-                    //     background-color: $gradient-end-red;
-                    //     outline: 1px solid slategrey;
-                    // }
-                    // &::-webkit-scrollbar-button {
-                    //     display: block;
-                    //     color: blue;
-                    //     background-color: green;
-                    // }
-                    .screenshot {
-                        width: 125px;
-                        height: auto;
-                        margin-right: 4px;
-                        position: relative;
+                .game-detail-left {
+                    .big-picture {
+                        width: 600px;
+                        // height: 340px;
                         &:hover {
                             cursor: pointer;
                         }
                     }
-                    .active {
-                        border: 2px solid $lighter-grey;
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            top: -27px;
-                            left: 50px;
-                            width: 0;
-                            height: 0;
-                            border: 13px solid transparent;
-                            border-bottom-color: $lighter-grey;
-                        }
-                    }
-                }
-            }
-            .game-detail-right {
-                // border: 1px solid hotpink;
-                margin-left: 15px;
-                .title-card {
-                    width: 328px;
-                    height: 148px;
-                }
-                .description {
-                    font-size: 12px;
-                    color: whitesmoke;
-                    margin-top: 15px;
-                    margin-right: 15px;
-                    max-height: 100px;
-                    p {
-                        line-height: 150%;
-                    }
-                }
-                .bottom-half {
-                    margin-top: 15px;
-                    display: grid;
-                    grid-template-columns: 35% 65%;
-                    grid-template-rows: 40% 30% 30%;
-                    font-size: 10px;
-                    height: 100px;
-                    color: $header-text-grey;
-                    .reviews-left {
-                        text-transform: uppercase;
-                        line-height: 16px;
-                    }
-                    .reviews-right {
-                        font-size: 11px;
-                        span {
-                            color: $link-yellow;
-                            &:hover {
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                    .releaseDate {
-                        text-transform: uppercase;
-                        line-height: 16px;
-                    }
-                    .date {
-                        font-size: 11px;
-                        color: $lighter-grey;
-                    }
-                    .devpub-left {
-                        text-transform: uppercase;
-                        line-height: 16px;
-                    }
-                    .devpub-right {
-                        font-size: 11px;
-                        color: $link-yellow;
-                        p {
-                            &:hover {
-                                cursor: pointer;
-                                color: whitesmoke;
-                            }
-                        }
-                    }
-                }
-                .popular-tags {
-                    font-size: 11px;
-                    color: $header-text-grey;
-                    margin-top: 10px;
-                    .tags {
+                    .screenshots {
                         display: flex;
-                        font-size: 10px;
-                        .tag {
-                            padding: 2px 5px;
-                            margin: 3px 2px;
-                            background-color: $review-box-red;
-                            color: $link-yellow;
-                            border-radius: 2px;
+                        margin-top: 5px;
+                        // overflow-x: scroll;
+                        // &::-webkit-scrollbar {
+                        //     width: 1em;
+                        // }
+
+                        // &::-webkit-scrollbar-track {
+                        //     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                        // }
+
+                        // &::-webkit-scrollbar-thumb {
+                        //     background-color: $gradient-end-red;
+                        //     outline: 1px solid slategrey;
+                        // }
+                        // &::-webkit-scrollbar-button {
+                        //     display: block;
+                        //     color: blue;
+                        //     background-color: green;
+                        // }
+                        .screenshot {
+                            width: 125px;
+                            height: auto;
+                            margin-right: 2px;
+                            position: relative;
+                            border: 2px solid transparent;
                             &:hover {
                                 cursor: pointer;
-                                color: whitesmoke;
-                                background-image: linear-gradient(to right, $index-detail-red, rgb(190, 87, 87));
+                            }
+                        }
+                        .active {
+                            border: 2px solid $lighter-grey;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: -27px;
+                                left: 50px;
+                                width: 0;
+                                height: 0;
+                                border: 13px solid transparent;
+                                border-bottom-color: $lighter-grey;
+                            }
+                        }
+                    }
+                }
+                .game-detail-right {
+                    // border: 1px solid hotpink;
+                    margin-left: 15px;
+                    .title-card {
+                        width: 328px;
+                        height: 148px;
+                    }
+                    .description {
+                        font-size: 12px;
+                        color: whitesmoke;
+                        margin-top: 15px;
+                        margin-right: 15px;
+                        max-height: 100px;
+                        p {
+                            line-height: 150%;
+                        }
+                    }
+                    .bottom-half {
+                        margin-top: 15px;
+                        display: grid;
+                        grid-template-columns: 35% 65%;
+                        grid-template-rows: 40% 30% 30%;
+                        font-size: 10px;
+                        height: 100px;
+                        color: $header-text-grey;
+                        .reviews-left {
+                            text-transform: uppercase;
+                            line-height: 16px;
+                        }
+                        .reviews-right {
+                            font-size: 11px;
+                            span {
+                                color: $link-yellow;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .releaseDate {
+                            text-transform: uppercase;
+                            line-height: 16px;
+                        }
+                        .date {
+                            font-size: 11px;
+                            color: $lighter-grey;
+                        }
+                        .devpub-left {
+                            text-transform: uppercase;
+                            line-height: 16px;
+                        }
+                        .devpub-right {
+                            font-size: 11px;
+                            color: $link-yellow;
+                            p {
+                                &:hover {
+                                    cursor: pointer;
+                                    color: whitesmoke;
+                                }
+                            }
+                        }
+                    }
+                    .popular-tags {
+                        font-size: 11px;
+                        color: $header-text-grey;
+                        margin-top: 10px;
+                        .tags {
+                            display: flex;
+                            font-size: 10px;
+                            .tag {
+                                padding: 2px 5px;
+                                margin: 3px 2px;
+                                background-color: $review-box-red;
+                                color: $link-yellow;
+                                border-radius: 2px;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: whitesmoke;
+                                    background-image: linear-gradient(to right, $index-detail-red, rgb(190, 87, 87));
+                                }
                             }
                         }
                     }
