@@ -38,11 +38,13 @@ class ShoppingCart extends React.Component {
                 </div>
                 <div className="shopping-cart-bottom">
                     <div className="estimated-total">
-                        <p>Estimated Total:</p>
-                        <p>Price</p>
+                        <p>Estimated Total</p>
+                        <p>{`$${this.calculateTotalPrice() / 100}`}</p>
+                    </div>
+                    <div className="purchase-row">
+                        <div className="purchase-button">Purchase for Myself</div>
                     </div>
                 </div>
-                <div className="purchase-button">Purchase for Myself</div>
             </div>
         );
     }
