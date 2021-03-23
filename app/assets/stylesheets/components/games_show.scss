@@ -3,11 +3,12 @@
     flex-direction: column;
     height: 100%;
     padding-bottom: 40px;
+    width: 100%;
     //
     .background {
         z-index: -5;
         width: 100%;
-        height: fit-content;
+        height: 120%;
         object-fit: cover;
         position: absolute;
         opacity: 10%;
