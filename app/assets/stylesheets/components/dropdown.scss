@@ -7,8 +7,8 @@
         width: 150px;
         z-index: 10;
         position: absolute;
-        top: 25px;
-        right: 20px;
+        top: 30px;
+        right: 0px;
         text-align: left;
         ul {
             li:first-child {
@@ -74,7 +74,7 @@
     }
     .main-username-button + div {
         position: absolute;
-        left: 23px;
+        left: 20px;
 
         font-size: 12px;
         width: 100px;
