@@ -54,5 +54,12 @@ body {
         .signup-form {
             grid-template-columns: 60% 40%;
         }
+        .game-show-page {
+            height: 100vh;
+
+            .background-image {
+                height: 100vh;
+            }
+        }
     }
 }
