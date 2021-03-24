@@ -8,12 +8,10 @@ class HomePage extends React.Component {
     constructor(props) {
         super(props);
         if (window.currentUser) {
-            debugger;
             this.hasCart = Boolean(localStorage.getItem(currentUser.id));
         }
 
         this.numItemsInCart = this.numItemsInCart.bind(this);
-        debugger;
     }
     numItemsInCart() {
         if (this.hasCart) {

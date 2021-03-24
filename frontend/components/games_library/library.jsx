@@ -1,5 +1,5 @@
 import React from 'react';
-
+import LibraryIndexItem from './library_index_item.jsx';
 class Library extends React.Component {
     constructor(props) {
         super(props);
@@ -11,13 +11,33 @@ class Library extends React.Component {
     render() {
         const { users, userId } = this.props;
         const user = users && users[userId];
-        debugger;
-        if (!user) return <div>No user!</div>;
+        const games = user && user.games;
+
+        if (!user.games) return <div>No user!</div>;
+
+        const mappedGames = games.map((game) => {
+            return (
+                <li>
+                    <LibraryIndexItem game={game} />
+                </li>
+            );
+        });
+
         return (
-            <div>
-                Library maybe?!?
-                <div>{user.username}</div>
-                <div>{this.props.userId}</div>
+            <div className="library-container">
+                <div className="library-div">
+                    <div className="username-bar">
+                        <div className="profile-pic"></div>
+                        <div className="words">
+                            <h1>{user.username}</h1>
+                            <i class="fas fa-angle-double-right"></i>
+                            <p>Games</p>
+                        </div>
+                    </div>
+                    <div className="library-index">
+                        <ul>{mappedGames}</ul>
+                    </div>
+                </div>
             </div>
         );
     }
