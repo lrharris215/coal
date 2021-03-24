@@ -7,12 +7,17 @@ import FeaturedCarouselContainer from '../games/featured/featured_carousel_conta
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
-        this.hasCart = Boolean(localStorage.getItem(window.currentUser.id));
+        if (window.currentUser) {
+            debugger;
+            this.hasCart = Boolean(localStorage.getItem(currentUser.id));
+        }
+
         this.numItemsInCart = this.numItemsInCart.bind(this);
+        debugger;
     }
     numItemsInCart() {
         if (this.hasCart) {
-            let items = Object.values(JSON.parse(localStorage.getItem(window.currentUser.id)));
+            let items = Object.values(JSON.parse(localStorage.getItem(currentUser.id)));
             return items.length;
         }
     }
