@@ -1,6 +1,9 @@
 .header-drop-down {
     position: relative;
-
+    .logout-button {
+        font-family: 'Open Sans';
+        font-size: 11px;
+    }
     .active {
         box-shadow: 2px 2px 2px $gradient-end-red;
         display: block;

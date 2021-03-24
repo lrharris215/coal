@@ -108,7 +108,7 @@ class MainHeader extends React.Component {
                                     listItems={[
                                         <a href="">View profile</a>,
                                         <a href="">Account details</a>,
-                                        <button onClick={this.props.logoutUser}>
+                                        <button className="logout-button" onClick={this.props.logoutUser}>
                                             Logout: <span className="yellow-text">{this.props.username}</span>
                                         </button>,
                                         <a href="">Preferences</a>,
