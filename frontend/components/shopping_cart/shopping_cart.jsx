@@ -15,6 +15,8 @@ class ShoppingCart extends React.Component {
         this.calculateTotalPrice = this.calculateTotalPrice.bind(this);
     }
     componentDidMount() {
+        console.log('Shopping cart is mounted?');
+        console.log(`${this.state.games}`);
         if (!this.state.games) {
             return <Redirect to="/" />;
         }
@@ -24,6 +26,7 @@ class ShoppingCart extends React.Component {
         Object.values(this.state.games).map((game) => {
             total += game.price;
         });
+        console.log('total price calculated');
         return total;
     }
 
@@ -44,6 +47,7 @@ class ShoppingCart extends React.Component {
         games.map((game) => {
             this.props.createNewPurchase({ buyerId: this.props.currentUserId, gameId: game.id });
         });
+        debugger;
         localStorage.clear();
         return <Redirect to="/" />;
     }

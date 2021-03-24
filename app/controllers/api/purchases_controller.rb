@@ -1,6 +1,7 @@
 class Api::PurchasesController < ApplicationController 
     def create
         @purchase = Purchase.new(purchase_params)
+       
         if @purchase.save
             render json: ["Purchase Successful!"]
         else
