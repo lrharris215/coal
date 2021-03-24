@@ -15,13 +15,11 @@ class ShoppingCart extends React.Component {
         this.calculateTotalPrice = this.calculateTotalPrice.bind(this);
     }
     componentDidMount() {
-        debugger;
         if (Object.values(this.state.games).length < 1) {
             return <Redirect to="/" />;
         }
     }
     componentDidUpdate() {
-        debugger;
         if (Object.values(this.state.games).length < 1) {
             return <Redirect to="/" />;
         }
@@ -48,11 +46,11 @@ class ShoppingCart extends React.Component {
     }
     handlePurchaseButton() {
         let games = Object.values(this.state.games);
-        debugger;
+
         games.map((game) => {
             this.props.createNewPurchase({ buyerId: this.props.currentUserId, gameId: game.id });
         });
-        debugger;
+
         localStorage.clear();
         this.setState({
             games: [],
