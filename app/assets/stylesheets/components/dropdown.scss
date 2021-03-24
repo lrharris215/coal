@@ -1,93 +1,82 @@
-.header-drop-down{
-    
+.header-drop-down {
     position: relative;
-   
-    .active{
+
+    .active {
         box-shadow: 2px 2px 2px $gradient-end-red;
         display: block;
         width: 150px;
-        z-index: 1;
+        z-index: 10;
         position: absolute;
         top: 25px;
         right: 20px;
         text-align: left;
         ul {
-            li:first-child{
+            li:first-child {
                 padding-top: 10px;
             }
-            li{
+            li {
                 padding: 5px 10px;
                 &:hover {
                     color: whitesmoke;
                 }
             }
-            li:last-child{
+            li:last-child {
                 padding-bottom: 10px;
             }
-            .yellow-text{
+            .yellow-text {
                 color: $link-yellow;
             }
-        }   
-
+        }
     }
-     .username-dropdown{
-       
+    .username-dropdown {
         margin: 5px 0;
         cursor: pointer;
-        .fa-caret-down{
+        .fa-caret-down {
             padding-top: 2px;
             margin: 3px;
             font-size: 14px;
         }
-        
     }
     .hidden {
         display: none;
-    }  
-    
-    .store-button{
+    }
+
+    .store-button {
         position: relative;
         cursor: pointer;
-        &:hover{
-           color: whitesmoke;
-       }
-       
+        &:hover {
+            color: whitesmoke;
+        }
     }
-    .store-button+div{
+    .store-button + div {
         position: absolute;
         left: 23px;
         font-size: 12px;
     }
-    .community-button{
+    .community-button {
         position: relative;
         cursor: pointer;
-       &:hover{
-           color: whitesmoke;
-       }
+        &:hover {
+            color: whitesmoke;
+        }
     }
-    .community-button+div{
+    .community-button + div {
         position: absolute;
         left: 18px;
         font-size: 12px;
     }
-    .main-username-button{
+    .main-username-button {
         position: relative;
         cursor: pointer;
-         &:hover{
-           color: whitesmoke;
-       }
+        &:hover {
+            color: whitesmoke;
+        }
     }
-    .main-username-button+div{
+    .main-username-button + div {
         position: absolute;
         left: 23px;
-        
+
         font-size: 12px;
         width: 100px;
     }
-
-
 }
-
-
-
- 
