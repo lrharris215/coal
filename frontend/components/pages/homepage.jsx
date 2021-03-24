@@ -12,13 +12,11 @@ class HomePage extends React.Component {
     }
     numItemsInCart() {
         if (this.hasCart) {
-            debugger;
             let items = Object.values(JSON.parse(localStorage.getItem(currentUser.id)));
             return items.length;
         }
     }
     render() {
-        debugger;
         return (
             <div className="homepage">
                 <Route exact path="/" component={Sidebar} />
