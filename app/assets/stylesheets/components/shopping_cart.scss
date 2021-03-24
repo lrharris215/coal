@@ -214,6 +214,9 @@
             border-radius: 2px;
             color: $link-yellow;
             filter: brightness(100%);
+            > a {
+                background-color: transparent;
+            }
             &:hover {
                 filter: brightness(130%);
                 cursor: pointer;

@@ -15,9 +15,14 @@ class ShoppingCart extends React.Component {
         this.calculateTotalPrice = this.calculateTotalPrice.bind(this);
     }
     componentDidMount() {
-        console.log('Shopping cart is mounted?');
-        console.log(`${this.state.games}`);
-        if (!this.state.games) {
+        debugger;
+        if (Object.values(this.state.games).length < 1) {
+            return <Redirect to="/" />;
+        }
+    }
+    componentDidUpdate() {
+        debugger;
+        if (Object.values(this.state.games).length < 1) {
             return <Redirect to="/" />;
         }
     }
@@ -49,10 +54,17 @@ class ShoppingCart extends React.Component {
         });
         debugger;
         localStorage.clear();
-        return <Redirect to="/" />;
+        this.setState({
+            games: [],
+        });
+        // return <Redirect to="/" />;
     }
 
     render() {
+        if (this.state.games === null || Object.values(this.state.games) < 1) {
+            return <Redirect to="/" />;
+        }
+
         const mappedGames =
             this.state.games &&
             Object.values(this.state.games).map((game, idx) => {
@@ -62,9 +74,6 @@ class ShoppingCart extends React.Component {
                     </li>
                 );
             });
-        if (Object.values(this.state.games).length < 1) {
-            return <Redirect to="/" />;
-        }
 
         return (
             <div className="shopping-cart-container">
@@ -95,9 +104,10 @@ class ShoppingCart extends React.Component {
                             <p>Remove all items</p>
                         </Link>
                     </div>
-                    <Link to="/">
-                        <div className="continue-shopping-box">Continue Shopping</div>
-                    </Link>
+
+                    <div className="continue-shopping-box">
+                        <Link to="/">Continue Shopping</Link>
+                    </div>
                 </div>
             </div>
         );
