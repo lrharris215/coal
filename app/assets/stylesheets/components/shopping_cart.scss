@@ -1,9 +1,10 @@
 .shopping-cart-container {
     // border: 1px solid pink;
     width: 935px;
-    height: 700px;
+    height: auto;
     align-self: center;
     margin-top: 50px;
+    padding-bottom: 200px;
 
     .shopping-cart-header {
         // border: 1px solid blue;
@@ -30,9 +31,9 @@
     // }
     .shopping-cart-body {
         padding-top: 20px;
-        position: relative;
+        // position: relative;
         // background-image: linear-gradient(to bottom, $gradient-mid-red, $gradient-start-red);
-        .shopping-cart-item:first-child {
+        .li:first-child {
             margin-top: 20px;
         }
         // border: 1px solid green;
@@ -46,7 +47,7 @@
             width: 65%;
             background-color: $header-red;
             color: $lighter-grey;
-
+            position: relative;
             .left-side {
                 display: flex;
                 .title-card {
@@ -87,7 +88,7 @@
                 display: none;
                 position: absolute;
                 width: 310px;
-                right: 0px;
+                right: -330px;
                 top: 0px;
                 font-size: 12px;
                 background-color: $index-detail-red;
@@ -149,7 +150,7 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    right: 310px;
+                    right: -20px;
                     width: 0;
                     height: 0;
                     border: 10px solid transparent;
