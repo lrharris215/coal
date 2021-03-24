@@ -75,10 +75,15 @@
                     padding-right: 10px;
 
                     .remove {
+                        margin-top: 3px;
                         font-size: 10px;
                         color: $header-dark-grey;
+                        text-decoration: underline;
+
                         &:hover {
                             cursor: pointer;
+                            color: $link-yellow;
+                            text-decoration-color: $link-yellow;
                         }
                     }
                 }
@@ -205,10 +210,11 @@
             font-size: 10px;
             color: $header-dark-grey;
             text-decoration: underline;
-            p {
+            a {
                 &:hover {
                     cursor: pointer;
                     color: $link-yellow;
+                    text-decoration-color: $link-yellow;
                 }
             }
         }

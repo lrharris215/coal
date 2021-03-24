@@ -109,10 +109,16 @@
                 .envelope {
                     height: 20px;
                     width: 20px;
-                    margin-top: 10px;
+                    margin-top: 8px;
                     margin-left: 5px;
                     margin-right: 10px;
-                    cursor: pointer;
+                    background-color: rgb(74, 42, 42);
+                    padding: 4px 3px 0 3px;
+                    &:hover {
+                        cursor: pointer;
+                        filter: brightness(140%);
+                    }
+
                     .fa-envelope {
                         color: white;
                         background-color: $gradient-end-red;
