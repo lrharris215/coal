@@ -1,0 +1,19 @@
+.library-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .library-div {
+        border: 2px solid purple;
+        width: 950px;
+        .username-bar {
+            display: flex;
+            .profile-pic {
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border: 1px solid $lighter-grey;
+                }
+            }
+        }
+    }
+}
