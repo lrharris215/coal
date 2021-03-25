@@ -85,13 +85,15 @@
 }
 .library-dropdown {
     position: relative;
-
+    width: 90px;
     .active {
         display: block;
-        font-size: 11px;
+        font-size: 10px;
         background-color: $index-detail-red;
         padding: 5px 10px;
         position: absolute;
+        width: 120px;
+        top: 27px;
         filter: brightness(100%);
     }
     .hidden {
