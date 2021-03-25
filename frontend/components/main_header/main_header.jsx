@@ -59,7 +59,7 @@ class MainHeader extends React.Component {
                                         titleItem={<p>{this.props.username}</p>}
                                         listItems={[
                                             <Link to="/">Activity</Link>,
-                                            <Link to="/">Profile</Link>,
+                                            <Link to={`api/users/${this.props.id}`}>Profile</Link>,
                                             <Link to="/">Friends</Link>,
                                             <Link to="/">Groups</Link>,
                                             <Link to="/">Content</Link>,
@@ -106,7 +106,7 @@ class MainHeader extends React.Component {
                                         </p>
                                     }
                                     listItems={[
-                                        <a href="">View profile</a>,
+                                        <Link to={`api/users/${this.props.id}`}>View profile</Link>,
                                         <a href="">Account details</a>,
                                         <button className="logout-button" onClick={this.props.logoutUser}>
                                             Logout: <span className="yellow-text">{this.props.username}</span>

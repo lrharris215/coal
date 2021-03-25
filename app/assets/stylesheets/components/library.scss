@@ -20,6 +20,9 @@
                     width: 65px;
                     height: 65px;
                     border: 1px solid $header-text-grey;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
             .words {
@@ -35,6 +38,10 @@
                 }
                 h1 {
                     font-size: 28px;
+                    &:hover {
+                        color: $link-yellow;
+                        cursor: pointer;
+                    }
                 }
                 .fa-angle-double-right {
                     color: $header-text-grey;
@@ -47,6 +54,10 @@
                     margin: 0;
                     margin-bottom: 3px;
                     font-size: 14px;
+                    &:hover {
+                        color: $link-yellow;
+                        cursor: pointer;
+                    }
                     // margin-block-start: 0;
                     // margin-block-end: 0;
                 }
