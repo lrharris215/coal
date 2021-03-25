@@ -1,0 +1,164 @@
+.library-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $gradient-start-red;
+    flex-direction: column;
+    align-items: center;
+    min-height: 700px;
+    .library-div {
+        // border: 2px solid purple;
+        width: 950px;
+        .username-bar {
+            background-color: $review-box-red;
+            display: flex;
+            margin-bottom: 30px;
+            .profile-pic {
+                margin: 20px;
+                margin-left: 30px;
+                img {
+                    width: 65px;
+                    height: 65px;
+                    border: 1px solid $header-text-grey;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .words {
+                background-color: transparent;
+                color: whitesmoke;
+                display: flex;
+                // line-height: 28px;
+                align-items: center;
+                vertical-align: text-bottom;
+                .words-helper {
+                    display: flex;
+                    align-items: flex-end;
+                }
+                h1 {
+                    font-size: 28px;
+                    &:hover {
+                        color: $link-yellow;
+                        cursor: pointer;
+                    }
+                }
+                .fa-angle-double-right {
+                    color: $header-text-grey;
+                    margin: 0;
+                    margin-bottom: 5px;
+                    padding: 0 10px;
+                    font-size: 12px;
+                }
+                p {
+                    margin: 0;
+                    margin-bottom: 3px;
+                    font-size: 14px;
+                    &:hover {
+                        color: $link-yellow;
+                        cursor: pointer;
+                    }
+                    // margin-block-start: 0;
+                    // margin-block-end: 0;
+                }
+            }
+        }
+        .library-nav-bar {
+            width: 900px;
+            margin: 0 auto;
+            border-bottom: 5px solid $index-detail-red;
+            .all-games {
+                // margin-left: 5px;
+                color: whitesmoke;
+                width: fit-content;
+                border-radius: 3px 3px 0 0;
+                font-size: 14px;
+                padding: 10px;
+                background-image: linear-gradient(to bottom, rgb(255, 164, 164), $index-detail-red);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .library-index {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+            .library-index-item {
+                margin-bottom: 10px;
+                display: flex;
+                // border: 1px solid silver;
+                background-color: $header-red;
+                width: 900px;
+
+                .title-card {
+                    margin: 5px;
+                    margin-bottom: 10px;
+                    img {
+                        width: 184px;
+                    }
+                }
+                .words {
+                    color: whitesmoke;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    margin-left: 5px;
+                    .title {
+                        margin-top: 5px;
+                        font-size: 14px;
+                    }
+                    .hours {
+                        margin: 5px 0;
+                        font-size: 10px;
+                        color: $header-dark-grey;
+                    }
+                    .link-drop-downs {
+                        margin: 5px 0;
+
+                        .library-dropdown {
+                            border-radius: 3px;
+
+                            // filter: brightness(80%);
+                        }
+                        .links-button {
+                            border-radius: 3px;
+                            background-color: transparent;
+                            background-color: $review-box-red;
+
+                            &:hover {
+                                cursor: pointer;
+                                filter: brightness(140%);
+                                .links-dropdown {
+                                    span {
+                                        color: whitesmoke;
+                                    }
+                                }
+                            }
+                        }
+                        .links-dropdown {
+                            font-size: 10px;
+                            padding: 6px 4px;
+                            color: $link-yellow;
+                            background-color: transparent;
+
+                            i {
+                                padding: 0 8px;
+                            }
+                            .fa-caret-down {
+                                font-size: 12px;
+                                color: $lighter-grey;
+                            }
+                        }
+                    }
+                }
+            }
+            .no-games {
+                background-color: $index-detail-red;
+                padding: 50px 150px;
+            }
+        }
+    }
+}

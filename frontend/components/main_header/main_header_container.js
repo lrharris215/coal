@@ -6,7 +6,8 @@ const MSTP = state => {
     const id = state.session.id
     return {
         loggedIn: Boolean(state.session.id),
-        username: state.entities.users[id] ? state.entities.users[id].username : null
+        username: state.entities.users[id] ? state.entities.users[id].username : null,
+        id,
     }
 
 }

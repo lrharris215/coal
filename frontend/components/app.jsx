@@ -7,6 +7,7 @@ import MainHeader from './main_header/main_header_container';
 import GameDetailContainer from './games/show/game_detail_container';
 import ShoppingCartContainer from './shopping_cart/shopping_cart_container';
 import HomePage from './pages/homepage';
+import LibraryContainer from './games_library/library_container';
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                 <ProtectedRoute path="/cart" component={ShoppingCartContainer} />
                 <Route exact path="/" component={HomePage} />
                 <Route path={`/api/games/:id`} component={GameDetailContainer} />
+                <Route path={`/api/users/:id`} component={LibraryContainer} />
             </div>
         </div>
     );

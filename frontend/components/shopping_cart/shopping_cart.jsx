@@ -29,7 +29,7 @@ class ShoppingCart extends React.Component {
         Object.values(this.state.games).map((game) => {
             total += game.price;
         });
-        console.log('total price calculated');
+
         return total;
     }
 
@@ -55,7 +55,6 @@ class ShoppingCart extends React.Component {
         this.setState({
             games: [],
         });
-        // return <Redirect to="/" />;
     }
 
     render() {
@@ -92,7 +91,7 @@ class ShoppingCart extends React.Component {
                     </div>
                     <div className="purchase-row">
                         <div className="purchase-button" onClick={() => this.handlePurchaseButton()}>
-                            Purchase for myself
+                            <Link to={`api/users/${this.props.currentUserId}`}> Purchase for myself </Link>
                         </div>
                     </div>
                 </div>
