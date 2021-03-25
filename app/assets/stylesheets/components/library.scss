@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     .library-div {
-        border: 2px solid purple;
+        // border: 2px solid purple;
         width: 950px;
         .username-bar {
             background-color: $review-box-red;
@@ -15,8 +15,8 @@
                 margin: 20px;
                 margin-left: 30px;
                 img {
-                    width: 75px;
-                    height: 75px;
+                    width: 65px;
+                    height: 65px;
                     border: 1px solid $header-text-grey;
                 }
             }
@@ -43,7 +43,7 @@
                 }
                 p {
                     margin: 0;
-                    margin-bottom: 2px;
+                    margin-bottom: 3px;
                     font-size: 14px;
                     // margin-block-start: 0;
                     // margin-block-end: 0;
@@ -57,12 +57,64 @@
                 border: 1px solid silver;
                 background-color: $header-red;
                 .title-card {
+                    margin: 5px;
+                    margin-bottom: 10px;
                     img {
                         width: 184px;
                     }
                 }
                 .words {
-                    border: 1px solid blue;
+                    color: whitesmoke;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    margin-left: 5px;
+                    .title {
+                        margin-top: 5px;
+                        font-size: 14px;
+                    }
+                    .hours {
+                        margin: 5px 0;
+                        font-size: 10px;
+                        color: $header-dark-grey;
+                    }
+                    .link-drop-downs {
+                        margin: 5px 0;
+
+                        .library-dropdown {
+                            border-radius: 3px;
+
+                            // filter: brightness(80%);
+                        }
+                        .links-button {
+                            border-radius: 3px;
+                            background-color: transparent;
+                            background-color: $review-box-red;
+
+                            &:hover {
+                                cursor: pointer;
+                                filter: brightness(140%);
+                                .links-dropdown {
+                                    span {
+                                        color: whitesmoke;
+                                    }
+                                }
+                            }
+                        }
+                        .links-dropdown {
+                            font-size: 11px;
+                            padding: 6px 4px;
+                            color: $link-yellow;
+                            background-color: transparent;
+
+                            i {
+                                padding: 0 10px;
+                            }
+                            .fa-caret-down {
+                                color: $header-dark-grey;
+                            }
+                        }
+                    }
                 }
             }
         }
