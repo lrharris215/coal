@@ -7,7 +7,7 @@ export default (props) => {
     return (
         <div className="library-index-item">
             <div className="titleCard">{/* <img src={titleCard.img_url} /> */}</div>
-
+            <div>{game.id}</div>
             <div className="title">{game.title}</div>
             <div className="hours"></div>
             <div className="link-drop-downs"></div>

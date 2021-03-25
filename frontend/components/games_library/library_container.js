@@ -15,7 +15,7 @@ const MSTP =  (state, ownProps) => {
 const MDTP = dispatch => {
     return {
         fetchUser: (userId) => dispatch(fetchUser(userId)),
-       
+       requestAllGames: () => dispatch(requestAllGames())
     }
 }
 
