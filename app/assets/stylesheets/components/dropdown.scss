@@ -95,6 +95,11 @@
         width: 120px;
         top: 27px;
         filter: brightness(100%);
+        box-shadow: 0 0 5px black;
+        &:hover {
+            background-color: $gradient-mid-red;
+            color: whitesmoke;
+        }
     }
     .hidden {
         display: none;
