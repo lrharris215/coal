@@ -64,7 +64,9 @@ class FeaturedCarousel extends React.Component {
                                 (gameImage) => gameImage.img_type === 'screenshot'
                             );
                             return (
-                                <div className={this.state.activeGameIdx === idx ? 'active' : 'hidden'}>
+                                <div
+                                    key={`featured-${idx}`}
+                                    className={this.state.activeGameIdx === idx ? 'active' : 'hidden'}>
                                     <Link to={`api/games/${game.id}`}>
                                         <div
                                             className="featured-carousel-inner-div"
@@ -79,9 +81,10 @@ class FeaturedCarousel extends React.Component {
                                             <div className="featured-right-side">
                                                 <h2 className="title">{game.title}</h2>
                                                 <div className="four-pic-box">
-                                                    {screenshots.map((screenshot) => {
+                                                    {screenshots.map((screenshot, jdx) => {
                                                         return (
                                                             <div
+                                                                key={`featured-sc-${jdx}`}
                                                                 className="screenshot-div"
                                                                 onMouseEnter={() => {
                                                                     this.setState((state) => ({
