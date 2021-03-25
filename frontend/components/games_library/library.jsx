@@ -7,20 +7,27 @@ class Library extends React.Component {
     componentDidMount() {
         this.props.fetchUser(this.props.userId);
     }
+
+    componentDidUpdate() {
+        this.props.fetchUser(this.props.userId);
+    }
+
     render() {
         const { users, userId } = this.props;
         const user = users && users[userId];
         const games = user && user.ownedGames;
 
-        if (!user.ownedGames) return <div>No user!</div>;
-
-        const mappedGames = games.map((game) => {
-            return (
-                <li>
-                    <LibraryIndexItem game={game} />
-                </li>
-            );
-        });
+        if (!user) return <div>No user!</div>;
+        const hasGames = games && games.length > 0 ? true : false;
+        const mappedGames =
+            games &&
+            games.map((game, idx) => {
+                return (
+                    <li key={`library-${idx}`}>
+                        <LibraryIndexItem game={game} />
+                    </li>
+                );
+            });
 
         return (
             <div className="library-container">
@@ -37,8 +44,15 @@ class Library extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <div className="library-nav-bar">
+                        <div className="all-games">All Games</div>
+                    </div>
                     <div className="library-index">
-                        <ul>{mappedGames}</ul>
+                        {hasGames ? (
+                            <ul>{mappedGames}</ul>
+                        ) : (
+                            <div className="no-games">Hmm... this user doesn't seem to own any games yet.</div>
+                        )}
                     </div>
                 </div>
             </div>
