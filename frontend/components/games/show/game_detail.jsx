@@ -80,6 +80,7 @@ class GameDetail extends React.Component {
                                     {screenshots.map((screenshot, idx) => {
                                         return (
                                             <div
+                                                key={`show-sc-${idx}`}
                                                 className={
                                                     idx === this.state.activePicIdx ? 'screenshot active' : 'screenshot'
                                                 }>
