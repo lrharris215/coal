@@ -6,7 +6,6 @@ class Library extends React.Component {
     }
     componentDidMount() {
         this.props.fetchUser(this.props.userId);
-        debugger;
     }
     render() {
         const { users, userId } = this.props;
@@ -31,9 +30,11 @@ class Library extends React.Component {
                             <img src={window.cubeURL} alt="Profile pic" />
                         </div>
                         <div className="words">
-                            <h1>{user.username}</h1>
-                            <i class="fas fa-angle-double-right"></i>
-                            <p>Games</p>
+                            <div className="words-helper">
+                                <h1>{user.username}</h1>
+                                <i class="fas fa-angle-double-right"></i>
+                                <p>Games</p>
+                            </div>
                         </div>
                     </div>
                     <div className="library-index">

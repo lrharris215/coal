@@ -29,7 +29,7 @@ class ShoppingCart extends React.Component {
         Object.values(this.state.games).map((game) => {
             total += game.price;
         });
-        console.log('total price calculated');
+
         return total;
     }
 
