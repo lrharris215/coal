@@ -1,14 +1,14 @@
 class Api::ReviewsController < ApplicationController 
     def game_reviews
         @reviews = Review.where(game_id: params[:game_id])
-        render json: @reviews
+        render :index
     end
 
     def new_game_review
         @review = Review.new(review_params)
         if  @review.save!
            
-            render json: @review
+            render :show
         else
             render json: @review.errors.full_messages, status 400;
         end
