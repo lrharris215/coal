@@ -493,3 +493,10 @@ Review.create({
     game_id: 7, 
     body: "Very scary!! Do not play if you have thallasophobia"
 })
+
+Review.create({
+    author_id: 3,
+    game_id: 10,
+    recommended: false,
+    body: "I didn't play this game but I don't like it!"
+})

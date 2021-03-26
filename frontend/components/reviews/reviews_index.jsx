@@ -9,6 +9,7 @@ class ReviewsIndex extends React.Component {
     componentDidMount() {
         this.props.requestAllGameReviews(this.props.gameId);
     }
+
     render() {
         const { reviews, gameId } = this.props;
 
