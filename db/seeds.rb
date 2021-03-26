@@ -442,6 +442,35 @@ GameImage.create({
     img_type: "screenshot"
 })
 
+Purchase.create({
+    buyerId: 2,
+    gameId: 1
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 3
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 4
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 5
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 6
+})
+Purchase.create({
+    buyerId: 1,
+    gameId: 1
+})
+Purchase.create({
+    buyerId: 3,
+    gameId: 1
+})
+
 Review.create({
  author_id: 2,
  game_id: 1,

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewsIndexItem from './reviews_index_item';
 
 class ReviewsIndex extends React.Component {
     constructor(props) {
@@ -10,10 +11,24 @@ class ReviewsIndex extends React.Component {
     }
     render() {
         const { reviews, gameId } = this.props;
-        const mappedReviews = reviews.map((review) => {
-            return <div></div>;
+
+        const mappedReviews = reviews.map((review, idx) => {
+            return (
+                <li key={`review-${idx}`}>
+                    <ReviewsIndexItem fetchUser={this.props.fetchUser} users={this.props.users} review={review} />
+                </li>
+            );
         });
-        return <div>{mappedReviews}</div>;
+        return (
+            <div className="reviews-index-container">
+                <div className="reviews-index">
+                    <div className="reviews-header">
+                        <h4>Customer Reviews</h4>
+                    </div>
+                    <ul className="reviews-list">{mappedReviews}</ul>
+                </div>
+            </div>
+        );
     }
 }
 
