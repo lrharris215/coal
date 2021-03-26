@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_25_202650) do
+ActiveRecord::Schema.define(version: 2021_03_26_010923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,10 +50,10 @@ ActiveRecord::Schema.define(version: 2021_03_25_202650) do
   create_table "reviews", force: :cascade do |t|
     t.integer "author_id", null: false
     t.integer "game_id", null: false
-    t.string "title", null: false
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "recommended", default: true
     t.index ["author_id", "game_id"], name: "index_reviews_on_author_id_and_game_id", unique: true
     t.index ["author_id"], name: "index_reviews_on_author_id"
     t.index ["game_id"], name: "index_reviews_on_game_id"
