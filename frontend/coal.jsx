@@ -4,9 +4,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { createNewPurchase } from './actions/purchases_actions';
-import { fetchUser } from './actions/user_actions';
-import { getUser } from './util/users_util';
+import { createNewGameReview, requestAllGameReviews } from './actions/reviews_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let preloadedState = {};
@@ -25,9 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const store = configureStore(preloadedState);
 
     window.store = store;
-    window.createNewPurchase = createNewPurchase;
-    window.fetchUser = fetchUser;
-    window.getUser = getUser;
+    window.requestAllGameReviews = requestAllGameReviews;
+    window.createNewGameReview = createNewGameReview;
 
     ReactDOM.render(<Root store={store} />, root);
 });

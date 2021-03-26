@@ -10,7 +10,7 @@ class Api::ReviewsController < ApplicationController
            
             render :show
         else
-            render json: @review.errors.full_messages, status 400;
+            render json: @review.errors.full_messages, status: 400;
         end
     end
 

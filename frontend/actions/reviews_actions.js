@@ -16,13 +16,13 @@ const receiveReview = review => {
     }
 }
 
-export const requestAllGameReviews = () => dispatch => {
+export const requestAllGameReviews = (gameId) => dispatch => {
     return (
-        ReviewsUtil.getGameReviews().then((reviews) => dispatch(receiveReviews(reviews)))
+        ReviewsUtil.getGameReviews(gameId).then((reviews) => dispatch(receiveReviews(reviews)))
     )
 }
 
-export const createNewGameReview = (gameId, newReview) => {
+export const createNewGameReview = (gameId, newReview) => dispatch => {
 return (
     ReviewsUtil.postGameReview(gameId, newReview).then(review => dispatch(receiveReview(review)))
 )

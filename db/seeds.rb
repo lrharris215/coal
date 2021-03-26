@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Review.delete_all
 Purchase.delete_all
 GameImage.delete_all
 Game.delete_all
@@ -13,6 +14,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('games')
 ActiveRecord::Base.connection.reset_pk_sequence!('game_images')
 ActiveRecord::Base.connection.reset_pk_sequence!('purchases')
+ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
 
 User.create({
     username: "Guest",
@@ -440,3 +442,29 @@ GameImage.create({
     img_type: "screenshot"
 })
 
+Review.create({
+ author_id: 2,
+ game_id: 1,
+ title: "Best game ever",
+ body: "Literally my favorite game. I <3 Shane",
+})
+Review.create({
+ author_id: 2,
+ game_id: 2,
+ title: "SO GOOD",
+ body: "I've spent more than 200 hours in this game and still haven't completed the main quest",
+})
+
+Review.create({
+    author_id: 3,
+    game_id: 1, 
+    title: "Awesome",
+    body: "I also really like this game."
+})
+
+Review.create({
+    author_id: 2,
+    game_id: 7, 
+    title: "Very scary",
+    body: "Do not play if you have thallasophobia"
+})
