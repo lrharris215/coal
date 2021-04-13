@@ -8,9 +8,9 @@ class ReviewsIndexItem extends React.Component {
     componentDidMount() {
         this.props.fetchUser(this.props.review.author_id);
     }
-    componentDidUpdate() {
-        this.props.fetchUser(this.props.review.author_id);
-    }
+    // componentDidUpdate() {
+    //     this.props.fetchUser(this.props.review.author_id);
+    // }
 
     render() {
         const { users, review } = this.props;
@@ -18,7 +18,11 @@ class ReviewsIndexItem extends React.Component {
         if (Object.values(users).length < 1 || !users[review.author_id]) {
             return <div>Nothing here??</div>;
         }
+
         const author = users[review.author_id];
+        if (!author.ownedGames) {
+            return <div>Nothing here??</div>;
+        }
         return (
             <div className="review-index-item">
                 <div className="transition-bar"></div>
