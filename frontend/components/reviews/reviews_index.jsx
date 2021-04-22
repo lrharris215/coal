@@ -58,8 +58,8 @@ class ReviewsIndex extends React.Component {
                 <div className="reviews-index">
                     <div className="reviews-header">
                         <h4>Customer Reviews</h4>
-                        {this.owned && !this.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
                     </div>
+                    {this.owned && !this.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
                     <ul className="reviews-list">{mappedReviews}</ul>
                 </div>
             </div>

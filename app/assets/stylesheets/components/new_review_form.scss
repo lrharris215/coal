@@ -1,0 +1,66 @@
+.review-form-container {
+    background-color: $review-box-red;
+    .green-header-bar {
+        height: 30px;
+        border: 1px solid $button-orange;
+    }
+    .install-button-bar {
+        border: 1px solid lime;
+        height: 30px;
+    }
+    .review-form {
+        border: 1px solid blue;
+        .review-form-header {
+            border: 1px solid hotpink;
+            margin: 2em;
+            font-weight: 400;
+            h3 {
+                font-weight: inherit;
+            }
+        }
+        .review-form-body {
+            margin: 2em;
+            border: 1px solid yellow;
+            display: flex;
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                border: 1px solid $header-dark-grey;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .main-body {
+                margin: 0 2em;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                #review-text {
+                    width: 100%;
+                    border: 1px solid white;
+                    background-color: $header-red;
+                }
+                .review-form-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    .recommended-box {
+                        font-size: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        .buttons {
+                            display: flex;
+                            font-size: 20px;
+                            div {
+                                border: 1px solid black;
+                            }
+                        }
+                    }
+                    button {
+                        border: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+}
