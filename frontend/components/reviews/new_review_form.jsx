@@ -3,9 +3,21 @@ import React from 'react';
 class NewReviewForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            text: '',
+            recommended: true,
+        };
     }
     componentDidMount() {
         this.props.requestOneGame(this.props.gameId);
+    }
+    handleSubmit() {
+        let NewReview = {
+            game_id: this.props.gameId,
+            author_id: this.props.currentUserId,
+            text: this.state.text,
+            recommended: this.state.recommended,
+        };
     }
     render() {
         const game = this.props.games[this.props.gameId];

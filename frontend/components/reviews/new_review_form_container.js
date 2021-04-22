@@ -13,7 +13,7 @@ const MSTP = (state) => {
 const MDTP = (dispatch) => {
     return {
         requestOneGame: (gameId) => dispatch(requestOneGame(gameId)),
-        createNewGameReview: (gameId, newReview) => dispatch(createNewGameReview(gameId, newReview)),
+        createNewGameReview: (newReview) => dispatch(createNewGameReview(newReview)),
     };
 };
 
