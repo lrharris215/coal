@@ -18,7 +18,6 @@ const MDTP = (dispatch) => {
     return {
         requestAllGameReviews: (gameId) => dispatch(requestAllGameReviews(gameId)),
         fetchUser: (userId) => dispatch(fetchUser(userId)),
-        requestOneGame: (gameId) => dispatch(requestOneGame(gameId)),
     };
 };
 

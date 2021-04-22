@@ -6,7 +6,7 @@ class NewReviewForm extends React.Component {
     }
     componentDidMount() {}
     render() {
-        return <div>New Review HERE!</div>;
+        return <div>{this.props.gameId} MAKE A REVIEW</div>;
     }
 }
 

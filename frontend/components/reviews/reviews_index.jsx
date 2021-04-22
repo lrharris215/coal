@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewsIndexItem from './reviews_index_item';
-import NewReviewForm from './new_review_form';
+import NewReviewFormContainer from './new_review_form_container';
 
 class ReviewsIndex extends React.Component {
     constructor(props) {
@@ -9,6 +9,7 @@ class ReviewsIndex extends React.Component {
     }
 
     componentDidMount() {
+        this.props.fetchUser(this.props.currentUserId);
         this.props.requestAllGameReviews(this.props.gameId);
         this.checkIfReviewed();
     }
@@ -57,11 +58,7 @@ class ReviewsIndex extends React.Component {
                 <div className="reviews-index">
                     <div className="reviews-header">
                         <h4>Customer Reviews</h4>
-                        {this.owned && !this.hasReviewed ? (
-                            <NewReviewForm requestOneGame={this.props.requestOneGame} gameId={this.props.gameId} />
-                        ) : (
-                            ''
-                        )}
+                        {this.owned && !this.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
                     </div>
                     <ul className="reviews-list">{mappedReviews}</ul>
                 </div>
