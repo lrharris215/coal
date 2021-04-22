@@ -10,6 +10,7 @@ const MSTP = (state, ownProps) => {
         gameId,
         reviews: Object.values(state.entities.reviews),
         users: state.entities.users,
+        currentUserId: state.session.id,
     };
 };
 
@@ -17,6 +18,7 @@ const MDTP = (dispatch) => {
     return {
         requestAllGameReviews: (gameId) => dispatch(requestAllGameReviews(gameId)),
         fetchUser: (userId) => dispatch(fetchUser(userId)),
+        requestOneGame: (gameId) => dispatch(requestOneGame(gameId)),
     };
 };
 
