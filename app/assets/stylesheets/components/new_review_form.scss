@@ -53,6 +53,31 @@
                             font-size: 20px;
                             div {
                                 border: 1px solid black;
+                                padding: 5px 10px;
+                            }
+                            .thumb {
+                                margin-right: 10px;
+                            }
+                            .pressed {
+                                background-color: $index-detail-red;
+                                position: relative;
+                                .thumb {
+                                    opacity: 20%;
+                                }
+                                .check {
+                                    display: inline-block;
+                                    opacity: 100%;
+                                    position: absolute;
+                                    left: 0.5em;
+                                    top: 0.5em;
+                                    color: whitesmoke;
+                                    background-color: transparent;
+                                }
+                            }
+                            .unpressed {
+                                .check {
+                                    display: none;
+                                }
                             }
                         }
                     }

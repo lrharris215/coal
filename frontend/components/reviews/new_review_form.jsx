@@ -81,12 +81,16 @@ class NewReviewForm extends React.Component {
                                             id="yes"
                                             className={this.state.recommended ? 'pressed' : 'unpressed'}
                                             onClick={() => this.handleButton('yes')}>
+                                            <i className="fas fa-check check"></i>
+                                            <i className="fas fa-thumbs-up thumb"></i>
                                             Yes
                                         </div>
                                         <div
                                             id="no"
                                             className={this.state.recommended ? 'unpressed' : 'pressed'}
                                             onClick={() => this.handleButton('no')}>
+                                            <i className="fas fa-check check"></i>
+                                            <i className="fas fa-thumbs-down thumb"></i>
                                             No
                                         </div>
                                     </div>
