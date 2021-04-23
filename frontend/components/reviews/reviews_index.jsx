@@ -9,13 +9,17 @@ class ReviewsIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchUser(this.props.currentUserId);
+        if (this.props.currentUserId) {
+            this.props.fetchUser(this.props.currentUserId);
+            this.checkIfReviewed();
+        }
         this.props.requestAllGameReviews(this.props.gameId);
-        this.checkIfReviewed();
     }
     componentDidUpdate() {
-        this.checkIfReviewed();
-        this.checkIfOwned();
+        if (this.props.currentUserId) {
+            this.checkIfReviewed();
+            this.checkIfOwned();
+        }
     }
     checkIfOwned() {
         let gamesList = this.props.users[this.props.currentUserId].ownedGames;

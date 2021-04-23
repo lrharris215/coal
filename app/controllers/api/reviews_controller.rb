@@ -10,8 +10,19 @@ class Api::ReviewsController < ApplicationController
            
             render :show
         else
-            render json: @review.errors.full_messages, status: 400;
+            render json: @review.errors.full_messages, status: 400
         end
+    end
+
+    def destroy
+        @review = Review.find(params[:id])
+        if @review 
+            @review.destroy
+            render json: @review
+        else
+            render json: ["Review cannot be found"], status: 404
+        end
+
     end
 
     private 

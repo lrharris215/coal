@@ -11,22 +11,24 @@ class NewReviewForm extends React.Component {
     componentDidMount() {
         this.props.requestOneGame(this.props.gameId);
     }
-    handleSubmit() {
-        let NewReview = {
+    handleSubmit(e) {
+        e.preventDefault();
+        let newReview = {
             game_id: this.props.gameId,
             author_id: this.props.currentUserId,
             text: this.state.text,
             recommended: this.state.recommended,
         };
+        this.props.createNewGameReview(newReview);
     }
     render() {
         const game = this.props.games[this.props.gameId];
-
+        if (!game) return <div>Nothing here!</div>;
         return (
             <div className="review-form-container">
                 <div className="green-header-bar"></div>
                 <div className="install-button-bar"></div>
-                <form className="review-form">
+                <form className="review-form" onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="review-form-header">
                         <h3>Write a review for {game.title}</h3>
                         <p>

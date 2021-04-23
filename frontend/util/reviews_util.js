@@ -6,6 +6,7 @@ export const getGameReviews = (gameId) => {
 };
 
 export const postGameReview = (review) => {
+    debugger;
     return $.ajax({
         method: 'POST',
         url: `/api/games/${review.gameId}/reviews`,

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get "reviews", to: 'reviews#game_reviews'
       post "reviews", to: 'reviews#new_game_review'
     end
+    resources :reviews, only: [:destroy, :update]
     resources :purchases, only:[:create]
   end
 end
