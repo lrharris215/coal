@@ -6,10 +6,24 @@ export const getGameReviews = (gameId) => {
 };
 
 export const postGameReview = (review) => {
-    debugger;
     return $.ajax({
         method: 'POST',
         url: `/api/games/${review.gameId}/reviews`,
         data: { review },
+    });
+};
+
+export const updateGameReview = (review) => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `api/reviews/${review.id}`,
+        data: { review },
+    });
+};
+
+export const deleteGameReview = (reviewId) => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `api/reviews/${reviewId}`,
     });
 };

@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import { createNewGameReview, requestAllGameReviews } from './actions/reviews_actions';
+import { deleteGameReview, updateGameReview } from './util/reviews_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     let preloadedState = {};
@@ -25,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.store = store;
     window.requestAllGameReviews = requestAllGameReviews;
     window.createNewGameReview = createNewGameReview;
+    window.deleteGameReview = deleteGameReview;
+    window.updateGameReview = updateGameReview;
 
     ReactDOM.render(<Root store={store} />, root);
 });
