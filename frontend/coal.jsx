@@ -4,8 +4,12 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { createNewGameReview, requestAllGameReviews } from './actions/reviews_actions';
-import { deleteGameReview, updateGameReview } from './util/reviews_util';
+import {
+    createNewGameReview,
+    requestAllGameReviews,
+    deleteGameReview,
+    updateGameReview,
+} from './actions/reviews_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let preloadedState = {};
