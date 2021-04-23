@@ -4,19 +4,44 @@ class NewReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: '',
+            body: '',
             recommended: true,
         };
     }
     componentDidMount() {
         this.props.requestOneGame(this.props.gameId);
     }
+
+    update(field) {
+        return (e) => {
+            this.setState({
+                [field]: e.currentTarget.value,
+            });
+        };
+    }
+    handleButton(answer) {
+        const yes = document.getElementById('yes');
+        const no = document.getElementById('no');
+        if (answer === 'yes') {
+            this.setState({
+                recommended: true,
+            });
+            yes.className = pressed;
+            no.className = unpressed;
+        } else if (answer === 'no') {
+            this.setState({
+                recommended: false,
+            });
+            yes.className = unpressed;
+            no.className = pressed;
+        }
+    }
     handleSubmit(e) {
         e.preventDefault();
         let newReview = {
             game_id: this.props.gameId,
             author_id: this.props.currentUserId,
-            text: this.state.text,
+            body: this.state.body,
             recommended: this.state.recommended,
         };
         this.props.createNewGameReview(newReview);
@@ -42,13 +67,28 @@ class NewReviewForm extends React.Component {
                             <img src={window.cubeURL} />
                         </div>
                         <div className="main-body">
-                            <textarea name="review-text" id="review-text" cols="30" rows="10"></textarea>
+                            <textarea
+                                name="review-text"
+                                id="review-text"
+                                cols="30"
+                                rows="10"
+                                onChange={this.update('body')}></textarea>
                             <div className="review-form-footer">
                                 <div className="recommended-box">
                                     <p>Do you recommend this game?</p>
                                     <div className="buttons">
-                                        <div className="yes">Yes</div>
-                                        <div className="no">No</div>
+                                        <div
+                                            id="yes"
+                                            className={this.state.recommended ? 'pressed' : 'unpressed'}
+                                            onClick={() => this.handleButton('yes')}>
+                                            Yes
+                                        </div>
+                                        <div
+                                            id="no"
+                                            className={this.state.recommended ? 'unpressed' : 'pressed'}
+                                            onClick={() => this.handleButton('no')}>
+                                            No
+                                        </div>
                                     </div>
                                 </div>
                                 <button>Post Review</button>
