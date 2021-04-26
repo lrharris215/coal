@@ -77,7 +77,9 @@ class ReviewsIndexItem extends React.Component {
                     {author.id === this.props.currentUserId ? (
                         <div className="buttons">
                             <div className="edit-button">Edit</div>
-                            <div className="delete-button">Delete</div>
+                            <div className="delete-button" onClick={() => this.props.deleteGameReview(review.id)}>
+                                Delete
+                            </div>
                         </div>
                     ) : (
                         ''
