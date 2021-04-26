@@ -5,7 +5,9 @@ import NewReviewFormContainer from './new_review_form_container';
 class ReviewsIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.hasReviewed = false;
+        this.state = {
+            hasReviewed: false,
+        };
     }
 
     componentDidMount() {
@@ -15,8 +17,9 @@ class ReviewsIndex extends React.Component {
         }
         this.props.requestAllGameReviews(this.props.gameId);
     }
-    componentDidUpdate() {
-        if (this.props.currentUserId) {
+    componentDidUpdate(prevProps) {
+        if (this.props.currentUserId && this.props.reviews !== prevProps.reviews) {
+            debugger;
             this.checkIfReviewed();
             this.checkIfOwned();
         }
@@ -40,11 +43,15 @@ class ReviewsIndex extends React.Component {
     checkIfReviewed() {
         for (let i = 0; i < this.props.reviews.length; i++) {
             if (this.props.reviews[i].author_id === this.props.currentUserId) {
-                this.hasReviewed = true;
+                this.setState({
+                    hasReviewed: true,
+                });
                 return;
             }
         }
-        this.hasReviewed = false;
+        this.setState({
+            hasReviewed: false,
+        });
         return;
     }
     render() {
@@ -70,7 +77,7 @@ class ReviewsIndex extends React.Component {
                     <div className="reviews-header">
                         <h4>Customer Reviews</h4>
                     </div>
-                    {this.owned && !this.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
+                    {this.owned && !this.state.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
                     <ul className="reviews-list">{mappedReviews}</ul>
                 </div>
             </div>
