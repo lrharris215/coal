@@ -67,8 +67,8 @@ class NewReviewForm extends React.Component {
                         <h3>Write a review for {game.title}</h3>
                         <p>
                             Please describe what you liked or disliked about this game and whether you recommend it to
-                            others. Please remember to be polite and follow the{' '}
-                            <span className="rules-link">Rules and Guidelines</span>.
+                            others. <br /> Please remember to be polite and follow the
+                            <span className="rules-link"> Rules and Guidelines</span>.
                         </p>
                     </div>
                     <div className="review-form-body">
@@ -76,12 +76,7 @@ class NewReviewForm extends React.Component {
                             <img src={window.cubeURL} />
                         </div>
                         <div className="main-body">
-                            <textarea
-                                name="review-text"
-                                id="review-text"
-                                cols="30"
-                                rows="10"
-                                onChange={this.update('body')}></textarea>
+                            <textarea name="review-text" id="review-text" onChange={this.update('body')}></textarea>
                             <div className="review-form-footer">
                                 <div className="recommended-box">
                                     <p>Do you recommend this game?</p>

@@ -74,10 +74,11 @@ class ReviewsIndex extends React.Component {
         return (
             <div className="reviews-index-container">
                 <div className="reviews-index">
+                    {this.owned && !this.state.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
                     <div className="reviews-header">
                         <h4>Customer Reviews</h4>
                     </div>
-                    {this.owned && !this.state.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
+
                     <ul className="reviews-list">{mappedReviews}</ul>
                 </div>
             </div>

@@ -17,8 +17,12 @@
         border-bottom: 1px solid black;
         display: flex;
         align-items: center;
+        position: relative;
         background-image: linear-gradient(to right, rgb(255, 187, 77), $button-orange);
         .in-library {
+            position: absolute;
+            top: 25%;
+            left: -10px;
             background-color: $button-orange;
             height: 0.8em;
             font-size: 0.6em;
@@ -39,6 +43,7 @@
         }
         h3 {
             margin: 0;
+            margin-left: 4em;
             font-weight: inherit;
             color: $header-red;
             // text-shadow: 1px 1px rgb(107, 48, 0);
@@ -46,13 +51,16 @@
     }
     .install-button-bar {
         display: flex;
-        border: 1px dotted lime;
+        margin-left: 2em;
         div {
             margin: 1em;
         }
         .button {
             padding: 0.5em 1em;
             font-size: 14px;
+        }
+        .install-coal {
+            margin-left: 0;
         }
     }
     .review-form {
@@ -66,6 +74,18 @@
             border-top: 1px solid black;
             h3 {
                 font-weight: inherit;
+                color: $link-yellow;
+            }
+            p {
+                font-size: 12px;
+                color: $header-text-grey;
+                span {
+                    color: white;
+                    &:hover {
+                        color: $link-yellow;
+                        cursor: pointer;
+                    }
+                }
             }
         }
         .review-form-body {
@@ -82,28 +102,47 @@
                 }
             }
             .main-body {
-                margin: 0 2em;
+                margin: 0 0 0 2em;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 #review-text {
                     width: 100%;
-                    border: 1px solid white;
+                    height: 10em;
+                    overflow-y: auto;
+                    border: 2px inset black;
                     background-color: $header-red;
+                    border-radius: 2px;
+                    padding: 1em;
+                    box-sizing: border-box;
+                    font-family: 'Open Sans';
+                    &:focus {
+                        border: 1px solid $link-yellow;
+                    }
                 }
                 .review-form-footer {
                     display: flex;
                     justify-content: space-between;
+                    margin-top: 1em;
+                    margin-bottom: 1em;
                     .recommended-box {
                         font-size: 12px;
                         display: flex;
                         flex-direction: column;
+
                         .buttons {
                             display: flex;
                             font-size: 20px;
+                            margin: 0.25em 0;
+                            justify-content: space-between;
+
                             div {
-                                border: 1px solid black;
+                                color: $link-yellow;
                                 padding: 5px 10px;
+                                border-radius: 5px;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                             .thumb {
                                 margin-right: 10px;
@@ -125,6 +164,10 @@
                                 }
                             }
                             .unpressed {
+                                background-color: rgb(178, 97, 97);
+                                &:hover {
+                                    filter: brightness(120%);
+                                }
                                 .check {
                                     display: none;
                                 }
