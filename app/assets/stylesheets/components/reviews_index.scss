@@ -125,6 +125,34 @@
                         }
                     }
                 }
+                .review-item-footer {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .buttons {
+                        display: flex;
+                        .edit-button {
+                            padding: 5px 10px;
+                            margin: 5px 10px;
+                            background-color: $gradient-end-red;
+                            border: 2px outset $gradient-end-red;
+                            &:hover {
+                                cursor: pointer;
+                                filter: brightness(140%);
+                            }
+                        }
+                        .delete-button {
+                            padding: 5px;
+                            margin: 5px 10px;
+                            background-color: $gradient-end-red;
+                            border: 2px outset $gradient-end-red;
+                            &:hover {
+                                cursor: pointer;
+                                filter: brightness(140%);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

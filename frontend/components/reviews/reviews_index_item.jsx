@@ -73,6 +73,16 @@ class ReviewsIndexItem extends React.Component {
                         <p className="review-body">{review.body}</p>
                     </div>
                 </div>
+                <div className="review-item-footer">
+                    {author.id === this.props.currentUserId ? (
+                        <div className="buttons">
+                            <div className="edit-button">Edit</div>
+                            <div className="delete-button">Delete</div>
+                        </div>
+                    ) : (
+                        ''
+                    )}
+                </div>
             </div>
         );
     }

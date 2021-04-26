@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
-import { requestAllGameReviews } from '../../actions/reviews_actions';
+import { deleteGameReview, requestAllGameReviews, updateGameReview } from '../../actions/reviews_actions';
 import ReviewsIndex from './reviews_index';
 
 const MSTP = (state, ownProps) => {
@@ -18,6 +18,8 @@ const MDTP = (dispatch) => {
     return {
         requestAllGameReviews: (gameId) => dispatch(requestAllGameReviews(gameId)),
         fetchUser: (userId) => dispatch(fetchUser(userId)),
+        deleteGameReview: (reviewId) => dispatch(deleteGameReview(reviewId)),
+        updateGameReview: (review) => dispatch(updateGameReview(review)),
     };
 };
 

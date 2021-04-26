@@ -52,7 +52,14 @@ class ReviewsIndex extends React.Component {
         const mappedReviews = reviews.map((review, idx) => {
             return (
                 <li key={`review-${idx}`}>
-                    <ReviewsIndexItem fetchUser={this.props.fetchUser} users={this.props.users} review={review} />
+                    <ReviewsIndexItem
+                        deleteGameReview={this.props.deleteGameReview}
+                        updateGameReview={this.props.updateGameReview}
+                        fetchUser={this.props.fetchUser}
+                        users={this.props.users}
+                        review={review}
+                        currentUserId={this.props.currentUserId}
+                    />
                 </li>
             );
         });
