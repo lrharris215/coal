@@ -51,8 +51,17 @@ class NewReviewForm extends React.Component {
         if (!game) return <div>Nothing here!</div>;
         return (
             <div className="review-form-container">
-                <div className="green-header-bar"></div>
-                <div className="install-button-bar"></div>
+                <div className="green-header-bar">
+                    <div className="in-library">
+                        <i class="fas fa-bars"></i> <p>In Library</p>
+                    </div>
+                    <h3>{game.title} is already in your Coal library</h3>
+                </div>
+                <div className="install-button-bar">
+                    <div className="button install-coal">Install Coal</div>
+                    <div className="button play-now">Play Now</div>
+                    <div className="stats"></div>
+                </div>
                 <form className="review-form" onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="review-form-header">
                         <h3>Write a review for {game.title}</h3>
@@ -95,7 +104,7 @@ class NewReviewForm extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <button>Post Review</button>
+                                <button className="button submit-button">Post Review</button>
                             </div>
                         </div>
                     </div>

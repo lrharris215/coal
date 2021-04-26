@@ -19,7 +19,6 @@ class ReviewsIndex extends React.Component {
     }
     componentDidUpdate(prevProps) {
         if (this.props.currentUserId && this.props.reviews !== prevProps.reviews) {
-            debugger;
             this.checkIfReviewed();
             this.checkIfOwned();
         }
@@ -56,6 +55,7 @@ class ReviewsIndex extends React.Component {
     }
     render() {
         const { reviews, gameId } = this.props;
+
         const mappedReviews = reviews.map((review, idx) => {
             return (
                 <li key={`review-${idx}`}>
