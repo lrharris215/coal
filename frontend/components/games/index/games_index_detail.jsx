@@ -13,7 +13,9 @@ export default (props) => {
                             <span>Very positive </span>({reviewNum})
                         </p>
                     </div>
-                    <div className="categories">Categories</div>
+                    <div className="categories" data-tip data-for="fake-link">
+                        Categories
+                    </div>
                 </div>
                 <div className="image-list">
                     <ul>

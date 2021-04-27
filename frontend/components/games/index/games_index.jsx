@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import GameIndexItem from './games_index_item';
 import GameIndexDetail from './games_index_detail';
+import ReactToolTip from 'react-tooltip';
 
 class GamesIndex extends React.Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class GamesIndex extends React.Component {
             this.setState({
                 activeGame: this.props.games[0].id,
             });
+            ReactToolTip.rebuild();
         }
     }
     sortGamesByReleaseDate(a, b) {
