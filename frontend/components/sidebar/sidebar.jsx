@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactToolTip from 'react-tooltip';
 
 class Sidebar extends React.Component {
     constructor(props) {
@@ -10,9 +9,6 @@ class Sidebar extends React.Component {
     render() {
         return (
             <div className="sidebar">
-                <ReactToolTip place="top" id="fake-link">
-                    Decorative link
-                </ReactToolTip>
                 <div className="giftcards-pic">
                     <img src={window.giftCards} alt="gift cards" />
                     <div className="sidebar-logo">
