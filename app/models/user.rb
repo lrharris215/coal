@@ -16,6 +16,14 @@ class User < ApplicationRecord
    through: :purchases,
    source: :game
 
+   has_many :reviews,
+   foreign_key: :author_id,
+   class_name: :Review
+
+   has_many :reviewed_games,
+    through: :reviews, 
+    source: :game
+
     def self.find_by_credentials(username, password)
         @user = User.find_by_username(username)
         if @user && @user.is_password?(password)

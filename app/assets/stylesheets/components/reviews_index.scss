@@ -1,0 +1,159 @@
+.reviews-index-container {
+    width: 944px;
+    min-height: 400px;
+    font-family: 'Open Sans';
+    color: whitesmoke;
+    .reviews-index {
+        .reviews-header {
+            border-top: 1px solid black;
+            h4 {
+                font-weight: 600;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                margin: 10px 0;
+            }
+        }
+        .reviews-list {
+            .review-index-item {
+                width: 650px;
+                background-color: $header-red;
+                margin-bottom: 20px;
+                .transition-bar {
+                    height: 2px;
+                    width: 650px;
+                    background-image: linear-gradient(to right, $index-detail-red, $gradient-start-red);
+                }
+                .review-item-header {
+                    display: flex;
+                    margin-top: 5px;
+                    .ri-header-left {
+                        width: 250px;
+                        display: flex;
+
+                        .profile-pic {
+                            margin: 5px;
+                            margin-top: 0;
+                            width: 50px;
+                            height: 50px;
+                            img {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                        .user-info {
+                            display: flex;
+                            flex-direction: column;
+                            h5 {
+                                font-weight: 800;
+                                margin-block-end: 0;
+                                margin-block-start: 0;
+                            }
+                            p {
+                                font-size: 10px;
+                                color: $header-text-grey;
+                                &:hover {
+                                    color: $link-yellow;
+                                }
+                            }
+                        }
+                    }
+                    .ri-header-right {
+                        display: flex;
+                        width: 400px;
+                        justify-content: space-between;
+                        align-items: center;
+                        background-color: $gradient-end-red;
+                        &:hover {
+                            filter: brightness(140%);
+                            cursor: pointer;
+                        }
+                        .thumbs-box {
+                            font-size: 16px;
+
+                            .fa-thumbs-up {
+                                font-size: 26px;
+                                margin-right: 15px;
+                                padding: 11px;
+                                background-color: rgb(16, 122, 16);
+                                color: rgb(52, 207, 52);
+                            }
+                            .fa-thumbs-down {
+                                font-size: 26px;
+                                margin-right: 15px;
+                                padding: 11px;
+                                background-color: $error-red;
+                                // color: $error-red;
+                            }
+                        }
+                        .logo {
+                            border-radius: 100%;
+                            background-color: $header-dark-grey;
+                            color: $header-red;
+                            width: 20px;
+                            height: 20px;
+                            align-self: center;
+                            position: relative;
+                            margin-right: 4px;
+                            .fa-cogs {
+                                font-size: 10px;
+                                position: absolute;
+                                top: 5px;
+                                left: 4px;
+                            }
+                        }
+                    }
+                }
+                .review-item-body {
+                    display: flex;
+                    .review-body-left {
+                        width: 250px;
+                        height: 100px;
+                        // border: 1px solid lime;
+                    }
+                    .review-body-right {
+                        width: 400px;
+                        .date {
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            margin: 10px 0;
+                            color: $header-dark-grey;
+                        }
+                        .review-body {
+                            font-size: 12px;
+                            padding-bottom: 20px;
+                            // border-bottom: 1px solid $header-dark-grey;
+                        }
+                    }
+                }
+                .review-item-footer {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .buttons {
+                        display: flex;
+                        .edit-button {
+                            padding: 5px 10px;
+                            margin: 5px 10px;
+                            background-color: $gradient-end-red;
+                            border: 2px outset $gradient-end-red;
+                            &:hover {
+                                cursor: pointer;
+                                filter: brightness(140%);
+                            }
+                        }
+                        .delete-button {
+                            padding: 5px;
+                            margin: 5px 10px;
+                            background-color: $gradient-end-red;
+                            border: 2px outset $gradient-end-red;
+                            &:hover {
+                                cursor: pointer;
+                                filter: brightness(140%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

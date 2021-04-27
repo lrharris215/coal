@@ -1,0 +1,191 @@
+.review-form-container {
+    background-color: $review-box-red;
+    .button {
+        border: 2px inset black;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, rgb(254, 166, 166), rgb(227, 112, 112));
+        color: $gradient-end-red;
+        &:hover {
+            cursor: pointer;
+            color: whitesmoke;
+            background-image: linear-gradient(to right, rgb(227, 112, 112), $gradient-mid-red);
+            filter: brightness(120%);
+        }
+    }
+    .green-header-bar {
+        height: 2.5em;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-image: linear-gradient(to right, rgb(255, 187, 77), $button-orange);
+        .in-library {
+            position: absolute;
+            top: 25%;
+            left: -10px;
+            background-color: $button-orange;
+            height: 0.8em;
+            font-size: 0.6em;
+            display: flex;
+            align-items: center;
+            margin-right: 1em;
+            padding: 0.5em;
+            color: black;
+            box-shadow: 2px 2px 2px black;
+
+            i {
+                // font-size: 13px;
+                margin: 0 2px;
+            }
+            p {
+                text-transform: uppercase;
+            }
+        }
+        h3 {
+            margin: 0;
+            margin-left: 4em;
+            font-weight: inherit;
+            color: $header-red;
+            // text-shadow: 1px 1px rgb(107, 48, 0);
+        }
+    }
+    .install-button-bar {
+        display: flex;
+        margin-left: 2em;
+        div {
+            margin: 1rem;
+        }
+        .button {
+            padding: 0.5em 1em;
+            font-size: 14px;
+        }
+        .install-coal {
+            margin-left: 0;
+        }
+        .stats {
+            font-size: 11px;
+            color: $header-text-grey;
+        }
+    }
+    .review-form {
+        // border: 1px solid blue;
+
+        .review-form-header {
+            // border: 1px solid hotpink;
+            margin: 2em;
+            margin-top: 0;
+            font-weight: 400;
+            border-top: 1px solid black;
+            h3 {
+                font-weight: inherit;
+                color: $link-yellow;
+            }
+            p {
+                font-size: 12px;
+                color: $header-text-grey;
+                span {
+                    color: white;
+                    &:hover {
+                        color: $link-yellow;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .review-form-body {
+            margin: 2em;
+            // border: 1px solid yellow;
+            display: flex;
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                border: 1px solid $header-dark-grey;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .main-body {
+                margin: 0 0 0 2em;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                #review-text {
+                    width: 100%;
+                    height: 10em;
+                    overflow-y: auto;
+                    border: 2px inset black;
+                    background-color: $header-red;
+                    border-radius: 2px;
+                    padding: 1em;
+                    box-sizing: border-box;
+                    font-family: 'Open Sans';
+                    &:focus {
+                        border: 1px solid $link-yellow;
+                    }
+                }
+                .review-form-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    .recommended-box {
+                        font-size: 12px;
+                        display: flex;
+                        flex-direction: column;
+
+                        .buttons {
+                            display: flex;
+                            font-size: 20px;
+                            margin: 0.25em 0;
+                            justify-content: space-between;
+
+                            div {
+                                color: $link-yellow;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            .thumb {
+                                margin-right: 10px;
+                            }
+                            .pressed {
+                                background-color: $index-detail-red;
+                                position: relative;
+                                .thumb {
+                                    opacity: 20%;
+                                }
+                                .check {
+                                    display: inline-block;
+                                    opacity: 100%;
+                                    position: absolute;
+                                    left: 0.5em;
+                                    top: 0.5em;
+                                    color: whitesmoke;
+                                    background-color: transparent;
+                                }
+                            }
+                            .unpressed {
+                                background-color: rgb(178, 97, 97);
+                                &:hover {
+                                    filter: brightness(120%);
+                                }
+                                .check {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .submit-button {
+                    padding: 0 1em;
+                    height: 50%;
+                    align-self: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

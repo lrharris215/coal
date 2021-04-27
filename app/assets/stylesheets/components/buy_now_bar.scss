@@ -49,10 +49,10 @@
             color: whitesmoke;
             text-shadow: 1px 1px $background-dark-grey;
             padding: 5px 10px;
-            filter: brightness(80%);
+            filter: brightness(90%);
             &:hover {
                 cursor: pointer;
-                filter: brightness(100%);
+                filter: brightness(110%);
             }
         }
     }

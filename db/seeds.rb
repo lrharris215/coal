@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Review.delete_all
 Purchase.delete_all
 GameImage.delete_all
 Game.delete_all
@@ -13,6 +14,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('games')
 ActiveRecord::Base.connection.reset_pk_sequence!('game_images')
 ActiveRecord::Base.connection.reset_pk_sequence!('purchases')
+ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
 
 User.create({
     username: "Guest",
@@ -440,3 +442,61 @@ GameImage.create({
     img_type: "screenshot"
 })
 
+Purchase.create({
+    buyerId: 2,
+    gameId: 1
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 3
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 4
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 5
+})
+Purchase.create({
+    buyerId: 2,
+    gameId: 6
+})
+Purchase.create({
+    buyerId: 1,
+    gameId: 1
+})
+Purchase.create({
+    buyerId: 3,
+    gameId: 1
+})
+
+Review.create({
+ author_id: 2,
+ game_id: 1,
+ body: "Literally my favorite game. I <3 Shane",
+})
+Review.create({
+ author_id: 2,
+ game_id: 2,
+ body: "I've spent more than 200 hours in this game and still haven't completed the main quest",
+})
+
+Review.create({
+    author_id: 3,
+    game_id: 1, 
+    body: "I also really like this game."
+})
+
+Review.create({
+    author_id: 2,
+    game_id: 7, 
+    body: "Very scary!! Do not play if you have thallasophobia"
+})
+
+Review.create({
+    author_id: 3,
+    game_id: 10,
+    recommended: false,
+    body: "I didn't play this game but I don't like it!"
+})

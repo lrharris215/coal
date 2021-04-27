@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy]
     get "/games/featured", to: 'games#featured'
-    resources :games, only: [:show, :index]
+    resources :games, only: [:show, :index] do
+      get "reviews", to: 'reviews#game_reviews'
+      post "reviews", to: 'reviews#new_game_review'
+    end
+    resources :reviews, only: [:destroy, :update]
     resources :purchases, only:[:create]
   end
 end

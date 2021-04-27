@@ -11,4 +11,12 @@ class Game < ApplicationRecord
     has_many :buyers,
     through: :purchases,
     source: :buyer
+
+    has_many :reviews,
+    foreign_key: :game_id, 
+    class_name: :Review
+
+    has_many :reviewers,
+    through: :reviews, 
+    source: :author
 end

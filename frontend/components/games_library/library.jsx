@@ -24,7 +24,7 @@ class Library extends React.Component {
             games.map((game, idx) => {
                 return (
                     <li key={`library-${idx}`}>
-                        <LibraryIndexItem game={game} />
+                        <LibraryIndexItem user={user} game={game} />
                     </li>
                 );
             });

@@ -5,7 +5,8 @@ export default (props) => {
     const game = props.game;
 
     const titleCard = game.titleCard[0];
-    const hoursPlayed = game.id * 42;
+
+    const hoursPlayed = props.user.id * game.id * 42;
     return (
         <div className="library-index-item">
             <div className="title-card">
