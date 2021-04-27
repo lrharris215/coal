@@ -1,6 +1,7 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import BuyNowBar from './buy_now_bar';
+import ReactToolTip from 'react-tooltip';
 
 class GameDetail extends React.Component {
     constructor(props) {
@@ -20,7 +21,9 @@ class GameDetail extends React.Component {
             this.setState({
                 activePicIdx: 0,
             });
+            // ReactToolTip.rebuild();
         }
+        ReactToolTip.rebuild();
     }
     componentWillUnmount() {
         clearInterval(this.intervalId);
@@ -59,13 +62,21 @@ class GameDetail extends React.Component {
                         <div className="game-detail-header">
                             <div className="gd-header-left">
                                 <p>
-                                    <span>All Games</span> {'>'} <span>Indie Games </span>
+                                    <Link to="/">
+                                        <span>All Games</span>
+                                    </Link>{' '}
+                                    {'>'}{' '}
+                                    <span data-tip data-for="fake-link">
+                                        Indie Games{' '}
+                                    </span>
                                     {'>'} <span>{game.title}</span>
                                 </p>
                                 <h2>{game.title}</h2>
                             </div>
                             <div className="gd-header-right">
-                                <div className="community-hub">Community Hub</div>
+                                <div className="community-hub" data-tip data-for="fake-link">
+                                    Community Hub
+                                </div>
                             </div>
                         </div>
                         <div className="game-detail-main">
@@ -112,11 +123,11 @@ class GameDetail extends React.Component {
                                         <p>All Reviews:</p>
                                     </div>
                                     <div className="reviews-right">
-                                        <p>
+                                        <p data-tip data-for="fake-link">
                                             <span>Overwhelmingly Positive</span>{' '}
                                             {`(${Math.floor(reviewNum * (1 / 20))})`}
                                         </p>
-                                        <p>
+                                        <p data-tip data-for="fake-link">
                                             <span>Overwhelmingly Positive</span> {`(${reviewNum})`}
                                         </p>
                                     </div>
@@ -135,17 +146,27 @@ class GameDetail extends React.Component {
                                         <p>Publisher:</p>
                                     </div>
                                     <div className="devpub-right">
-                                        <p>{game.developer}</p>
+                                        <p data-tip data-for="fake-link">
+                                            {game.developer}
+                                        </p>
 
-                                        <p>{game.publisher}</p>
+                                        <p data-tip data-for="fake-link">
+                                            {game.publisher}
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="popular-tags">
                                     <p>Popular user-defined tags for this product:</p>
                                     <div className="tags">
-                                        <div className="tag">Tag-1</div>
-                                        <div className="tag">Tag-2</div>
-                                        <div className="tag">Tag-3</div>
+                                        <div className="tag" data-place="bottom" data-tip data-for="fake-link">
+                                            Tag-1
+                                        </div>
+                                        <div className="tag" data-place="bottom" data-tip data-for="fake-link">
+                                            Tag-2
+                                        </div>
+                                        <div className="tag" data-place="bottom" data-tip data-for="fake-link">
+                                            Tag-3
+                                        </div>
                                     </div>
                                 </div>
                             </div>
