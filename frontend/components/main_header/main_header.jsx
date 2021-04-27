@@ -167,7 +167,10 @@ class MainHeader extends React.Component {
                             <div className="loggedOut-right-header">
                                 <Link to="/login">login</Link>
                                 <p>
-                                    <span className="line">|</span> <span className="pretend-link">language</span>
+                                    <span className="line">|</span>{' '}
+                                    <span data-place="bottom" data-tip data-for="fake-link" className="pretend-link">
+                                        language
+                                    </span>
                                     <i className="fas fa-caret-down" />{' '}
                                 </p>
                             </div>
