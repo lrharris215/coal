@@ -76,7 +76,10 @@ class ShoppingCart extends React.Component {
             <div className="shopping-cart-container">
                 <div className="shopping-cart-header">
                     <p>
-                        <span>All Products </span> {'>'} Your Shopping Cart
+                        <Link to="/">
+                            <span>All Products </span>
+                        </Link>{' '}
+                        {'>'} Your Shopping Cart
                     </p>
                     <h1>Your Shopping Cart</h1>
                 </div>
