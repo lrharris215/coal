@@ -1,5 +1,6 @@
 import { Route, Switch, Link } from 'react-router-dom';
 import React from 'react';
+import ReactToolTip from 'react-tooltip';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LogInFormContainer from '../components/session_form/login-form-container';
 import SignUpFormContainer from '../components/session_form/signup-form-container';
@@ -15,6 +16,9 @@ const App = () => {
         <div>
             <header>
                 <MainHeader />
+                <ReactToolTip place="top" id="fake-link">
+                    Decorative link
+                </ReactToolTip>
             </header>
             <div className="main-body-section">
                 <AuthRoute path="/login" component={LogInFormContainer} />

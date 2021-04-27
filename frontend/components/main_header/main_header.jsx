@@ -29,11 +29,21 @@ class MainHeader extends React.Component {
                                     titleItem={<p className="store-dropdown">Store</p>}
                                     listItems={[
                                         <Link to="/">Home</Link>,
-                                        <Link to="/">Discovery Queue</Link>,
-                                        <Link to="/">Wishlist</Link>,
-                                        <Link to="/">News</Link>,
-                                        <Link to="/">Stats</Link>,
-                                        <Link to="/">About</Link>,
+                                        <Link to="/" data-place="left" data-tip data-for="fake-link">
+                                            Discovery Queue
+                                        </Link>,
+                                        <Link to="/" data-place="left" data-tip data-for="fake-link">
+                                            Wishlist
+                                        </Link>,
+                                        <Link to="/" data-place="left" data-tip data-for="fake-link">
+                                            News
+                                        </Link>,
+                                        <Link to="/" data-place="left" data-tip data-for="fake-link">
+                                            Stats
+                                        </Link>,
+                                        <Link to="/" data-place="left" data-tip data-for="fake-link">
+                                            About
+                                        </Link>,
                                     ]}
                                 />
                             </li>
@@ -44,10 +54,18 @@ class MainHeader extends React.Component {
                                     titleItem={<p className="community-dropdown">Community</p>}
                                     listItems={[
                                         <Link to="/">Home</Link>,
-                                        <Link to="/">Discussions</Link>,
-                                        <Link to="/">Workshop</Link>,
-                                        <Link to="/">Market</Link>,
-                                        <Link to="/">Broadcasts</Link>,
+                                        <Link data-place="left" data-tip data-for="fake-link" to="">
+                                            Discussions
+                                        </Link>,
+                                        <Link data-place="left" data-tip data-for="fake-link" to="">
+                                            Workshop
+                                        </Link>,
+                                        <Link data-place="left" data-tip data-for="fake-link" to="">
+                                            Market
+                                        </Link>,
+                                        <Link data-place="left" data-tip data-for="fake-link" to="">
+                                            Broadcasts
+                                        </Link>,
                                     ]}
                                 />{' '}
                             </li>
@@ -58,13 +76,25 @@ class MainHeader extends React.Component {
                                         hasHover={true}
                                         titleItem={<p>{this.props.username}</p>}
                                         listItems={[
-                                            <Link to="/">Activity</Link>,
+                                            <Link data-place="left" data-tip data-for="fake-link" to="/">
+                                                Activity
+                                            </Link>,
                                             <Link to={`api/users/${this.props.id}`}>Profile</Link>,
-                                            <Link to="/">Friends</Link>,
-                                            <Link to="/">Groups</Link>,
-                                            <Link to="/">Content</Link>,
-                                            <Link to="/">Badges</Link>,
-                                            <Link to="/">Inventory</Link>,
+                                            <Link data-place="left" data-tip data-for="fake-link" to="/">
+                                                Friends
+                                            </Link>,
+                                            <Link data-place="left" data-tip data-for="fake-link" to="/">
+                                                Groups
+                                            </Link>,
+                                            <Link data-place="left" data-tip data-for="fake-link" to="/">
+                                                Content
+                                            </Link>,
+                                            <Link data-place="left" data-tip data-for="fake-link" to="/">
+                                                Badges
+                                            </Link>,
+                                            <Link data-place="left" data-tip data-for="fake-link" to="/">
+                                                Inventory
+                                            </Link>,
                                         ]}
                                     />
                                 </li>
@@ -76,24 +106,32 @@ class MainHeader extends React.Component {
 
                             {this.props.loggedIn ? (
                                 <li>
-                                    <a href="">Chat</a>
+                                    <a href="" data-place="bottom" data-tip data-for="fake-link">
+                                        Chat
+                                    </a>
                                 </li>
                             ) : null}
 
                             <li>
-                                <a href="">Support</a>
+                                <a href="" data-place="bottom" data-tip data-for="fake-link">
+                                    Support
+                                </a>
                             </li>
                         </ul>
                     </nav>
 
                     <div className="right-main-header">
-                        <div className={`install-button ${installButtonColor}`}>
+                        <div
+                            className={`install-button ${installButtonColor}`}
+                            data-place="bottom"
+                            data-tip
+                            data-for="fake-link">
                             <i className="fas fa-download"></i>
                             Install Coal
                         </div>
                         {this.props.loggedIn ? (
                             <div className="loggedIn-right-header">
-                                <div className="envelope">
+                                <div className="envelope" data-place="bottom" data-tip data-for="fake-link">
                                     <i className="fas fa-envelope"></i>
                                 </div>
 
@@ -107,12 +145,18 @@ class MainHeader extends React.Component {
                                     }
                                     listItems={[
                                         <Link to={`api/users/${this.props.id}`}>View profile</Link>,
-                                        <a href="">Account details</a>,
+                                        <a href="" data-place="left" data-tip data-for="fake-link">
+                                            Account details
+                                        </a>,
                                         <button className="logout-button" onClick={this.props.logoutUser}>
                                             Logout: <span className="yellow-text">{this.props.username}</span>
                                         </button>,
-                                        <a href="">Preferences</a>,
-                                        <a href="">Change language</a>,
+                                        <a href="" data-place="left" data-tip data-for="fake-link">
+                                            Preferences
+                                        </a>,
+                                        <a href="" data-place="left" data-tip data-for="fake-link">
+                                            Change language
+                                        </a>,
                                     ]}
                                 />
                                 <div className="profile-pic">

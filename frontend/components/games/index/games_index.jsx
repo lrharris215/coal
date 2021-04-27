@@ -67,7 +67,9 @@ class GamesIndex extends React.Component {
                     <div className="index-header-row">
                         <p>See more:</p>
                         <div>
-                            <Link to="">New Releases</Link>
+                            <Link to="" data-tip data-for="fake-link">
+                                New Releases
+                            </Link>
                         </div>
                     </div>
                     <ul>{mappedGames}</ul>
