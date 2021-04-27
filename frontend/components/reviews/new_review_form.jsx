@@ -49,6 +49,7 @@ class NewReviewForm extends React.Component {
     render() {
         const game = this.props.games[this.props.gameId];
         if (!game) return <div>Nothing here!</div>;
+        const hoursPlayed = this.props.currentUserId * game.id * 42;
         return (
             <div className="review-form-container">
                 <div className="green-header-bar">
@@ -60,7 +61,7 @@ class NewReviewForm extends React.Component {
                 <div className="install-button-bar">
                     <div className="button install-coal">Install Coal</div>
                     <div className="button play-now">Play Now</div>
-                    <div className="stats"></div>
+                    <div className="stats">{hoursPlayed} hrs on record</div>
                 </div>
                 <form className="review-form" onSubmit={(e) => this.handleSubmit(e)}>
                     <div className="review-form-header">
@@ -99,7 +100,7 @@ class NewReviewForm extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="button submit-button">Post Review</button>
+                                <button className="button submit-button">Post review</button>
                             </div>
                         </div>
                     </div>

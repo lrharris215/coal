@@ -53,7 +53,7 @@
         display: flex;
         margin-left: 2em;
         div {
-            margin: 1em;
+            margin: 1rem;
         }
         .button {
             padding: 0.5em 1em;
@@ -61,6 +61,10 @@
         }
         .install-coal {
             margin-left: 0;
+        }
+        .stats {
+            font-size: 11px;
+            color: $header-text-grey;
         }
     }
     .review-form {
@@ -174,6 +178,12 @@
                             }
                         }
                     }
+                }
+                .submit-button {
+                    padding: 0 1em;
+                    height: 50%;
+                    align-self: center;
+                    font-size: 14px;
                 }
             }
         }

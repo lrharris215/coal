@@ -21,6 +21,11 @@ class ReviewsIndex extends React.Component {
         if (this.props.currentUserId && this.props.reviews !== prevProps.reviews) {
             this.checkIfReviewed();
             this.checkIfOwned();
+        } else if (this.props.currentUserId !== prevProps.currentUserId) {
+            this.setState({
+                hasReviewed: false,
+                owned: false,
+            });
         }
     }
     checkIfOwned() {
@@ -29,14 +34,20 @@ class ReviewsIndex extends React.Component {
         if (gamesList) {
             for (let i = 0; i < gamesList.length; i++) {
                 if (gamesList[i].id.toString() === this.props.gameId) {
-                    this.owned = true;
+                    this.setState({
+                        owned: true,
+                    });
                     return;
                 }
             }
-            this.owned = false;
+            this.setState({
+                owned: false,
+            });
             return;
         } else {
-            this.owned = false;
+            this.setState({
+                owned: false,
+            });
         }
     }
     checkIfReviewed() {
@@ -74,7 +85,11 @@ class ReviewsIndex extends React.Component {
         return (
             <div className="reviews-index-container">
                 <div className="reviews-index">
-                    {this.owned && !this.state.hasReviewed ? <NewReviewFormContainer gameId={this.props.gameId} /> : ''}
+                    {this.state.owned && !this.state.hasReviewed ? (
+                        <NewReviewFormContainer gameId={this.props.gameId} />
+                    ) : (
+                        ''
+                    )}
                     <div className="reviews-header">
                         <h4>Customer Reviews</h4>
                     </div>
