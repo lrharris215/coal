@@ -8,6 +8,7 @@ class ReviewsIndex extends React.Component {
         this.state = {
             hasReviewed: false,
         };
+        this.sortReviewsByMostRecent = this.sortReviewsByMostRecent.bind(this);
     }
 
     componentDidMount() {
@@ -27,6 +28,13 @@ class ReviewsIndex extends React.Component {
                 owned: false,
             });
         }
+    }
+    sortReviewsByMostRecent(a, b) {
+        if (a.created_at > b.created_at) {
+            return -1;
+        } else if (a.created_at === b.created_at) {
+            return 0;
+        } else return 1;
     }
     checkIfOwned() {
         let gamesList = this.props.users[this.props.currentUserId].ownedGames;
@@ -66,8 +74,9 @@ class ReviewsIndex extends React.Component {
     }
     render() {
         const { reviews, gameId } = this.props;
+        let sortedReviews = reviews && [...reviews].sort(this.sortReviewsByMostRecent);
 
-        const mappedReviews = reviews.map((review, idx) => {
+        const mappedReviews = sortedReviews.map((review, idx) => {
             return (
                 <li key={`review-${idx}`}>
                     <ReviewsIndexItem
