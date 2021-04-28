@@ -100,22 +100,32 @@ class MainHeader extends React.Component {
                                 </li>
                             ) : (
                                 <li>
-                                    <a href="">About</a>
+                                    <a href="" data-place="bottom" data-tip data-for="fake-link">
+                                        Support
+                                    </a>
                                 </li>
                             )}
 
-                            {this.props.loggedIn ? (
-                                <li>
-                                    <a href="" data-place="bottom" data-tip data-for="fake-link">
-                                        Chat
-                                    </a>
-                                </li>
-                            ) : null}
-
                             <li>
-                                <a href="" data-place="bottom" data-tip data-for="fake-link">
-                                    Support
-                                </a>
+                                <HeaderDropDownContainer
+                                    buttonName="about-button"
+                                    hasHover={true}
+                                    titleItem={<p className="about-dropdown">About</p>}
+                                    listItems={[
+                                        <a target="_blank" href="https://lrharris215.github.io./">
+                                            <i className="fas fa-user-circle"></i> Portfolio Site
+                                        </a>,
+                                        <a target="_blank" href="https://github.com/lrharris215">
+                                            <i className="fab fa-github"></i> Github
+                                        </a>,
+                                        <a target="_blank" href="https://www.linkedin.com/in/lane-harris-86830320b/">
+                                            <i className="fab fa-linkedin"></i> LinkedIn
+                                        </a>,
+                                        <a target="_blank" href="https://angel.co/u/lane-harris">
+                                            <i class="fab fa-angellist"></i> AngelList
+                                        </a>,
+                                    ]}
+                                />
                             </li>
                         </ul>
                     </nav>

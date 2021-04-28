@@ -85,6 +85,20 @@
         font-size: 12px;
         width: 100px;
     }
+    .about-button {
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            color: whitesmoke;
+        }
+    }
+    .about-button + div {
+        position: absolute;
+        left: 20px;
+
+        font-size: 12px;
+        // width: 100px;
+    }
 }
 .library-dropdown {
     position: relative;
