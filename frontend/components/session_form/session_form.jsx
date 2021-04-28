@@ -157,9 +157,9 @@ class SessionForm extends React.Component {
                     <div className="right-login-section">
                         <div className="right-side">
                             <p>Join Coal and discover dozens of games to play.</p>
-                            <Link className="learn-more" to="/">
+                            <a className="learn-more" target="_blank" href="https://lrharris215.github.io./">
                                 Learn More
-                            </Link>
+                            </a>
 
                             <div className="computerImage">
                                 <img src={window.joinPic} alt="Computer image" />
