@@ -29,10 +29,9 @@ class SessionForm extends React.Component {
     }
 
     handleGuest(e) {
-        this.setState({
-            username: 'Guest',
-            password: 'password',
-        });
+        e.preventDefault();
+
+        this.props.action(this.guest);
     }
     handleSubmit(e) {
         e.preventDefault();
@@ -146,7 +145,7 @@ class SessionForm extends React.Component {
                                 <p className="forgot-pw" onClick={() => alert('Too bad')}>
                                     Forgot your password?
                                 </p>
-                                <button className="guest-button" onClick={() => this.handleGuest()}>
+                                <button className="guest-button" onClick={(e) => this.handleGuest(e)}>
                                     Sign in as Guest!
                                 </button>
                             </div>
