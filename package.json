@@ -12,10 +12,12 @@
     "react-router-dom": "^5.2.0",
     "react-tooltip": "^4.2.18",
     "redux": "^4.0.5",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "webpack": "^5.24.3",
     "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
