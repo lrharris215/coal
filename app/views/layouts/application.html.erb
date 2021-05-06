@@ -8,7 +8,14 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag asset_path('coal.ico') %>
-
+    <meta property="og:title" content="Coal" />
+     <meta property='og:image' content="<%= image_url('coal_one.png') %>"/>
+     <meta property="og:description"
+       content="Coal is a clone of the website Steam, an online marketplace for video games."
+     />
+     <meta property="og:url"
+       content="https://coal-powered.herokuapp.com/#/"
+     />
       <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
