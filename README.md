@@ -56,4 +56,4 @@ class ShoppingCart extends React.Component {
 
 -   All icons are from Fontawesome.com
 -   The gift card pic: https://toppng.com/show_download/84324/steam-gift-card-usd-50-steam-digital/large
--   All other pictures and screenshots are from Steam's store pages.
+-   All other pictures and screenshots are from the [Steam](https://store.steampowered.com/) website. 
