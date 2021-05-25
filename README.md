@@ -4,7 +4,7 @@
 
 ## About
 
-[Coal](https://coal-powered.herokuapp.com/#/) is a clone of the website Steam! Users can log in and purchase games from their shopping cart for their Coal Library. Featured games are displayed front and center on the Feature Carousel on the home page, while the full list of available games displayed below. Each game also has a show page with more information, as well as the ability to add the game to your cart. Finally, after purchasing the game from your shopping cart, you can view your collection of games in your Coal Library, or go back to the game's show page and leave a review!
+[Coal](https://coal-powered.herokuapp.com/#/) is a clone of the website [Steam](https://store.steampowered.com/)! Users can log in and purchase games from their shopping cart for their Coal Library. Featured games are displayed front and center on the Feature Carousel on the home page, while the full list of available games displayed below. Each game also has a show page with more information, as well as the ability to add the game to your cart. Finally, after purchasing the game from your shopping cart, you can view your collection of games in your Coal Library, or go back to the game's show page and leave a review!
 
 ## Technologies
 
