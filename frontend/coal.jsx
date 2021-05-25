@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     const store = configureStore(preloadedState);
 
-    window.store = store;
-    window.requestAllGameReviews = requestAllGameReviews;
-    window.createNewGameReview = createNewGameReview;
-    window.deleteGameReview = deleteGameReview;
-    window.updateGameReview = updateGameReview;
+    // window.store = store;
+    // window.requestAllGameReviews = requestAllGameReviews;
+    // window.createNewGameReview = createNewGameReview;
+    // window.deleteGameReview = deleteGameReview;
+    // window.updateGameReview = updateGameReview;
 
     ReactDOM.render(<Root store={store} />, root);
 });
