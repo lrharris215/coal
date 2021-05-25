@@ -122,7 +122,7 @@ class MainHeader extends React.Component {
                                             <i className="fab fa-linkedin"></i> LinkedIn
                                         </a>,
                                         <a target="_blank" href="https://angel.co/u/lane-harris">
-                                            <i class="fab fa-angellist"></i> AngelList
+                                            <i className="fab fa-angellist"></i> AngelList
                                         </a>,
                                     ]}
                                 />
