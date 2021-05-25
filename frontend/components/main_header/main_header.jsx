@@ -79,7 +79,7 @@ class MainHeader extends React.Component {
                                             <Link data-place="left" data-tip data-for="fake-link" to="/">
                                                 Activity
                                             </Link>,
-                                            <Link to={`api/users/${this.props.id}`}>Profile</Link>,
+                                            <Link to={`/api/users/${this.props.id}`}>Profile</Link>,
                                             <Link data-place="left" data-tip data-for="fake-link" to="/">
                                                 Friends
                                             </Link>,
