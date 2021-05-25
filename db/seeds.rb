@@ -448,6 +448,10 @@ Purchase.create({
 })
 Purchase.create({
     buyerId: 2,
+    gameId: 2
+})
+Purchase.create({
+    buyerId: 2,
     gameId: 3
 })
 Purchase.create({
@@ -463,6 +467,10 @@ Purchase.create({
     gameId: 6
 })
 Purchase.create({
+    buyerId: 2,
+    gameId: 7
+})
+Purchase.create({
     buyerId: 1,
     gameId: 1
 })
@@ -470,6 +478,8 @@ Purchase.create({
     buyerId: 3,
     gameId: 1
 })
+
+
 
 Review.create({
  author_id: 2,
