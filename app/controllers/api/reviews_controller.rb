@@ -7,8 +7,7 @@ class Api::ReviewsController < ApplicationController
     def new_game_review
         @review = Review.new(review_params)
      
-        if  @review.valid?
-            @review.save!
+        if  @review.save
             render :show
         else
             render json: @review.errors.full_messages, status: 400
