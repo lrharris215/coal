@@ -1,4 +1,7 @@
 class Api::PurchasesController < ApplicationController 
+
+    before_action :require_logged_in, only: [:create]
+    
     def create
         @purchase = Purchase.new(purchase_params)
        

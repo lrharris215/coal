@@ -1,4 +1,7 @@
 class Api::ReviewsController < ApplicationController 
+
+    before_action :require_logged_in, only:[:new_game_review, :destroy]
+    
     def game_reviews
         @reviews = Review.where(game_id: params[:game_id])
         render :index
