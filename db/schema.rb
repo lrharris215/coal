@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_010923) do
+ActiveRecord::Schema.define(version: 2021_06_08_181919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,12 @@ ActiveRecord::Schema.define(version: 2021_03_26_010923) do
     t.index ["author_id", "game_id"], name: "index_reviews_on_author_id_and_game_id", unique: true
     t.index ["author_id"], name: "index_reviews_on_author_id"
     t.index ["game_id"], name: "index_reviews_on_game_id"
+  end
+
+  create_table "taggings", force: :cascade do |t|
+  end
+
+  create_table "tags", force: :cascade do |t|
   end
 
   create_table "users", force: :cascade do |t|
